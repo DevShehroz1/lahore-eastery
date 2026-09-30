@@ -1,1 +1,2726 @@
-{"sections":{"collections_list_carousel_fVhWbq":{"type":"collections-list-carousel","blocks":{"collection_item_NixJRm":{"type":"collection_item","disabled":true,"settings":{"collection":"","image":"shopify://shop_images/Lahore_Eatery_Collection_Images_2_e9a31cec-f74e-4f62-9bee-5361e6e1db8c.jpg","collection_title":"Ramadan Deals","collection_link":"shopify://collections/ramzan-deals"}},"collection_item_gbWpz6":{"type":"collection_item","disabled":true,"settings":{"collection":"pickles-pop-lahori-chatkara","image":"shopify://shop_images/Lahore_Eatery_Collection_Images_c2d5b79d-b3f6-47fa-8d1c-daa33194d209.jpg","collection_title":"Pickles Pop","collection_link":"shopify://collections/pickles-pop-lahori-chatkara"}},"collection_item_bFnmmr":{"type":"collection_item","settings":{"collection":"lean-lahore-club","image":"shopify://shop_images/Lahore_Eatery_Collection_Images_4.jpg","collection_title":"Lean Lahore Club","collection_link":""}},"collection_item_VaqMNg":{"type":"collection_item","settings":{"collection":"tester-deals","image":"shopify://shop_images/Lahore_Eatery_Collection_Images_2.jpg","collection_title":"Tester Deals","collection_link":""}},"collection_item_ffaQLC":{"type":"collection_item","settings":{"collection":"signature-pockets","image":"shopify://shop_images/Lahore_Eatery_Collection_1.jpg","collection_title":"Pockets","collection_link":""}},"collection_item_j6PkgU":{"type":"collection_item","settings":{"collection":"spring-rolls","image":"shopify://shop_images/Lahore_Eatery_Collection_2.jpg","collection_title":"Spring Rolls","collection_link":""}},"collection_item_QAdhg6":{"type":"collection_item","settings":{"collection":"heavenly-samosas","image":"shopify://shop_images/Lahore_Eatery_Collection_3.jpg","collection_title":"Samosas","collection_link":""}},"collection_item_aVPrba":{"type":"collection_item","settings":{"collection":"breaded-selection","image":"shopify://shop_images/Lahore_Eatery_Collection_4.jpg","collection_title":"Breaded Selection","collection_link":""}},"collection_item_e3x3a9":{"type":"collection_item","settings":{"collection":"kebab-selection","image":"shopify://shop_images/Lahore_Eatery_Collection_6.jpg","collection_title":"Kebabs","collection_link":""}},"collection_item_t43f69":{"type":"collection_item","settings":{"collection":"frozen-fries","image":"shopify://shop_images/Lahore_Eatery_Collection_11.jpg","collection_title":"Frozen Fries","collection_link":""}},"collection_item_egCWPa":{"type":"collection_item","settings":{"collection":"guest-special","image":"shopify://shop_images/Lahore_Eatery_Collection_5.jpg","collection_title":"Guest Special","collection_link":""}},"collection_item_W9zqrE":{"type":"collection_item","disabled":true,"settings":{"collection":"drinks","image":"shopify://shop_images/Lahore_Eatery_Collection_10.jpg","collection_title":"Sharbat","collection_link":""}},"collection_item_egxTPR":{"type":"collection_item","settings":{"collection":"snacks","image":"shopify://shop_images/Lahore_Eatery_Collection_9.jpg","collection_title":"Snacks","collection_link":""}},"collection_item_meFnLT":{"type":"collection_item","disabled":true,"settings":{"collection":"flavorful-sauces","image":"shopify://shop_images/Lahore_Eatery_Collection_7.jpg","collection_title":"Sauces & Chutneys","collection_link":""}},"collection_item_Die66F":{"type":"collection_item","settings":{"collection":"make-your-own","image":"shopify://shop_images/Lahore_Eatery_Collection_8.jpg","collection_title":"Make your own","collection_link":""}},"collection_item_6DpwVw":{"type":"collection_item","settings":{"collection":"value-deals","image":"shopify://shop_images/Lahore_Eatery_Collection_Images_1.jpg","collection_title":"Value Deals","collection_link":""}},"collection_item_zcpcJn":{"type":"collection_item","disabled":true,"settings":{"collection":"ramzan-deals","image":"shopify://shop_images/Lahore_Eatery_Collection_Images.jpg","collection_title":"Ramadan Deals","collection_link":""}}},"block_order":["collection_item_NixJRm","collection_item_gbWpz6","collection_item_bFnmmr","collection_item_VaqMNg","collection_item_ffaQLC","collection_item_j6PkgU","collection_item_QAdhg6","collection_item_aVPrba","collection_item_e3x3a9","collection_item_t43f69","collection_item_egCWPa","collection_item_W9zqrE","collection_item_egxTPR","collection_item_meFnLT","collection_item_Die66F","collection_item_6DpwVw","collection_item_zcpcJn"],"settings":{"show_on":"show_all","design_heading":"4","heading_align":"t4s-text-center","top_heading":"All the Flavors You Love, Right Here!","icon_heading":"","top_subheading":"","tophead_mb":10,"title_fs":13,"title_fw":400,"title_cl":"#151515","title_cl_hover":"#e15656","open_link":"_self","image_rd":true,"img_effect":"zoom","col_dk":"6","col_tb":"5","col_mb":"4","space_h_item":"30","space_h_item_mb":"10","loop":false,"au_time":4,"au_hover":false,"scrollbar":false,"nav_btn":false,"btn_pos":"ontop","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":true,"dot_owl":"elessi","dots_cl":"primary","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-wrap","cl_bg":"#ffffff","cl_bg_gradient":"","mg":",,10px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,5px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"1646028739ae283905":{"type":"slideshow","blocks":{"164602873867eb3815-0":{"type":"image_parent","disabled":true,"settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_Banners_1_b1ca6db4-aa7e-436f-9385-51b9ed3841ee.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_Banners_2.jpg","image_position":"8","cl_img":"","link_img1":"shopify://collections/most-loved","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"start","content_width":"container","cv_pos":50,"ch_pos":0,"cv_pos_mb":50,"ch_pos_mb":0,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"rgba(0,0,0,0)","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":30}},"image_parent_hT8QBa":{"type":"image_parent","settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_Banners_2_5d1cbe28-9acf-42c4-a617-d7fda9af16f0.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_Banners_3.jpg","image_position":"8","cl_img":"","link_img1":"shopify://collections/lean-lahore-club","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"start","content_width":"container","cv_pos":50,"ch_pos":0,"cv_pos_mb":50,"ch_pos_mb":0,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"rgba(0,0,0,0)","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":30}},"image_parent_7VEKyL":{"type":"image_parent","settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_Banners_3_1160c0a4-8056-4c2e-ba3c-62e13a4cd7ec.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_Banners_4.jpg","image_position":"8","cl_img":"","link_img1":"shopify://collections/signature-pockets","open_link":"_blank","animate_slide":"none","text_align":"center","text_align_mb":"center","content_width":"auto","cv_pos":50,"ch_pos":50,"cv_pos_mb":50,"ch_pos_mb":50,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"#ffffff","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":40}},"image_parent_L8p7HH":{"type":"image_parent","settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_2.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_2.jpg","image_position":"8","cl_img":"","link_img1":"shopify://collections/breaded-selection","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"start","content_width":"container","cv_pos":50,"ch_pos":0,"cv_pos_mb":50,"ch_pos_mb":0,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"rgba(0,0,0,0)","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":30}},"image_parent_yLbBqj":{"type":"image_parent","settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_4.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_4.jpg","image_position":"8","cl_img":"","link_img1":"shopify://collections/signature-pockets","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"start","content_width":"container","cv_pos":50,"ch_pos":0,"cv_pos_mb":50,"ch_pos_mb":0,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"rgba(0,0,0,0)","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":30}},"image_parent_NMB8Dc":{"type":"image_parent","disabled":true,"settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_Banners_2.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_5.jpg","image_position":"8","cl_img":"","link_img1":"shopify://collections/drinks","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"start","content_width":"container","cv_pos":50,"ch_pos":0,"cv_pos_mb":50,"ch_pos_mb":0,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"rgba(0,0,0,0)","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":30}}},"block_order":["164602873867eb3815-0","image_parent_hT8QBa","image_parent_7VEKyL","image_parent_L8p7HH","image_parent_yLbBqj","image_parent_NMB8Dc"],"settings":{"se_height":"t4s_ratioadapt","custom_dk":true,"height_dk":700,"custom_tb":true,"height_tb":500,"custom_mb":true,"height_mb":250,"eff":"fade","loop":true,"au_time":8.5,"au_hover":true,"nav_btn":false,"btn_vi":"hover","btn_owl":"default","btn_icon":"0","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":true,"dot_owl":"default","dots_position":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,30px,","pd":"","mg_tb":",50px","pd_tb":"","mg_mb":",,10px,","pd_mb":"","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"},"disabled":true},"slideshow_WLJREi":{"type":"slideshow","blocks":{"image_parent_NWEP7w":{"type":"image_parent","settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_Banners_1.png","image_mb":"shopify://shop_images/Lahore_Eatery_Web_Banners_2.png","image_position":"8","cl_img":"","link_img1":"","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"start","content_width":"container","cv_pos":50,"ch_pos":0,"cv_pos_mb":50,"ch_pos_mb":0,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"rgba(0,0,0,0)","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":30}}},"block_order":["image_parent_NWEP7w"],"settings":{"se_height":"t4s_ratioadapt","custom_dk":true,"height_dk":700,"custom_tb":true,"height_tb":500,"custom_mb":true,"height_mb":250,"eff":"fade","loop":true,"au_time":8.5,"au_hover":true,"nav_btn":false,"btn_vi":"hover","btn_owl":"default","btn_icon":"0","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":true,"dot_owl":"default","dots_position":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,30px,","pd":"","mg_tb":",50px","pd_tb":"","mg_mb":",,10px,","pd_mb":"","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"},"disabled":true},"164603686708691778":{"type":"featured-collection","settings":{"design_heading":"11","heading_align":"t4s-text-center","top_heading":"❤️ Loved by Everyone 👌","icon_heading":"gem","top_subheading":"Check out our Most Loved Snacks!","tophead_mb":15,"head_btn_label":"","head_btn_url":"","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"medium","head_btn_cl":"dark","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"most-loved","product_des":"4","show_vendor":false,"use_cdt":false,"image_ratio":"ratioadapt","image_size":"cover","image_position":"8","content_align":"center","limit":8,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","loop":true,"au_time":0,"au_hover":true,"center_slide":false,"nav_btn":true,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":true,"dot_owl":"default","dots_cl":"dark","dots_round":false,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"view-all","enable_bar_lm":true,"btn_icon":true,"button_style":"default","btns_size":"medium","btns_cl":"primary","button_effect":"fade","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,45px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,25px,","pd_mb":"","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"}},"custom_liquid_mmHxfh":{"type":"custom-liquid","settings":{"custom_liquid":"<section id=\"shopify-section-reels\" class=\"shopify-section section\">\n  <style>\n    .reels-container {\n      display: flex;\n      overflow-x: auto;\n      scroll-snap-type: x mandatory;\n      gap: 12px;\n      padding: 10px 6px;\n      width: 100%;\n      height: auto;\n    }\n\n    .video-wrapper {\n      position: relative;\n      flex: 0 0 auto;\n      width: 260px;\n      height: 380px;\n      border-radius: 12px;\n      overflow: hidden;\n    }\n\n    .reels-container video {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      background: #000;\n      border-radius: 12px;\n      pointer-events: none;\n    }\n\n    .play-pause-btn {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      background: rgba(0, 0, 0, 0.6);\n      border: none;\n      border-radius: 50%;\n      width: 50px;\n      height: 50px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      cursor: pointer;\n      transition: opacity 0.3s ease;\n    }\n\n    .play-pause-btn i {\n      color: white;\n      font-size: 24px;\n      display: block;\n    }\n\n    .video-wrapper:hover .play-pause-btn {\n      opacity: 1;\n    }\n\n    .reels-container::-webkit-scrollbar {\n      display: none;\n    }\n\n    @media screen and (max-width: 768px) {\n      .reels-container {\n        overflow-x: scroll;\n        padding: 10px 12px;\n        justify-content: start;\n      }\n\n      .video-wrapper {\n        width: 66vw;\n        height: 55vh;\n      }\n    }\n  </style>\n\n  <div class=\"color-background-1 gradient\">\n    <div class=\"reels-container\">\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/07597913484e483d9b0a5a9819fedcbd.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/cbbc379d7ee34019b3774e4b70749d37.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/3b1663ec9aad4495825dab6e977cece3.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/f2b260c4542c4cadaea53c6ac2ecd6ac.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/83a9d5b35c5a4fd4afba3e3a5e25f90e.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n    </div>\n  </div>\n\n  <script>\n    const videoWrappers = document.querySelectorAll('.video-wrapper');\n\n    videoWrappers.forEach(wrapper => {\n      const video = wrapper.querySelector('video');\n      const button = wrapper.querySelector('.play-pause-btn');\n      const icon = button.querySelector('i');\n\n      button.addEventListener('click', () => {\n        if (video.paused) {\n          // Pause all other videos before playing the clicked one\n          videoWrappers.forEach(otherWrapper => {\n            const otherVideo = otherWrapper.querySelector('video');\n            const otherIcon = otherWrapper.querySelector('.play-pause-btn i');\n\n            if (otherVideo !== video) {\n              otherVideo.pause();\n              otherIcon.classList.remove('fa-pause');\n              otherIcon.classList.add('fa-play');\n            }\n          });\n\n          video.muted = false; // Unmute when playing\n          video.play();\n          icon.classList.remove('fa-play');\n          icon.classList.add('fa-pause');\n        } else {\n          video.pause();\n          icon.classList.remove('fa-pause');\n          icon.classList.add('fa-play');\n        }\n      });\n\n      // Auto-update icon when video is played/paused\n      video.addEventListener('play', () => {\n        icon.classList.remove('fa-play');\n        icon.classList.add('fa-pause');\n      });\n\n      video.addEventListener('pause', () => {\n        icon.classList.remove('fa-pause');\n        icon.classList.add('fa-play');\n      });\n    });\n  </script>\n\n  <!-- Updated FontAwesome Link -->\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\">\n</section>","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":""}},"countdown_RT8UeV":{"type":"countdown","disabled":true,"settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"⭐ Ramadan is Coming ⭐ But Ramadan Deals are already Live!","icon_heading":"las la-gem","top_subheading":"","tophead_mb":10,"date":"2025/3/1","cdt_des":"1","cdt_size":"small","box_bdr":55,"bd_width":0,"space_item":21,"number_cl":"#ffffff","text_cl":"#222222","border_cl":"#ec0101","bg_cl":"#ec0101","content_align":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,20px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,15px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"16460362229768af39":{"type":"banner","blocks":{"164603622209bd8d44-3":{"type":"b_item","settings":{"custom_dk":true,"height_dk":600,"custom_tb":true,"height_tb":400,"custom_mb":true,"height_mb":300,"image":"shopify://shop_images/Main_New_1.png","b_link":"","open_link":"_self","img_effect":"zoom","b_effect":"none","col_dk":"6","col_tb":"6","col_mb":"12","content_align":"center","content_align_mobile":"center","content_width":"container","cv_pos":42,"ch_pos":50,"cv_pos_mb":50,"ch_pos_mb":50,"bg_overlay":"#000000","bg_opacity":0,"bg_content_bl":false,"bg_content_cl":"#ffffff","bg_content_op":50,"content_pd_tb":20,"content_pd_lr":20,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":40}},"164603622209bd8d44-0":{"type":"b_item","settings":{"custom_dk":false,"height_dk":600,"custom_tb":false,"height_tb":400,"custom_mb":false,"height_mb":300,"image":"shopify://shop_images/Main_New_2.png","b_link":"","open_link":"_self","img_effect":"zoom","b_effect":"none","col_dk":"6","col_tb":"6","col_mb":"12","content_align":"center","content_align_mobile":"center","content_width":"auto","cv_pos":50,"ch_pos":50,"cv_pos_mb":50,"ch_pos_mb":50,"bg_overlay":"#000000","bg_opacity":0,"bg_content_bl":false,"bg_content_cl":"#ffffff","bg_content_op":50,"content_pd_tb":20,"content_pd_lr":20,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":40}}},"block_order":["164603622209bd8d44-3","164603622209bd8d44-0"],"settings":{"image_ratio":"ratioadapt","image_size":"cover","image_position":"8","space_h_item":"6","space_v_item":"6","space_h_item_mb":"2","space_v_item_mb":"2","hidden_content_first":false,"layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,10px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"}},"featured_collection_pqLrXD":{"type":"featured-collection","disabled":true,"settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Tester Deals 🤌🏻✨💖","icon_heading":"","top_subheading":"Most Demanded Deals, Try all our flavors easily!","tophead_mb":20,"head_btn_label":"","head_btn_url":"shopify://collections/tester-deals","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"medium","head_btn_cl":"primary","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"tester-deals","product_des":"4","show_vendor":false,"use_cdt":false,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"default","limit":4,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","loop":true,"au_time":0,"au_hover":true,"center_slide":false,"nav_btn":false,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"view-all","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"extra-medium","btns_cl":"primary","button_effect":"outline","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,30px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"featured_collection_xhtFaH":{"type":"featured-collection","settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Signature Pockets 💫","icon_heading":"las la-gem","top_subheading":"Our Most Tasty, Unique and Best-Selling Delights!","tophead_mb":20,"head_btn_label":"","head_btn_url":"shopify://collections/signature-pockets","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"medium","head_btn_cl":"primary","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"signature-pockets","product_des":"4","show_vendor":false,"use_cdt":false,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"default","limit":4,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","loop":true,"au_time":0,"au_hover":true,"center_slide":false,"nav_btn":false,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"view-all","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"extra-medium","btns_cl":"primary","button_effect":"outline","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,30px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"featured_collection_ifKrTX":{"type":"featured-collection","settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Hassle-Free Deals 💯","icon_heading":"las la-gem","top_subheading":"Stock-up and Save!","tophead_mb":20,"head_btn_label":"","head_btn_url":"","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"medium","head_btn_cl":"dark","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"value-deals","product_des":"4","show_vendor":false,"use_cdt":false,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"default","limit":4,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","loop":true,"au_time":0,"au_hover":true,"center_slide":false,"nav_btn":false,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"view-all","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"extra-medium","btns_cl":"primary","button_effect":"outline","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"slideshow_zTGp9m":{"type":"slideshow","blocks":{"image_parent_aeeJ9J":{"type":"image_parent","settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_Banners_4.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_Banners.jpg","image_position":"8","cl_img":"","link_img1":"","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"center","content_width":"auto","cv_pos":50,"ch_pos":50,"cv_pos_mb":50,"ch_pos_mb":50,"bg_overlay":"#ffffff","bg_opacity":0,"bg_content_cl":"#ffffff","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":40}}},"block_order":["image_parent_aeeJ9J"],"disabled":true,"settings":{"se_height":"t4s_ratioadapt","custom_dk":true,"height_dk":600,"custom_tb":true,"height_tb":400,"custom_mb":true,"height_mb":250,"eff":"slide","loop":true,"au_time":0,"au_hover":true,"nav_btn":false,"btn_vi":"hover","btn_owl":"default","btn_icon":"0","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":false,"dot_owl":"default","dots_position":"default","dots_cl":"dark","dots_round":false,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"featured_collection_YJpCPP":{"type":"featured-collection","settings":{"design_heading":"9","heading_align":"t4s-text-center","top_heading":"Savoury Samosas! ✨","icon_heading":"las la-gem","top_subheading":"A lots of new flavors!","tophead_mb":10,"head_btn_label":"","head_btn_url":"shopify://collections/heavenly-samosas","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"small","head_btn_cl":"primary","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"heavenly-samosas","product_des":"4","show_vendor":false,"use_cdt":false,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"center","limit":4,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","loop":true,"au_time":0,"au_hover":true,"center_slide":false,"nav_btn":false,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"view-all","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"extra-medium","btns_cl":"primary","button_effect":"outline","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"featured_collection_WVyQ6B":{"type":"featured-collection","settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Delicious Kebab Selection 🤩","icon_heading":"las la-gem","top_subheading":"Traditional Kebab Taste of Pakistan, ready to cook & serve ✌️","tophead_mb":11,"head_btn_label":"","head_btn_url":"shopify://collections/kebab-selection","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"medium","head_btn_cl":"primary","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"kebab-selection","product_des":"4","show_vendor":false,"use_cdt":false,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"default","limit":4,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","loop":true,"au_time":0,"au_hover":true,"center_slide":false,"nav_btn":false,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"view-all","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"large","btns_cl":"primary","button_effect":"outline","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"slideshow_YppXKF":{"type":"slideshow","blocks":{"image_parent_h84VtE":{"type":"image_parent","settings":{"image":"shopify://shop_images/Lahore_Eatery_Web_3.jpg","image_mb":"shopify://shop_images/Lahore_Eatery_Mobile_3.jpg","image_position":"8","cl_img":"","link_img1":"","open_link":"_blank","animate_slide":"none","text_align":"start","text_align_mb":"center","content_width":"container","cv_pos":50,"ch_pos":50,"cv_pos_mb":50,"ch_pos_mb":50,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"#ffffff","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":40}}},"block_order":["image_parent_h84VtE"],"settings":{"se_height":"t4s_ratioadapt","custom_dk":true,"height_dk":600,"custom_tb":true,"height_tb":400,"custom_mb":true,"height_mb":250,"eff":"slide","loop":true,"au_time":0,"au_hover":true,"nav_btn":false,"btn_vi":"hover","btn_owl":"default","btn_icon":"0","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":false,"dot_owl":"default","dots_position":"default","dots_cl":"dark","dots_round":false,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""},"disabled":true},"featured_collection_B3FwbL":{"type":"featured-collection","settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Tasty Spring Rolls 🤓","icon_heading":"las la-gem","top_subheading":"A lots of filling in a large sized roll to satisfy your hunger!","tophead_mb":10,"head_btn_label":"","head_btn_url":"","head_btn_icon":false,"head_btn_style":"default","head_btn_size":"medium","head_btn_cl":"dark","head_btn_effect":"default","head_btn_hidden_mb":false,"collection":"spring-rolls","product_des":"4","show_vendor":false,"use_cdt":false,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"default","limit":4,"col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":true,"au_time":0,"au_hover":true,"center_slide":false,"nav_btn":false,"btns_pos":"default","btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"view-all","enable_bar_lm":true,"btn_icon":false,"button_style":"default","btns_size":"extra-medium","btns_cl":"primary","button_effect":"outline","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"164620932069107a3a":{"type":"shipping","blocks":{"164620932047c7965f-0":{"type":"shipping","settings":{"icon_themes":"car","icon":"las la-shipping-fast","title":"FREE DELIVERY Above Rs. 2500","text":"<p>Free delivery on all Orders Above Rs. 2500.</p>","html":""}},"164620932047c7965f-1":{"type":"shipping","settings":{"icon_themes":"help","icon":"las la-life-ring","title":"Delivery in Just 24-48 Hours","text":"<p>As we make fresh items, we try to delivery them in frozen form in 1-2 days.</p>","html":""}},"164620932047c7965f-2":{"type":"shipping","settings":{"icon_themes":"refesh","icon":"las la-undo-alt","title":"Returns are Possible!","text":"<p>In case of any issue, unopened food items can be returned.</p>","html":""}},"164620932047c7965f-3":{"type":"shipping","settings":{"icon_themes":"door-lock","icon":"las la-lock","title":"Don't Worry About Advance Payments","text":"<p>Foodies who pay in advance, your payments are secure and refundable in case of any issues.</p>","html":""}}},"block_order":["164620932047c7965f-0","164620932047c7965f-1","164620932047c7965f-2","164620932047c7965f-3"],"settings":{"design_heading":"16","heading_align":"t4s-text-center","top_heading":"Wanna know more before ordering?","icon_heading":"gem","top_subheading":"","tophead_mb":10,"content_align":"text-center","align_vertical":false,"design_padding":"1","source":"themes_icon","icon_des":"default","icon_size":"medium","col_dk":"4","col_tb":"2","col_mb":"1","border":false,"cl_bd":"#dddddd","cl_ic":"#c42b2b","cl_hd":"#dc5555","cl_cot":"#878787","bg_item":"#ffffff","hd_fs":16,"hd_fw":600,"txt_fs":13,"space_h_item":"30","space_v_item":"30","space_h_item_mb":"30","space_v_item_mb":"20","carousel_mobile":false,"dots_cl":"custom2","dots_round":true,"layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":"","pd":"55px,,25px,","mg_tb":",,50px,","pd_tb":"","mg_mb":"","pd_mb":"25px,,15px,","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"}},"1646209857bf69e76a":{"type":"instagram-shop","blocks":{"1646209857c01ad255-1":{"type":"img","settings":{"image":"shopify://shop_images/Lahore_Eatery_Post_2.jpg","url":"https://www.instagram.com/lahore.eatery","product_1":"ribbed-stripe-top","pos_t_1":39,"pos_l_1":38,"pos_popup_1":"top","cl_pin_1":"dark","product_2":"","pos_t_2":50,"pos_l_2":50,"pos_popup_2":"top","cl_pin_2":"dark","product_3":"","pos_t_3":50,"pos_l_3":50,"pos_popup_3":"top","cl_pin_3":"light"}},"1646209857c01ad255-5":{"type":"img","settings":{"image":"shopify://shop_images/Other_Posts_1.jpg","url":"https://www.instagram.com/lahore.eatery","product_1":"long-sleeve-tie-front-top","pos_t_1":34,"pos_l_1":74,"pos_popup_1":"top","cl_pin_1":"dark","product_2":"","pos_t_2":50,"pos_l_2":50,"pos_popup_2":"top","cl_pin_2":"dark","product_3":"","pos_t_3":50,"pos_l_3":50,"pos_popup_3":"top","cl_pin_3":"light"}},"1646209857c01ad255-4":{"type":"img","settings":{"image":"shopify://shop_images/LE_Signs_Post_6.jpg","url":"https://www.instagram.com/lahore.eatery","product_1":"wide-fit-dusty","pos_t_1":74,"pos_l_1":37,"pos_popup_1":"top","cl_pin_1":"dark","product_2":"","pos_t_2":50,"pos_l_2":50,"pos_popup_2":"top","cl_pin_2":"dark","product_3":"","pos_t_3":50,"pos_l_3":50,"pos_popup_3":"top","cl_pin_3":"light"}},"1646209857c01ad255-2":{"type":"img","settings":{"image":"shopify://shop_images/Lahore_Eatery_New_Creatives_Posts_Till_August_1.jpg","url":"https://www.instagram.com/lahore.eatery","product_1":"short-sleeved-hoodie","pos_t_1":30,"pos_l_1":60,"pos_popup_1":"top","cl_pin_1":"dark","product_2":"retro-lace-up-sneakers","pos_t_2":95,"pos_l_2":43,"pos_popup_2":"top","cl_pin_2":"dark","product_3":"","pos_t_3":50,"pos_l_3":50,"pos_popup_3":"top","cl_pin_3":"light"}},"1646209857c01ad255-0":{"type":"img","settings":{"image":"shopify://shop_images/Other_Posts_3.jpg","url":"https://www.instagram.com/lahore.eatery","product_1":"high-waist-straight-leg","pos_t_1":65,"pos_l_1":50,"pos_popup_1":"top","cl_pin_1":"dark","product_2":"","pos_t_2":50,"pos_l_2":50,"pos_popup_2":"top","cl_pin_2":"dark","product_3":"","pos_t_3":50,"pos_l_3":50,"pos_popup_3":"top","cl_pin_3":"light"}},"1646209857c01ad255-3":{"type":"img","settings":{"image":"shopify://shop_images/Lahore_Eatery_New_Creatives_Posts_Till_August.jpg","url":"https://www.instagram.com/lahore.eatery","product_1":"striped-long-sleeve-top","pos_t_1":50,"pos_l_1":50,"pos_popup_1":"top","cl_pin_1":"dark","product_2":"","pos_t_2":50,"pos_l_2":50,"pos_popup_2":"top","cl_pin_2":"dark","product_3":"","pos_t_3":50,"pos_l_3":50,"pos_popup_3":"top","cl_pin_3":"light"}}},"block_order":["1646209857c01ad255-1","1646209857c01ad255-5","1646209857c01ad255-4","1646209857c01ad255-2","1646209857c01ad255-0","1646209857c01ad255-3"],"settings":{"design_heading":"16","heading_align":"t4s-text-center","top_heading":"Follow us @lahore.eatery","icon_heading":"gem","top_subheading":"","tophead_mb":20,"layout_des":"2","pr_pin_des":"6","open_link":"_blank","space":"2","space_mb":"2","col_dk":"6","col_tb":"3","col_mb":"2","image_ratio":"ratio1_1","image_size":"cover","image_position":"8","image_bdr":0,"loop":false,"au_time":0,"au_hover":true,"nav_btn":true,"btn_vi":"always","btn_owl":"outline","btn_shape":"round","btn_cl":"default","btn_size":"small","btn_hidden_mobile":false,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":false,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":"","pd":"","mg_tb":"","pd_tb":"","mg_mb":"","pd_mb":""}},"16460368750174c54a":{"type":"blog-post","disabled":true,"settings":{"design_heading":"2","heading_align":"t4s-text-center","top_heading":"LATES FROM BLOG","bt_lb":"Button label","icon_heading":"gem","top_subheading":"The freshest and most exciting news","tophead_mb":30,"blog":"fashion","post_des":"1","show_cate":false,"show_tags":false,"show_cnt":true,"show_au":true,"show_dt":true,"show_cm":false,"show_rm":false,"show_irm":false,"date":"date","content_align":"t4s-text-start","limit":3,"img_effect":"translateToTop","b_effect":"border-run","image_ratio":"ratio4_3","image_size":"cover","image_position":"8","col_dk":"3","col_tb":"2","col_mb":"1","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":false,"au_time":0,"au_hover":true,"nav_btn":true,"btn_vi":"always","btn_owl":"outline","btn_shape":"round","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":false,"dots_space":10,"dots_hidden_mobile":false,"use_pagination":"none","enable_bar_lm":true,"btn_icon":true,"button_style":"outline","btns_size":"medium","btns_cl":"dark","button_effect":"fade","btn_pos":"t4s-text-center","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,105px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"}},"164603504020ce33da":{"type":"collections-list-manual","blocks":{"1646035040fee424aa-0":{"type":"collection_item","settings":{"collection":"value-deals","image":"shopify://shop_images/Easier_Home_Parties_3.jpg","collection_title":"Deals","collection_link":""}},"1646035040fee424aa-1":{"type":"collection_item","settings":{"collection":"most-loved","image":"shopify://shop_images/Easier_Home_Parties_619a1d10-2f1c-4f69-bdca-e6f37db4f9d6.jpg","collection_title":"","collection_link":""}},"1646035040fee424aa-2":{"type":"collection_item","settings":{"collection":"guest-special","image":"shopify://shop_images/Easier_Home_Parties_1_af98ad14-f44f-4ef0-be55-7a332bd6171e.jpg","collection_title":"","collection_link":""}},"fb81d2b5-38b4-4322-93fc-cd722f8758f3":{"type":"collection_item","settings":{"collection":"breaded-selection","image":"shopify://shop_images/Easier_Home_Parties_1140_x_600_px_33131d55-d067-4b62-b4d1-753a964410b6.jpg","collection_title":"","collection_link":""}}},"block_order":["1646035040fee424aa-0","1646035040fee424aa-1","1646035040fee424aa-2","fb81d2b5-38b4-4322-93fc-cd722f8758f3"],"disabled":true,"settings":{"design_heading":"2","heading_align":"t4s-text-center","top_heading":"Shop By Collection","icon_heading":"gem","top_subheading":"","tophead_mb":30,"collection_des":"1","title_cl":"#ffffff","title_cl_hover":"#222222","subtitle_cl":"#878787","count_cl":"#222222","border_cl":"#e5e5e5","collection_subtitle":"Products","open_link":"_self","space_bottom":20,"space_bottom_mb":10,"border":false,"item_rd":0,"item_rd_unit":"%","img_effect":"zoom","b_effect":"none","image_position":"7","coll_layout":"3","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,110px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,50px,","pd_mb":"","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"}},"collections_list_manual_t3w9qE":{"type":"collections-list-manual","blocks":{"collection_item_cMe7mQ":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}},"collection_item_EbhdFr":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}},"collection_item_4RAG9X":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}},"collection_item_WkX6w4":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}},"collection_item_gwGraF":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}},"collection_item_4EXGrx":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}},"collection_item_BMCFPz":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}},"collection_item_bW8Y69":{"type":"collection_item","settings":{"collection":"","collection_title":"Collection title","collection_link":""}}},"block_order":["collection_item_cMe7mQ","collection_item_EbhdFr","collection_item_4RAG9X","collection_item_WkX6w4","collection_item_gwGraF","collection_item_4EXGrx","collection_item_BMCFPz","collection_item_bW8Y69"],"disabled":true,"settings":{"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Collections list manual","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"collection_des":"1","title_cl":"#ffffff","title_cl_hover":"#222222","subtitle_cl":"#878787","count_cl":"#222222","border_cl":"#e5e5e5","collection_subtitle":"Products","open_link":"_self","space_bottom":20,"space_bottom_mb":10,"border":false,"item_rd":0,"item_rd_unit":"%","img_effect":"none","b_effect":"none","image_position":"8","coll_layout":"1","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_tb":"","pd_tb":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"17383511173830307a":{"type":"apps","settings":{}},"le_hero_main":{"type":"le-hero","settings":{"social_proof":"4.8 stars from 10,000+ reviews • 50,000+ happy customers","heading":"Authentic Pakistani Flavors","heading_highlight":"Delivered to Your Door","cta_text":"Order Now","cta_link":"/collections/most-loved","trust_1":"Free delivery above Rs. 2500","trust_2":"Fresh & frozen daily","stat_1_num":"20+","stat_1_label":"Snacks","stat_1_sub":"Pockets, rolls & more","stat_2_num":"100%","stat_2_label":"Halal","stat_2_sub":"Certified & verified","stat_3_num":"48hr","stat_3_label":"Delivery","stat_3_sub":"Frozen & fresh to you","badge_text":"Order Now & Save!","bg_color":"#fef7f0","accent_color":"#e94949","stat_circle_color":"#ffd166"}},"le_social_proof":{"type":"le-social-proof","settings":{"stat1_num":"4.8 stars","stat1_label":"from 5,000+ reviews","stat2_icon":"🚚","stat2_num":"50,000+","stat2_label":"orders delivered","stat3_icon":"✅","stat3_num":"100%","stat3_label":"Halal certified","bg_color":"#ffffff","accent_color":"#e94949"}},"le_value_props":{"type":"le-value-props","settings":{"heading":"Why Lahore Eatery?","bg_color":"#faf6e4","card_bg":"#f0ede0","card_1_emoji":"🥙","card_1_title":"Freshly Prepared","card_1_body":"Made fresh in our kitchen and frozen to lock in taste, texture, and nutrition — straight to your door.","card_2_emoji":"✅","card_2_title":"100% Halal","card_2_body":"Every single ingredient we use is certified Halal. No compromises, no shortcuts — ever.","card_3_emoji":"🚚","card_3_title":"Delivered in 48hrs","card_3_body":"Order today and receive your fresh frozen snacks within 24–48 hours anywhere in Pakistan."}}},"order":["le_hero_main","le_social_proof","le_value_props","collections_list_carousel_fVhWbq","164603686708691778","16460362229768af39","featured_collection_xhtFaH","featured_collection_ifKrTX","featured_collection_YJpCPP","featured_collection_WVyQ6B","featured_collection_B3FwbL","164620932069107a3a","custom_liquid_mmHxfh","1646209857bf69e76a","17383511173830307a","1646028739ae283905","slideshow_WLJREi","slideshow_YppXKF","slideshow_zTGp9m","countdown_RT8UeV","featured_collection_pqLrXD","16460368750174c54a","164603504020ce33da","collections_list_manual_t3w9qE"]}
+{
+  "sections": {
+    "collections_list_carousel_fVhWbq": {
+      "type": "collections-list-carousel",
+      "blocks": {
+        "collection_item_NixJRm": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images_2_e9a31cec-f74e-4f62-9bee-5361e6e1db8c.jpg",
+            "collection_title": "Ramadan Deals",
+            "collection_link": "shopify://collections/ramzan-deals"
+          }
+        },
+        "collection_item_gbWpz6": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "pickles-pop-lahori-chatkara",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images_c2d5b79d-b3f6-47fa-8d1c-daa33194d209.jpg",
+            "collection_title": "Pickles Pop",
+            "collection_link": "shopify://collections/pickles-pop-lahori-chatkara"
+          }
+        },
+        "collection_item_bFnmmr": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "lean-lahore-club",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images_4.jpg",
+            "collection_title": "Lean Lahore Club",
+            "collection_link": ""
+          }
+        },
+        "collection_item_VaqMNg": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "tester-deals",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images_2.jpg",
+            "collection_title": "Tester Deals",
+            "collection_link": ""
+          }
+        },
+        "collection_item_ffaQLC": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "signature-pockets",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_1.jpg",
+            "collection_title": "Pockets",
+            "collection_link": ""
+          }
+        },
+        "collection_item_j6PkgU": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "spring-rolls",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_2.jpg",
+            "collection_title": "Spring Rolls",
+            "collection_link": ""
+          }
+        },
+        "collection_item_QAdhg6": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "heavenly-samosas",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_3.jpg",
+            "collection_title": "Samosas",
+            "collection_link": ""
+          }
+        },
+        "collection_item_aVPrba": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "breaded-selection",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_4.jpg",
+            "collection_title": "Breaded Selection",
+            "collection_link": ""
+          }
+        },
+        "collection_item_e3x3a9": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "kebab-selection",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_6.jpg",
+            "collection_title": "Kebabs",
+            "collection_link": ""
+          }
+        },
+        "collection_item_t43f69": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "frozen-fries",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_11.jpg",
+            "collection_title": "Frozen Fries",
+            "collection_link": ""
+          }
+        },
+        "collection_item_egCWPa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "guest-special",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_5.jpg",
+            "collection_title": "Guest Special",
+            "collection_link": ""
+          }
+        },
+        "collection_item_W9zqrE": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "drinks",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_10.jpg",
+            "collection_title": "Sharbat",
+            "collection_link": ""
+          }
+        },
+        "collection_item_egxTPR": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "snacks",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_9.jpg",
+            "collection_title": "Snacks",
+            "collection_link": ""
+          }
+        },
+        "collection_item_meFnLT": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "flavorful-sauces",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_7.jpg",
+            "collection_title": "Sauces & Chutneys",
+            "collection_link": ""
+          }
+        },
+        "collection_item_Die66F": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "make-your-own",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_8.jpg",
+            "collection_title": "Make your own",
+            "collection_link": ""
+          }
+        },
+        "collection_item_6DpwVw": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "value-deals",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images_1.jpg",
+            "collection_title": "Value Deals",
+            "collection_link": ""
+          }
+        },
+        "collection_item_zcpcJn": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "ramzan-deals",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images.jpg",
+            "collection_title": "Ramadan Deals",
+            "collection_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_NixJRm",
+        "collection_item_gbWpz6",
+        "collection_item_bFnmmr",
+        "collection_item_VaqMNg",
+        "collection_item_ffaQLC",
+        "collection_item_j6PkgU",
+        "collection_item_QAdhg6",
+        "collection_item_aVPrba",
+        "collection_item_e3x3a9",
+        "collection_item_t43f69",
+        "collection_item_egCWPa",
+        "collection_item_W9zqrE",
+        "collection_item_egxTPR",
+        "collection_item_meFnLT",
+        "collection_item_Die66F",
+        "collection_item_6DpwVw",
+        "collection_item_zcpcJn"
+      ],
+      "settings": {
+        "show_on": "show_all",
+        "design_heading": "4",
+        "heading_align": "t4s-text-center",
+        "top_heading": "All the Flavors You Love, Right Here!",
+        "icon_heading": "",
+        "top_subheading": "",
+        "tophead_mb": 10,
+        "title_fs": 13,
+        "title_fw": 400,
+        "title_cl": "#151515",
+        "title_cl_hover": "#e15656",
+        "open_link": "_self",
+        "image_rd": true,
+        "img_effect": "zoom",
+        "col_dk": "6",
+        "col_tb": "5",
+        "col_mb": "4",
+        "space_h_item": "30",
+        "space_h_item_mb": "10",
+        "loop": false,
+        "au_time": 4,
+        "au_hover": false,
+        "scrollbar": false,
+        "nav_btn": false,
+        "btn_pos": "ontop",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": true,
+        "dot_owl": "elessi",
+        "dots_cl": "primary",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#ffffff",
+        "cl_bg_gradient": "",
+        "mg": ",,10px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,5px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      },
+      "disabled": true
+    },
+    "1646028739ae283905": {
+      "type": "slideshow",
+      "blocks": {
+        "164602873867eb3815-0": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_Banners_1_b1ca6db4-aa7e-436f-9385-51b9ed3841ee.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_Banners_2.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://collections/most-loved",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "start",
+            "content_width": "container",
+            "cv_pos": 50,
+            "ch_pos": 0,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 0,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "rgba(0,0,0,0)",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 30
+          }
+        },
+        "image_parent_hT8QBa": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_Banners_2_5d1cbe28-9acf-42c4-a617-d7fda9af16f0.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_Banners_3.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://collections/lean-lahore-club",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "start",
+            "content_width": "container",
+            "cv_pos": 50,
+            "ch_pos": 0,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 0,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "rgba(0,0,0,0)",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 30
+          }
+        },
+        "image_parent_7VEKyL": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_Banners_3_1160c0a4-8056-4c2e-ba3c-62e13a4cd7ec.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_Banners_4.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://collections/signature-pockets",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "center",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "image_parent_L8p7HH": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_2.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_2.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://collections/breaded-selection",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "start",
+            "content_width": "container",
+            "cv_pos": 50,
+            "ch_pos": 0,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 0,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "rgba(0,0,0,0)",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 30
+          }
+        },
+        "image_parent_yLbBqj": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_4.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_4.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://collections/signature-pockets",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "start",
+            "content_width": "container",
+            "cv_pos": 50,
+            "ch_pos": 0,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 0,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "rgba(0,0,0,0)",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 30
+          }
+        },
+        "image_parent_NMB8Dc": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_Banners_2.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_5.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify://collections/drinks",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "start",
+            "content_width": "container",
+            "cv_pos": 50,
+            "ch_pos": 0,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 0,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "rgba(0,0,0,0)",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 30
+          }
+        }
+      },
+      "block_order": [
+        "164602873867eb3815-0",
+        "image_parent_hT8QBa",
+        "image_parent_7VEKyL",
+        "image_parent_L8p7HH",
+        "image_parent_yLbBqj",
+        "image_parent_NMB8Dc"
+      ],
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 700,
+        "custom_tb": true,
+        "height_tb": 500,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "fade",
+        "loop": true,
+        "au_time": 8.5,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_icon": "0",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": true,
+        "dot_owl": "default",
+        "dots_position": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,30px,",
+        "pd": "",
+        "mg_tb": ",50px",
+        "pd_tb": "",
+        "mg_mb": ",,10px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      },
+      "disabled": true
+    },
+    "slideshow_WLJREi": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_NWEP7w": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_Banners_1.png",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Web_Banners_2.png",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "start",
+            "content_width": "container",
+            "cv_pos": 50,
+            "ch_pos": 0,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 0,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "rgba(0,0,0,0)",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_NWEP7w"
+      ],
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 700,
+        "custom_tb": true,
+        "height_tb": 500,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "fade",
+        "loop": true,
+        "au_time": 8.5,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_icon": "0",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": true,
+        "dot_owl": "default",
+        "dots_position": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,30px,",
+        "pd": "",
+        "mg_tb": ",50px",
+        "pd_tb": "",
+        "mg_mb": ",,10px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      },
+      "disabled": true
+    },
+    "164603686708691778": {
+      "type": "featured-collection",
+      "settings": {
+        "design_heading": "11",
+        "heading_align": "t4s-text-center",
+        "top_heading": "❤️ Loved by Everyone 👌",
+        "icon_heading": "gem",
+        "top_subheading": "Check out our Most Loved Snacks!",
+        "tophead_mb": 15,
+        "head_btn_label": "",
+        "head_btn_url": "",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "medium",
+        "head_btn_cl": "dark",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "most-loved",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "limit": 8,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "center_slide": false,
+        "nav_btn": true,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": true,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "view-all",
+        "enable_bar_lm": true,
+        "btn_icon": true,
+        "button_style": "default",
+        "btns_size": "medium",
+        "btns_cl": "primary",
+        "button_effect": "fade",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,45px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,25px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      },
+      "disabled": true
+    },
+    "custom_liquid_mmHxfh": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section id=\"shopify-section-reels\" class=\"shopify-section section\">\n  <style>\n    .reels-container {\n      display: flex;\n      overflow-x: auto;\n      scroll-snap-type: x mandatory;\n      gap: 12px;\n      padding: 10px 6px;\n      width: 100%;\n      height: auto;\n    }\n\n    .video-wrapper {\n      position: relative;\n      flex: 0 0 auto;\n      width: 260px;\n      height: 380px;\n      border-radius: 12px;\n      overflow: hidden;\n    }\n\n    .reels-container video {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      background: #000;\n      border-radius: 12px;\n      pointer-events: none;\n    }\n\n    .play-pause-btn {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      background: rgba(0, 0, 0, 0.6);\n      border: none;\n      border-radius: 50%;\n      width: 50px;\n      height: 50px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      cursor: pointer;\n      transition: opacity 0.3s ease;\n    }\n\n    .play-pause-btn i {\n      color: white;\n      font-size: 24px;\n      display: block;\n    }\n\n    .video-wrapper:hover .play-pause-btn {\n      opacity: 1;\n    }\n\n    .reels-container::-webkit-scrollbar {\n      display: none;\n    }\n\n    @media screen and (max-width: 768px) {\n      .reels-container {\n        overflow-x: scroll;\n        padding: 10px 12px;\n        justify-content: start;\n      }\n\n      .video-wrapper {\n        width: 66vw;\n        height: 55vh;\n      }\n    }\n  </style>\n\n  <div class=\"color-background-1 gradient\">\n    <div class=\"reels-container\">\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/07597913484e483d9b0a5a9819fedcbd.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/cbbc379d7ee34019b3774e4b70749d37.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/3b1663ec9aad4495825dab6e977cece3.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/f2b260c4542c4cadaea53c6ac2ecd6ac.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n\n      <div class=\"video-wrapper\">\n        <video muted playsinline preload=\"auto\">\n          <source src=\"https://cdn.shopify.com/videos/c/o/v/83a9d5b35c5a4fd4afba3e3a5e25f90e.mp4\" type=\"video/mp4\">\n        </video>\n        <button class=\"play-pause-btn\"><i class=\"fa-solid fa-play\"></i></button>\n      </div>\n    </div>\n  </div>\n\n  <script>\n    const videoWrappers = document.querySelectorAll('.video-wrapper');\n\n    videoWrappers.forEach(wrapper => {\n      const video = wrapper.querySelector('video');\n      const button = wrapper.querySelector('.play-pause-btn');\n      const icon = button.querySelector('i');\n\n      button.addEventListener('click', () => {\n        if (video.paused) {\n          // Pause all other videos before playing the clicked one\n          videoWrappers.forEach(otherWrapper => {\n            const otherVideo = otherWrapper.querySelector('video');\n            const otherIcon = otherWrapper.querySelector('.play-pause-btn i');\n\n            if (otherVideo !== video) {\n              otherVideo.pause();\n              otherIcon.classList.remove('fa-pause');\n              otherIcon.classList.add('fa-play');\n            }\n          });\n\n          video.muted = false; // Unmute when playing\n          video.play();\n          icon.classList.remove('fa-play');\n          icon.classList.add('fa-pause');\n        } else {\n          video.pause();\n          icon.classList.remove('fa-pause');\n          icon.classList.add('fa-play');\n        }\n      });\n\n      // Auto-update icon when video is played/paused\n      video.addEventListener('play', () => {\n        icon.classList.remove('fa-play');\n        icon.classList.add('fa-pause');\n      });\n\n      video.addEventListener('pause', () => {\n        icon.classList.remove('fa-pause');\n        icon.classList.add('fa-play');\n      });\n    });\n  </script>\n\n  <!-- Updated FontAwesome Link -->\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\">\n</section>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "countdown_RT8UeV": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "⭐ Ramadan is Coming ⭐ But Ramadan Deals are already Live!",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 10,
+        "date": "2025/3/1",
+        "cdt_des": "1",
+        "cdt_size": "small",
+        "box_bdr": 55,
+        "bd_width": 0,
+        "space_item": 21,
+        "number_cl": "#ffffff",
+        "text_cl": "#222222",
+        "border_cl": "#ec0101",
+        "bg_cl": "#ec0101",
+        "content_align": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,20px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,15px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "16460362229768af39": {
+      "type": "banner",
+      "blocks": {
+        "164603622209bd8d44-3": {
+          "type": "b_item",
+          "settings": {
+            "custom_dk": true,
+            "height_dk": 600,
+            "custom_tb": true,
+            "height_tb": 400,
+            "custom_mb": true,
+            "height_mb": 300,
+            "image": "shopify://shop_images/Main_New_1.png",
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "zoom",
+            "b_effect": "none",
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "content_align": "center",
+            "content_align_mobile": "center",
+            "content_width": "container",
+            "cv_pos": 42,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_bl": false,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 50,
+            "content_pd_tb": 20,
+            "content_pd_lr": 20,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "164603622209bd8d44-0": {
+          "type": "b_item",
+          "settings": {
+            "custom_dk": false,
+            "height_dk": 600,
+            "custom_tb": false,
+            "height_tb": 400,
+            "custom_mb": false,
+            "height_mb": 300,
+            "image": "shopify://shop_images/Main_New_2.png",
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "zoom",
+            "b_effect": "none",
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "content_align": "center",
+            "content_align_mobile": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_bl": false,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 50,
+            "content_pd_tb": 20,
+            "content_pd_lr": 20,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        }
+      },
+      "block_order": [
+        "164603622209bd8d44-3",
+        "164603622209bd8d44-0"
+      ],
+      "settings": {
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "space_h_item": "6",
+        "space_v_item": "6",
+        "space_h_item_mb": "2",
+        "space_v_item_mb": "2",
+        "hidden_content_first": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,10px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      },
+      "disabled": true
+    },
+    "featured_collection_pqLrXD": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Tester Deals 🤌🏻✨💖",
+        "icon_heading": "",
+        "top_subheading": "Most Demanded Deals, Try all our flavors easily!",
+        "tophead_mb": 20,
+        "head_btn_label": "",
+        "head_btn_url": "shopify://collections/tester-deals",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "medium",
+        "head_btn_cl": "primary",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "tester-deals",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "limit": 4,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "center_slide": false,
+        "nav_btn": false,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "view-all",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "extra-medium",
+        "btns_cl": "primary",
+        "button_effect": "outline",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,30px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "featured_collection_xhtFaH": {
+      "type": "featured-collection",
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Signature Pockets 💫",
+        "icon_heading": "las la-gem",
+        "top_subheading": "Our Most Tasty, Unique and Best-Selling Delights!",
+        "tophead_mb": 20,
+        "head_btn_label": "",
+        "head_btn_url": "shopify://collections/signature-pockets",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "medium",
+        "head_btn_cl": "primary",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "signature-pockets",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "limit": 4,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "center_slide": false,
+        "nav_btn": false,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "view-all",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "extra-medium",
+        "btns_cl": "primary",
+        "button_effect": "outline",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,30px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      },
+      "disabled": true
+    },
+    "featured_collection_ifKrTX": {
+      "type": "featured-collection",
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Hassle-Free Deals 💯",
+        "icon_heading": "las la-gem",
+        "top_subheading": "Stock-up and Save!",
+        "tophead_mb": 20,
+        "head_btn_label": "",
+        "head_btn_url": "",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "medium",
+        "head_btn_cl": "dark",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "value-deals",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "limit": 4,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "center_slide": false,
+        "nav_btn": false,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "view-all",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "extra-medium",
+        "btns_cl": "primary",
+        "button_effect": "outline",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      },
+      "disabled": true
+    },
+    "slideshow_zTGp9m": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_aeeJ9J": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_Banners_4.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_Banners.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#ffffff",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_aeeJ9J"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_icon": "0",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_position": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "featured_collection_YJpCPP": {
+      "type": "featured-collection",
+      "settings": {
+        "design_heading": "9",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Savoury Samosas! ✨",
+        "icon_heading": "las la-gem",
+        "top_subheading": "A lots of new flavors!",
+        "tophead_mb": 10,
+        "head_btn_label": "",
+        "head_btn_url": "shopify://collections/heavenly-samosas",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "small",
+        "head_btn_cl": "primary",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "heavenly-samosas",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "limit": 4,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "center_slide": false,
+        "nav_btn": false,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "view-all",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "extra-medium",
+        "btns_cl": "primary",
+        "button_effect": "outline",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      },
+      "disabled": true
+    },
+    "featured_collection_WVyQ6B": {
+      "type": "featured-collection",
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Delicious Kebab Selection 🤩",
+        "icon_heading": "las la-gem",
+        "top_subheading": "Traditional Kebab Taste of Pakistan, ready to cook & serve ✌️",
+        "tophead_mb": 11,
+        "head_btn_label": "",
+        "head_btn_url": "shopify://collections/kebab-selection",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "medium",
+        "head_btn_cl": "primary",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "kebab-selection",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "limit": 4,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "center_slide": false,
+        "nav_btn": false,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "view-all",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "large",
+        "btns_cl": "primary",
+        "button_effect": "outline",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      },
+      "disabled": true
+    },
+    "slideshow_YppXKF": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_h84VtE": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Web_3.jpg",
+            "image_mb": "shopify://shop_images/Lahore_Eatery_Mobile_3.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "container",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_h84VtE"
+      ],
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_icon": "0",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_position": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      },
+      "disabled": true
+    },
+    "featured_collection_B3FwbL": {
+      "type": "featured-collection",
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Tasty Spring Rolls 🤓",
+        "icon_heading": "las la-gem",
+        "top_subheading": "A lots of filling in a large sized roll to satisfy your hunger!",
+        "tophead_mb": 10,
+        "head_btn_label": "",
+        "head_btn_url": "",
+        "head_btn_icon": false,
+        "head_btn_style": "default",
+        "head_btn_size": "medium",
+        "head_btn_cl": "dark",
+        "head_btn_effect": "default",
+        "head_btn_hidden_mb": false,
+        "collection": "spring-rolls",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "limit": 4,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "center_slide": false,
+        "nav_btn": false,
+        "btns_pos": "default",
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "view-all",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "default",
+        "btns_size": "extra-medium",
+        "btns_cl": "primary",
+        "button_effect": "outline",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      },
+      "disabled": true
+    },
+    "164620932069107a3a": {
+      "type": "shipping",
+      "blocks": {
+        "164620932047c7965f-0": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "car",
+            "icon": "las la-shipping-fast",
+            "title": "FREE DELIVERY Above Rs. 2500",
+            "text": "<p>Free delivery on all Orders Above Rs. 2500.</p>",
+            "html": ""
+          }
+        },
+        "164620932047c7965f-1": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "help",
+            "icon": "las la-life-ring",
+            "title": "Delivery in Just 24-48 Hours",
+            "text": "<p>As we make fresh items, we try to delivery them in frozen form in 1-2 days.</p>",
+            "html": ""
+          }
+        },
+        "164620932047c7965f-2": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "refesh",
+            "icon": "las la-undo-alt",
+            "title": "Returns are Possible!",
+            "text": "<p>In case of any issue, unopened food items can be returned.</p>",
+            "html": ""
+          }
+        },
+        "164620932047c7965f-3": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "door-lock",
+            "icon": "las la-lock",
+            "title": "Don't Worry About Advance Payments",
+            "text": "<p>Foodies who pay in advance, your payments are secure and refundable in case of any issues.</p>",
+            "html": ""
+          }
+        }
+      },
+      "block_order": [
+        "164620932047c7965f-0",
+        "164620932047c7965f-1",
+        "164620932047c7965f-2",
+        "164620932047c7965f-3"
+      ],
+      "settings": {
+        "design_heading": "16",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Wanna know more before ordering?",
+        "icon_heading": "gem",
+        "top_subheading": "",
+        "tophead_mb": 10,
+        "content_align": "text-center",
+        "align_vertical": false,
+        "design_padding": "1",
+        "source": "themes_icon",
+        "icon_des": "default",
+        "icon_size": "medium",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "1",
+        "border": false,
+        "cl_bd": "#dddddd",
+        "cl_ic": "#c42b2b",
+        "cl_hd": "#dc5555",
+        "cl_cot": "#878787",
+        "bg_item": "#ffffff",
+        "hd_fs": 16,
+        "hd_fw": 600,
+        "txt_fs": 13,
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "30",
+        "space_v_item_mb": "20",
+        "carousel_mobile": false,
+        "dots_cl": "custom2",
+        "dots_round": true,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "55px,,25px,",
+        "mg_tb": ",,50px,",
+        "pd_tb": "",
+        "mg_mb": "",
+        "pd_mb": "25px,,15px,",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      },
+      "disabled": true
+    },
+    "1646209857bf69e76a": {
+      "type": "instagram-shop",
+      "blocks": {
+        "1646209857c01ad255-1": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_Post_2.jpg",
+            "url": "https://www.instagram.com/lahore.eatery",
+            "product_1": "ribbed-stripe-top",
+            "pos_t_1": 39,
+            "pos_l_1": 38,
+            "pos_popup_1": "top",
+            "cl_pin_1": "dark",
+            "product_2": "",
+            "pos_t_2": 50,
+            "pos_l_2": 50,
+            "pos_popup_2": "top",
+            "cl_pin_2": "dark",
+            "product_3": "",
+            "pos_t_3": 50,
+            "pos_l_3": 50,
+            "pos_popup_3": "top",
+            "cl_pin_3": "light"
+          }
+        },
+        "1646209857c01ad255-5": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Other_Posts_1.jpg",
+            "url": "https://www.instagram.com/lahore.eatery",
+            "product_1": "long-sleeve-tie-front-top",
+            "pos_t_1": 34,
+            "pos_l_1": 74,
+            "pos_popup_1": "top",
+            "cl_pin_1": "dark",
+            "product_2": "",
+            "pos_t_2": 50,
+            "pos_l_2": 50,
+            "pos_popup_2": "top",
+            "cl_pin_2": "dark",
+            "product_3": "",
+            "pos_t_3": 50,
+            "pos_l_3": 50,
+            "pos_popup_3": "top",
+            "cl_pin_3": "light"
+          }
+        },
+        "1646209857c01ad255-4": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/LE_Signs_Post_6.jpg",
+            "url": "https://www.instagram.com/lahore.eatery",
+            "product_1": "wide-fit-dusty",
+            "pos_t_1": 74,
+            "pos_l_1": 37,
+            "pos_popup_1": "top",
+            "cl_pin_1": "dark",
+            "product_2": "",
+            "pos_t_2": 50,
+            "pos_l_2": 50,
+            "pos_popup_2": "top",
+            "cl_pin_2": "dark",
+            "product_3": "",
+            "pos_t_3": 50,
+            "pos_l_3": 50,
+            "pos_popup_3": "top",
+            "cl_pin_3": "light"
+          }
+        },
+        "1646209857c01ad255-2": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_New_Creatives_Posts_Till_August_1.jpg",
+            "url": "https://www.instagram.com/lahore.eatery",
+            "product_1": "short-sleeved-hoodie",
+            "pos_t_1": 30,
+            "pos_l_1": 60,
+            "pos_popup_1": "top",
+            "cl_pin_1": "dark",
+            "product_2": "retro-lace-up-sneakers",
+            "pos_t_2": 95,
+            "pos_l_2": 43,
+            "pos_popup_2": "top",
+            "cl_pin_2": "dark",
+            "product_3": "",
+            "pos_t_3": 50,
+            "pos_l_3": 50,
+            "pos_popup_3": "top",
+            "cl_pin_3": "light"
+          }
+        },
+        "1646209857c01ad255-0": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Other_Posts_3.jpg",
+            "url": "https://www.instagram.com/lahore.eatery",
+            "product_1": "high-waist-straight-leg",
+            "pos_t_1": 65,
+            "pos_l_1": 50,
+            "pos_popup_1": "top",
+            "cl_pin_1": "dark",
+            "product_2": "",
+            "pos_t_2": 50,
+            "pos_l_2": 50,
+            "pos_popup_2": "top",
+            "cl_pin_2": "dark",
+            "product_3": "",
+            "pos_t_3": 50,
+            "pos_l_3": 50,
+            "pos_popup_3": "top",
+            "cl_pin_3": "light"
+          }
+        },
+        "1646209857c01ad255-3": {
+          "type": "img",
+          "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery_New_Creatives_Posts_Till_August.jpg",
+            "url": "https://www.instagram.com/lahore.eatery",
+            "product_1": "striped-long-sleeve-top",
+            "pos_t_1": 50,
+            "pos_l_1": 50,
+            "pos_popup_1": "top",
+            "cl_pin_1": "dark",
+            "product_2": "",
+            "pos_t_2": 50,
+            "pos_l_2": 50,
+            "pos_popup_2": "top",
+            "cl_pin_2": "dark",
+            "product_3": "",
+            "pos_t_3": 50,
+            "pos_l_3": 50,
+            "pos_popup_3": "top",
+            "cl_pin_3": "light"
+          }
+        }
+      },
+      "block_order": [
+        "1646209857c01ad255-1",
+        "1646209857c01ad255-5",
+        "1646209857c01ad255-4",
+        "1646209857c01ad255-2",
+        "1646209857c01ad255-0",
+        "1646209857c01ad255-3"
+      ],
+      "settings": {
+        "design_heading": "16",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Follow us @lahore.eatery",
+        "icon_heading": "gem",
+        "top_subheading": "",
+        "tophead_mb": 20,
+        "layout_des": "2",
+        "pr_pin_des": "6",
+        "open_link": "_blank",
+        "space": "2",
+        "space_mb": "2",
+        "col_dk": "6",
+        "col_tb": "3",
+        "col_mb": "2",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "image_bdr": 0,
+        "loop": false,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "default",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "16460368750174c54a": {
+      "type": "blog-post",
+      "disabled": true,
+      "settings": {
+        "design_heading": "2",
+        "heading_align": "t4s-text-center",
+        "top_heading": "LATES FROM BLOG",
+        "bt_lb": "Button label",
+        "icon_heading": "gem",
+        "top_subheading": "The freshest and most exciting news",
+        "tophead_mb": 30,
+        "blog": "fashion",
+        "post_des": "1",
+        "show_cate": false,
+        "show_tags": false,
+        "show_cnt": true,
+        "show_au": true,
+        "show_dt": true,
+        "show_cm": false,
+        "show_rm": false,
+        "show_irm": false,
+        "date": "date",
+        "content_align": "t4s-text-start",
+        "limit": 3,
+        "img_effect": "translateToTop",
+        "b_effect": "border-run",
+        "image_ratio": "ratio4_3",
+        "image_size": "cover",
+        "image_position": "8",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": false,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "use_pagination": "none",
+        "enable_bar_lm": true,
+        "btn_icon": true,
+        "button_style": "outline",
+        "btns_size": "medium",
+        "btns_cl": "dark",
+        "button_effect": "fade",
+        "btn_pos": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,105px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "164603504020ce33da": {
+      "type": "collections-list-manual",
+      "blocks": {
+        "1646035040fee424aa-0": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "value-deals",
+            "image": "shopify://shop_images/Easier_Home_Parties_3.jpg",
+            "collection_title": "Deals",
+            "collection_link": ""
+          }
+        },
+        "1646035040fee424aa-1": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "most-loved",
+            "image": "shopify://shop_images/Easier_Home_Parties_619a1d10-2f1c-4f69-bdca-e6f37db4f9d6.jpg",
+            "collection_title": "",
+            "collection_link": ""
+          }
+        },
+        "1646035040fee424aa-2": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "guest-special",
+            "image": "shopify://shop_images/Easier_Home_Parties_1_af98ad14-f44f-4ef0-be55-7a332bd6171e.jpg",
+            "collection_title": "",
+            "collection_link": ""
+          }
+        },
+        "fb81d2b5-38b4-4322-93fc-cd722f8758f3": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "breaded-selection",
+            "image": "shopify://shop_images/Easier_Home_Parties_1140_x_600_px_33131d55-d067-4b62-b4d1-753a964410b6.jpg",
+            "collection_title": "",
+            "collection_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1646035040fee424aa-0",
+        "1646035040fee424aa-1",
+        "1646035040fee424aa-2",
+        "fb81d2b5-38b4-4322-93fc-cd722f8758f3"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "2",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Shop By Collection",
+        "icon_heading": "gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "collection_des": "1",
+        "title_cl": "#ffffff",
+        "title_cl_hover": "#222222",
+        "subtitle_cl": "#878787",
+        "count_cl": "#222222",
+        "border_cl": "#e5e5e5",
+        "collection_subtitle": "Products",
+        "open_link": "_self",
+        "space_bottom": 20,
+        "space_bottom_mb": 10,
+        "border": false,
+        "item_rd": 0,
+        "item_rd_unit": "%",
+        "img_effect": "zoom",
+        "b_effect": "none",
+        "image_position": "7",
+        "coll_layout": "3",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,110px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,50px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "collections_list_manual_t3w9qE": {
+      "type": "collections-list-manual",
+      "blocks": {
+        "collection_item_cMe7mQ": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        },
+        "collection_item_EbhdFr": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        },
+        "collection_item_4RAG9X": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        },
+        "collection_item_WkX6w4": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        },
+        "collection_item_gwGraF": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        },
+        "collection_item_4EXGrx": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        },
+        "collection_item_BMCFPz": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        },
+        "collection_item_bW8Y69": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "collection_title": "Collection title",
+            "collection_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_cMe7mQ",
+        "collection_item_EbhdFr",
+        "collection_item_4RAG9X",
+        "collection_item_WkX6w4",
+        "collection_item_gwGraF",
+        "collection_item_4EXGrx",
+        "collection_item_BMCFPz",
+        "collection_item_bW8Y69"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Collections list manual",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "collection_des": "1",
+        "title_cl": "#ffffff",
+        "title_cl_hover": "#222222",
+        "subtitle_cl": "#878787",
+        "count_cl": "#222222",
+        "border_cl": "#e5e5e5",
+        "collection_subtitle": "Products",
+        "open_link": "_self",
+        "space_bottom": 20,
+        "space_bottom_mb": 10,
+        "border": false,
+        "item_rd": 0,
+        "item_rd_unit": "%",
+        "img_effect": "none",
+        "b_effect": "none",
+        "image_position": "8",
+        "coll_layout": "1",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "17383511173830307a": {
+      "type": "apps",
+      "settings": {}
+    },
+    "le_hero_main": {
+      "type": "le-hero",
+      "settings": {
+        "social_proof": "4.8 stars from 10,000+ reviews • 50,000+ happy customers",
+        "heading": "Authentic Pakistani Flavors",
+        "heading_highlight": "Delivered to Your Door",
+        "cta_text": "Order Now",
+        "cta_link": "/collections/most-loved",
+        "trust_1": "Free delivery above Rs. 2500",
+        "trust_2": "Fresh & frozen daily",
+        "stat_1_num": "20+",
+        "stat_1_label": "Snacks",
+        "stat_1_sub": "Pockets, rolls & more",
+        "stat_2_num": "100%",
+        "stat_2_label": "Halal",
+        "stat_2_sub": "Certified & verified",
+        "stat_3_num": "48hr",
+        "stat_3_label": "Delivery",
+        "stat_3_sub": "Frozen & fresh to you",
+        "badge_text": "Order Now & Save!",
+        "bg_color": "#faf6e4",
+        "accent_color": "#007E40",
+        "stat_circle_color": "#dff5d8"
+      }
+    },
+    "le_social_proof": {
+      "type": "le-social-proof",
+      "settings": {
+        "stat1_num": "4.8 stars",
+        "stat1_label": "from 5,000+ reviews",
+        "stat2_icon": "🚚",
+        "stat2_num": "50,000+",
+        "stat2_label": "orders delivered",
+        "stat3_icon": "✅",
+        "stat3_num": "100%",
+        "stat3_label": "Halal certified",
+        "bg_color": "#ffffff",
+        "accent_color": "#007E40"
+      }
+    },
+    "le_value_props": {
+      "type": "le-value-props",
+      "settings": {
+        "heading": "Why Lahore Eatery?",
+        "bg_color": "#ffffff",
+        "card_bg": "#dff5d8",
+        "card_1_emoji": "🥙",
+        "card_1_title": "Freshly Prepared",
+        "card_1_body": "Made fresh in our kitchen and frozen to lock in taste, texture, and nutrition — straight to your door.",
+        "card_2_emoji": "✅",
+        "card_2_title": "100% Halal",
+        "card_2_body": "Every single ingredient we use is certified Halal. No compromises, no shortcuts — ever.",
+        "card_3_emoji": "🚚",
+        "card_3_title": "Delivered in 48hrs",
+        "card_3_body": "Order today and receive your fresh frozen snacks within 24–48 hours anywhere in Pakistan."
+      }
+    },
+    "le_marquee": {
+      "type": "le-marquee",
+      "blocks": {
+        "mq_1": {
+          "type": "item",
+          "settings": {
+            "icon": "✅",
+            "text": "100% Halal"
+          }
+        },
+        "mq_2": {
+          "type": "item",
+          "settings": {
+            "icon": "🔥",
+            "text": "Made fresh in Lahore"
+          }
+        },
+        "mq_3": {
+          "type": "item",
+          "settings": {
+            "icon": "❄️",
+            "text": "Frozen to lock in flavor"
+          }
+        },
+        "mq_4": {
+          "type": "item",
+          "settings": {
+            "icon": "🚚",
+            "text": "Delivered in 24–48 hrs"
+          }
+        },
+        "mq_5": {
+          "type": "item",
+          "settings": {
+            "icon": "💵",
+            "text": "Cash on delivery"
+          }
+        },
+        "mq_6": {
+          "type": "item",
+          "settings": {
+            "icon": "⭐",
+            "text": "4.8 stars from 5,000+ reviews"
+          }
+        }
+      },
+      "block_order": [
+        "mq_1",
+        "mq_2",
+        "mq_3",
+        "mq_4",
+        "mq_5",
+        "mq_6"
+      ],
+      "settings": {
+        "aria_label": "Why customers love Lahore Eatery",
+        "bg_color": "#007E40",
+        "text_color": "#ffffff",
+        "speed": 35
+      }
+    },
+    "le_product_tabs": {
+      "type": "le-product-tabs",
+      "blocks": {
+        "tab_1": {
+          "type": "tab",
+          "settings": {
+            "collection": "most-loved",
+            "label": "Most Loved"
+          }
+        },
+        "tab_2": {
+          "type": "tab",
+          "settings": {
+            "collection": "signature-pockets",
+            "label": "Pockets"
+          }
+        },
+        "tab_3": {
+          "type": "tab",
+          "settings": {
+            "collection": "value-deals",
+            "label": "Deals"
+          }
+        },
+        "tab_4": {
+          "type": "tab",
+          "settings": {
+            "collection": "heavenly-samosas",
+            "label": "Samosas"
+          }
+        },
+        "tab_5": {
+          "type": "tab",
+          "settings": {
+            "collection": "kebab-selection",
+            "label": "Kebabs"
+          }
+        },
+        "tab_6": {
+          "type": "tab",
+          "settings": {
+            "collection": "spring-rolls",
+            "label": "Spring Rolls"
+          }
+        }
+      },
+      "block_order": [
+        "tab_1",
+        "tab_2",
+        "tab_3",
+        "tab_4",
+        "tab_5",
+        "tab_6"
+      ],
+      "settings": {
+        "eyebrow": "Our bestsellers",
+        "heading": "Find your new favorite snack",
+        "subheading": "Crispy, juicy and packed with authentic Lahori flavor — ready in minutes from your freezer.",
+        "limit": 8,
+        "rating_text": "4.8",
+        "badge_text": "Bestseller",
+        "bestseller_count": 2,
+        "atc_text": "Add to cart",
+        "view_all_text": "Shop all",
+        "bg_color": "#faf6e4"
+      }
+    },
+    "le_split": {
+      "type": "le-split",
+      "blocks": {
+        "pt_1": {
+          "type": "point",
+          "settings": {
+            "icon": "🥩",
+            "title": "Premium halal meat",
+            "body": "Hand-picked chicken and beef, sourced from certified halal suppliers."
+          }
+        },
+        "pt_2": {
+          "type": "point",
+          "settings": {
+            "icon": "🌶️",
+            "title": "Authentic Lahori spices",
+            "body": "Family recipes with the masalas you grew up with — never watered down."
+          }
+        },
+        "pt_3": {
+          "type": "point",
+          "settings": {
+            "icon": "❄️",
+            "title": "Flash-frozen fresh",
+            "body": "Made in small batches and frozen the same day to lock in taste and texture."
+          }
+        }
+      },
+      "block_order": [
+        "pt_1",
+        "pt_2",
+        "pt_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Lahore_Eatery_Collection_3.jpg",
+        "image_right": false,
+        "eyebrow": "What's inside",
+        "heading": "Real ingredients. Real Lahori taste.",
+        "body": "No shortcuts, no fillers. Every snack is made in our kitchen the way it would be made at home — just faster to put on your table.",
+        "cta_text": "Shop all snacks",
+        "cta_link": "/collections/all",
+        "bg_color": "#faf6e4"
+      }
+    },
+    "le_stats": {
+      "type": "le-stats",
+      "blocks": {
+        "st_1": {
+          "type": "stat",
+          "settings": {
+            "number": "50K+",
+            "label": "orders delivered to happy families"
+          }
+        },
+        "st_2": {
+          "type": "stat",
+          "settings": {
+            "number": "4.8★",
+            "label": "average rating from 5,000+ reviews"
+          }
+        },
+        "st_3": {
+          "type": "stat",
+          "settings": {
+            "number": "100%",
+            "label": "halal certified ingredients"
+          }
+        },
+        "st_4": {
+          "type": "stat",
+          "settings": {
+            "number": "48hr",
+            "label": "from our kitchen to your freezer"
+          }
+        }
+      },
+      "block_order": [
+        "st_1",
+        "st_2",
+        "st_3",
+        "st_4"
+      ],
+      "settings": {
+        "eyebrow": "The numbers speak",
+        "heading": "Pakistan's favorite frozen snacks",
+        "subheading": "",
+        "note": "",
+        "bg_color": "#00502a",
+        "text_color": "#ffffff",
+        "accent_color": "#ffd166"
+      }
+    },
+    "le_category_tiles": {
+      "type": "le-category-tiles",
+      "blocks": {
+        "cat_1": {
+          "type": "tile",
+          "settings": {
+            "collection": "signature-pockets",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_1.jpg",
+            "title": "Pockets"
+          }
+        },
+        "cat_2": {
+          "type": "tile",
+          "settings": {
+            "collection": "heavenly-samosas",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_3.jpg",
+            "title": "Samosas"
+          }
+        },
+        "cat_3": {
+          "type": "tile",
+          "settings": {
+            "collection": "spring-rolls",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_2.jpg",
+            "title": "Spring Rolls"
+          }
+        },
+        "cat_4": {
+          "type": "tile",
+          "settings": {
+            "collection": "kebab-selection",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_6.jpg",
+            "title": "Kebabs"
+          }
+        },
+        "cat_5": {
+          "type": "tile",
+          "settings": {
+            "collection": "breaded-selection",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_4.jpg",
+            "title": "Breaded Selection"
+          }
+        },
+        "cat_6": {
+          "type": "tile",
+          "settings": {
+            "collection": "frozen-fries",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_11.jpg",
+            "title": "Frozen Fries"
+          }
+        },
+        "cat_7": {
+          "type": "tile",
+          "settings": {
+            "collection": "snacks",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_9.jpg",
+            "title": "Snacks"
+          }
+        },
+        "cat_8": {
+          "type": "tile",
+          "settings": {
+            "collection": "value-deals",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images_1.jpg",
+            "title": "Value Deals"
+          }
+        },
+        "cat_9": {
+          "type": "tile",
+          "settings": {
+            "collection": "guest-special",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_5.jpg",
+            "title": "Guest Special"
+          }
+        },
+        "cat_10": {
+          "type": "tile",
+          "settings": {
+            "collection": "lean-lahore-club",
+            "image": "shopify://shop_images/Lahore_Eatery_Collection_Images_4.jpg",
+            "title": "Lean Lahore Club"
+          }
+        }
+      },
+      "block_order": [
+        "cat_1",
+        "cat_2",
+        "cat_3",
+        "cat_4",
+        "cat_5",
+        "cat_6",
+        "cat_7",
+        "cat_8",
+        "cat_9",
+        "cat_10"
+      ],
+      "settings": {
+        "eyebrow": "Shop by craving",
+        "heading": "All the flavors you love",
+        "subheading": "",
+        "columns": 5,
+        "bg_color": "#ffffff"
+      }
+    },
+    "le_comparison": {
+      "type": "le-comparison",
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "feature": "100% halal certified",
+            "us": true,
+            "other_1": false,
+            "other_2": true
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "feature": "Authentic Lahori recipes",
+            "us": true,
+            "other_1": false,
+            "other_2": true
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "feature": "Ready in under 10 minutes",
+            "us": true,
+            "other_1": true,
+            "other_2": false
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "feature": "Made fresh, frozen same day",
+            "us": true,
+            "other_1": false,
+            "other_2": true
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "feature": "No preservatives or fillers",
+            "us": true,
+            "other_1": false,
+            "other_2": true
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "feature": "Delivered to your door in 48hrs",
+            "us": true,
+            "other_1": true,
+            "other_2": false
+          }
+        },
+        "row_7": {
+          "type": "row",
+          "settings": {
+            "feature": "No mess, no prep, no cleanup",
+            "us": true,
+            "other_1": true,
+            "other_2": false
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6",
+        "row_7"
+      ],
+      "settings": {
+        "eyebrow": "The difference",
+        "heading": "Why we're not like the rest",
+        "subheading": "Homemade taste without the hours in the kitchen.",
+        "col_1": "Lahore Eatery",
+        "col_2": "Other frozen brands",
+        "col_3": "Making it at home",
+        "cta_text": "Try it yourself",
+        "cta_link": "/collections/most-loved",
+        "bg_color": "#ffffff"
+      }
+    },
+    "le_steps": {
+      "type": "le-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "icon": "🛒",
+            "title": "Pick your favorites",
+            "body": "Build your box from samosas, rolls, kebabs, pockets and value deals."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "icon": "🚚",
+            "title": "We deliver in 48hrs",
+            "body": "Packed frozen and delivered to your door. Free delivery above Rs. 2500."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "icon": "🍳",
+            "title": "Fry, air-fry or bake",
+            "body": "Straight from freezer to pan — hot, crispy snacks in under 10 minutes."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "From our kitchen to your table",
+        "subheading": "",
+        "cta_text": "Start your order",
+        "cta_link": "/collections/most-loved",
+        "bg_color": "#dff5d8"
+      }
+    },
+    "le_reviews": {
+      "type": "le-reviews",
+      "blocks": {
+        "rv_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Tastes just like home",
+            "body": "[Replace with a real customer review] Crispy samosas with the perfect filling.",
+            "author": "Customer name",
+            "location": "Lahore"
+          }
+        },
+        "rv_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Our iftar go-to",
+            "body": "[Replace with a real customer review] Saves us so much time every evening.",
+            "author": "Customer name",
+            "location": "Karachi"
+          }
+        },
+        "rv_3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Kids love the pockets",
+            "body": "[Replace with a real customer review] Quick, filling and the kids finish every one.",
+            "author": "Customer name",
+            "location": "Islamabad"
+          }
+        },
+        "rv_4": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Great for guests",
+            "body": "[Replace with a real customer review] Always have a box ready for unexpected guests.",
+            "author": "Customer name",
+            "location": "Lahore"
+          }
+        }
+      },
+      "block_order": [
+        "rv_1",
+        "rv_2",
+        "rv_3",
+        "rv_4"
+      ],
+      "settings": {
+        "eyebrow": "Reviews",
+        "heading": "Loved by 50,000+ families",
+        "summary": "4.8 out of 5 from 5,000+ reviews",
+        "bg_color": "#faf6e4"
+      },
+      "disabled": true
+    },
+    "le_faq": {
+      "type": "le-faq",
+      "blocks": {
+        "q_1": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>As we make items fresh, we deliver them frozen within 24–48 hours.</p>"
+          }
+        },
+        "q_2": {
+          "type": "question",
+          "settings": {
+            "question": "Is delivery free?",
+            "answer": "<p>Yes — delivery is free on all orders above Rs. 2500.</p>"
+          }
+        },
+        "q_3": {
+          "type": "question",
+          "settings": {
+            "question": "Are your products halal?",
+            "answer": "<p>Yes. Every ingredient we use is 100% halal certified.</p>"
+          }
+        },
+        "q_4": {
+          "type": "question",
+          "settings": {
+            "question": "How do I cook them?",
+            "answer": "<p>Cook straight from frozen — deep-fry, air-fry or bake. Cooking instructions are on every pack and most snacks are ready in under 10 minutes.</p>"
+          }
+        },
+        "q_5": {
+          "type": "question",
+          "settings": {
+            "question": "Do I have to pay in advance?",
+            "answer": "<p>No, cash on delivery is available. If you pay in advance, your payment is secure and refundable in case of any issues.</p>"
+          }
+        },
+        "q_6": {
+          "type": "question",
+          "settings": {
+            "question": "Can I return an order?",
+            "answer": "<p>Yes. In case of any issue, unopened food items can be returned.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q_1",
+        "q_2",
+        "q_3",
+        "q_4",
+        "q_5",
+        "q_6"
+      ],
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Questions? We've got answers.",
+        "open_first": true,
+        "bg_color": "#ffffff"
+      }
+    },
+    "le_cta_band": {
+      "type": "le-cta-band",
+      "settings": {
+        "emoji": "🥟",
+        "heading": "Ready to taste Lahore?",
+        "subheading": "Stock your freezer with the snacks everyone's talking about.",
+        "cta_text": "Order now",
+        "cta_link": "/collections/most-loved",
+        "trust": "100% Halal | Delivered in 48hrs | Free delivery above Rs. 2500",
+        "bg_color": "#007E40",
+        "text_color": "#ffffff",
+        "outer_bg": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "le_hero_main",
+    "le_marquee",
+    "le_social_proof",
+    "le_product_tabs",
+    "le_value_props",
+    "le_split",
+    "le_stats",
+    "le_category_tiles",
+    "le_comparison",
+    "le_steps",
+    "le_reviews",
+    "custom_liquid_mmHxfh",
+    "le_faq",
+    "le_cta_band",
+    "1646209857bf69e76a",
+    "17383511173830307a",
+    "collections_list_carousel_fVhWbq",
+    "164603686708691778",
+    "16460362229768af39",
+    "featured_collection_xhtFaH",
+    "featured_collection_ifKrTX",
+    "featured_collection_YJpCPP",
+    "featured_collection_WVyQ6B",
+    "featured_collection_B3FwbL",
+    "164620932069107a3a",
+    "1646028739ae283905",
+    "slideshow_WLJREi",
+    "slideshow_YppXKF",
+    "slideshow_zTGp9m",
+    "countdown_RT8UeV",
+    "featured_collection_pqLrXD",
+    "16460368750174c54a",
+    "164603504020ce33da",
+    "collections_list_manual_t3w9qE"
+  ]
+}

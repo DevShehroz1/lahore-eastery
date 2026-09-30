@@ -1,0 +1,76 @@
+{%- assign s = section.settings -%}
+<style>
+  #le-sp-{{ section.id }} { background: {{ s.bg_color }}; }
+  #le-sp-{{ section.id }} .le-sp__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  #le-sp-{{ section.id }} .le-sp__media { border-radius: var(--le-radius); overflow: hidden; aspect-ratio: 1 / 1; background: var(--le-mint); {% if s.image_right %}order: 2;{% endif %} }
+  #le-sp-{{ section.id }} .le-sp__media img, #le-sp-{{ section.id }} .le-sp__media svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #le-sp-{{ section.id }} .le-sp__text .le-lead { margin: 0 0 28px; }
+  #le-sp-{{ section.id }} .le-sp__list { list-style: none; padding: 0; margin: 0 0 32px; display: grid; gap: 16px; }
+  #le-sp-{{ section.id }} .le-sp__item { display: flex; gap: 14px; align-items: flex-start; }
+  #le-sp-{{ section.id }} .le-sp__icon { flex: 0 0 44px; height: 44px; border-radius: 50%; background: var(--le-mint); display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  #le-sp-{{ section.id }} .le-sp__item-title { font-size: 18px; font-weight: 700; margin: 0 0 2px; }
+  #le-sp-{{ section.id }} .le-sp__item-body { font-size: 15px; line-height: 1.5; color: var(--le-ink-soft); margin: 0; }
+  @media (max-width: 767px) {
+    #le-sp-{{ section.id }} .le-sp__grid { grid-template-columns: 1fr; gap: 32px; }
+    #le-sp-{{ section.id }} .le-sp__media { order: 0; aspect-ratio: 4 / 3; }
+  }
+</style>
+<div id="le-sp-{{ section.id }}" class="le-sec">
+  <div class="le-wrap le-sp__grid">
+    <div class="le-sp__media">
+      {%- if s.image != blank -%}
+        {{ s.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500,750,1000', sizes: '(max-width: 767px) 100vw, 50vw' }}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag }}
+      {%- endif -%}
+    </div>
+    <div class="le-sp__text">
+      {%- if s.eyebrow != blank -%}<p class="le-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+      {%- if s.heading != blank -%}<h2 class="le-h2">{{ s.heading }}</h2>{%- endif -%}
+      {%- if s.body != blank -%}<p class="le-lead">{{ s.body }}</p>{%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <ul class="le-sp__list">
+          {%- for block in section.blocks -%}
+            <li class="le-sp__item" {{ block.shopify_attributes }}>
+              <span class="le-sp__icon" aria-hidden="true">{{ block.settings.icon }}</span>
+              <div>
+                <p class="le-sp__item-title">{{ block.settings.title }}</p>
+                {%- if block.settings.body != blank -%}<p class="le-sp__item-body">{{ block.settings.body }}</p>{%- endif -%}
+              </div>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+      {%- if s.cta_text != blank -%}<a href="{{ s.cta_link | default: '/collections/all' }}" class="le-btn">{{ s.cta_text }}</a>{%- endif -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "LE Image + Text",
+  "tag": "section",
+  "class": "t4s-section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "checkbox", "id": "image_right", "label": "Image on right (desktop)", "default": false },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "What's inside" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Real ingredients. Real Lahori taste." },
+    { "type": "textarea", "id": "body", "label": "Body" },
+    { "type": "text", "id": "cta_text", "label": "Button text", "default": "Shop now" },
+    { "type": "url", "id": "cta_link", "label": "Button link" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#faf6e4" }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon / emoji", "default": "🌿" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Fresh ingredients" },
+        { "type": "textarea", "id": "body", "label": "Description" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "LE Image + Text", "blocks": [{ "type": "point" }, { "type": "point" }, { "type": "point" }] }]
+}
+{% endschema %}

@@ -1,0 +1,96 @@
+{%- assign s = section.settings -%}
+<style>
+  #le-cmp-{{ section.id }} { background: {{ s.bg_color }}; }
+  #le-cmp-{{ section.id }} .le-cmp__table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: separate; border-spacing: 0; font-family: var(--le-font); }
+  #le-cmp-{{ section.id }} th, #le-cmp-{{ section.id }} td { padding: 18px 16px; text-align: center; font-size: 16px; border-bottom: 1px solid rgba(0,31,16,.1); }
+  #le-cmp-{{ section.id }} thead th { font-size: 16px; font-weight: 800; border-bottom: 0; vertical-align: bottom; }
+  #le-cmp-{{ section.id }} tbody th { text-align: left; font-weight: 600; }
+  #le-cmp-{{ section.id }} .le-cmp__us { background: var(--le-green); color: #fff; width: 22%; }
+  #le-cmp-{{ section.id }} thead .le-cmp__us { border-radius: 20px 20px 0 0; padding-top: 24px; font-size: 18px; }
+  #le-cmp-{{ section.id }} tbody tr:last-child .le-cmp__us { border-radius: 0 0 20px 20px; }
+  #le-cmp-{{ section.id }} tbody .le-cmp__us { border-bottom-color: rgba(255,255,255,.18); }
+  #le-cmp-{{ section.id }} .le-cmp__other { width: 22%; color: var(--le-ink-soft); }
+  #le-cmp-{{ section.id }} .le-yes, #le-cmp-{{ section.id }} .le-no { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; font-weight: 800; font-size: 16px; }
+  #le-cmp-{{ section.id }} .le-yes { background: #fff; color: var(--le-green); }
+  #le-cmp-{{ section.id }} .le-cmp__other .le-yes { background: var(--le-mint); }
+  #le-cmp-{{ section.id }} .le-no { background: rgba(0,31,16,.08); color: rgba(0,31,16,.45); }
+  #le-cmp-{{ section.id }} .le-cmp__cta { text-align: center; margin-top: 40px; }
+  @media (max-width: 767px) {
+    #le-cmp-{{ section.id }} th, #le-cmp-{{ section.id }} td { padding: 14px 6px; font-size: 13px; }
+    #le-cmp-{{ section.id }} thead th, #le-cmp-{{ section.id }} thead .le-cmp__us { font-size: 13px; }
+    #le-cmp-{{ section.id }} .le-yes, #le-cmp-{{ section.id }} .le-no { width: 24px; height: 24px; font-size: 13px; }
+  }
+</style>
+{%- liquid
+  assign cols = 1
+  if s.col_2 != blank
+    assign cols = 2
+  endif
+  if s.col_3 != blank
+    assign cols = 3
+  endif
+-%}
+<div id="le-cmp-{{ section.id }}" class="le-sec">
+  <div class="le-wrap">
+    <div class="le-head le-center">
+      {%- if s.eyebrow != blank -%}<p class="le-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+      {%- if s.heading != blank -%}<h2 class="le-h2">{{ s.heading }}</h2>{%- endif -%}
+      {%- if s.subheading != blank -%}<p class="le-lead">{{ s.subheading }}</p>{%- endif -%}
+    </div>
+    <table class="le-cmp__table">
+      <thead>
+        <tr>
+          <th scope="col"><span class="le-sr">Feature</span></th>
+          <th scope="col" class="le-cmp__us">{{ s.col_1 }}</th>
+          {%- if cols >= 2 -%}<th scope="col" class="le-cmp__other">{{ s.col_2 }}</th>{%- endif -%}
+          {%- if cols >= 3 -%}<th scope="col" class="le-cmp__other">{{ s.col_3 }}</th>{%- endif -%}
+        </tr>
+      </thead>
+      <tbody>
+        {%- for block in section.blocks -%}
+          {%- assign b = block.settings -%}
+          <tr {{ block.shopify_attributes }}>
+            <th scope="row">{{ b.feature }}</th>
+            <td class="le-cmp__us">{% if b.us %}<span class="le-yes" aria-label="Yes">✓</span>{% else %}<span class="le-no" aria-label="No">✕</span>{% endif %}</td>
+            {%- if cols >= 2 -%}<td class="le-cmp__other">{% if b.other_1 %}<span class="le-yes" aria-label="Yes">✓</span>{% else %}<span class="le-no" aria-label="No">✕</span>{% endif %}</td>{%- endif -%}
+            {%- if cols >= 3 -%}<td class="le-cmp__other">{% if b.other_2 %}<span class="le-yes" aria-label="Yes">✓</span>{% else %}<span class="le-no" aria-label="No">✕</span>{% endif %}</td>{%- endif -%}
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+    {%- if s.cta_text != blank -%}
+      <div class="le-cmp__cta"><a href="{{ s.cta_link | default: '/collections/all' }}" class="le-btn">{{ s.cta_text }}</a></div>
+    {%- endif -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "LE Comparison",
+  "tag": "section",
+  "class": "t4s-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The difference" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Why we're not like the rest" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading" },
+    { "type": "text", "id": "col_1", "label": "Our column", "default": "Lahore Eatery" },
+    { "type": "text", "id": "col_2", "label": "Comparison column 1", "default": "Other frozen brands" },
+    { "type": "text", "id": "col_3", "label": "Comparison column 2", "default": "Making it at home" },
+    { "type": "text", "id": "cta_text", "label": "Button text", "default": "Shop now" },
+    { "type": "url", "id": "cta_link", "label": "Button link" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#ffffff" }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "text", "id": "feature", "label": "Feature", "default": "100% Halal ingredients" },
+        { "type": "checkbox", "id": "us", "label": "Our column has it", "default": true },
+        { "type": "checkbox", "id": "other_1", "label": "Comparison column 1 has it", "default": false },
+        { "type": "checkbox", "id": "other_2", "label": "Comparison column 2 has it", "default": false }
+      ]
+    }
+  ],
+  "presets": [{ "name": "LE Comparison", "blocks": [{ "type": "row" }, { "type": "row" }, { "type": "row" }] }]
+}
+{% endschema %}

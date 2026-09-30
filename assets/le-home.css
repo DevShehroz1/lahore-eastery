@@ -1,0 +1,37 @@
+/* Lahore Eatery homepage — gruns.co-style design system */
+:root {
+  --le-green: #007E40;
+  --le-green-dark: #00502a;
+  --le-ink: rgba(0, 31, 16, 0.949);
+  --le-ink-soft: rgba(0, 31, 16, 0.7);
+  --le-cream: #faf6e4;
+  --le-mint: #dff5d8;
+  --le-red: #e94949;
+  --le-yellow: #ffd166;
+  --le-radius: 24px;
+  --le-font: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.le-sec { font-family: var(--le-font); color: var(--le-ink); padding: 88px 0; }
+.le-sec *, .le-sec *::before, .le-sec *::after { box-sizing: border-box; }
+.le-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.le-eyebrow { display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--le-green); margin: 0 0 12px; }
+.le-h2 { font-family: var(--le-font); font-size: 48px; font-weight: 800; line-height: 1.08; letter-spacing: -0.5px; color: inherit; margin: 0 0 16px; }
+.le-h2 em { font-style: normal; color: var(--le-green); }
+.le-lead { font-size: 18px; line-height: 1.55; color: var(--le-ink-soft); margin: 0 auto; max-width: 620px; }
+.le-center { text-align: center; }
+.le-head { margin-bottom: 48px; }
+.le-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 56px; padding: 0 32px; border-radius: 9999px; background: var(--le-green); color: #fff !important; font-family: var(--le-font); font-size: 18px; font-weight: 700; text-decoration: none; border: 0; cursor: pointer; transition: transform .15s ease, background .2s ease; }
+.le-btn:hover { background: var(--le-green-dark); transform: translateY(-1px); }
+.le-btn--light { background: #fff; color: var(--le-green) !important; }
+.le-btn--light:hover { background: var(--le-cream); }
+.le-btn--sm { height: 44px; padding: 0 22px; font-size: 15px; }
+.le-btn--block { width: 100%; }
+.le-stars { color: #f5a623; letter-spacing: 1px; }
+@media (max-width: 767px) {
+  .le-sec { padding: 56px 0; }
+  .le-wrap { padding: 0 16px; }
+  .le-h2 { font-size: 32px; }
+  .le-lead { font-size: 16px; }
+  .le-head { margin-bottom: 32px; }
+}
+.le-sr { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
