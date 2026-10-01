@@ -2063,8 +2063,8 @@
         "stat_3_sub": "Frozen & fresh to you",
         "badge_text": "Order Now & Save!",
         "bg_color": "#faf6e4",
-        "accent_color": "#e94949",
-        "stat_circle_color": "#fde0e0"
+        "accent_color": "#007E40",
+        "stat_circle_color": "#dff5d8"
       }
     },
     "le_social_proof": {
@@ -2079,7 +2079,7 @@
         "stat3_num": "100%",
         "stat3_label": "Halal certified",
         "bg_color": "#ffffff",
-        "accent_color": "#e94949"
+        "accent_color": "#007E40"
       }
     },
     "le_value_props": {
@@ -2087,7 +2087,7 @@
       "settings": {
         "heading": "Why Lahore Eatery?",
         "bg_color": "#ffffff",
-        "card_bg": "#fde0e0",
+        "card_bg": "#dff5d8",
         "card_1_emoji": "🥙",
         "card_1_title": "Freshly Prepared",
         "card_1_body": "Made fresh in our kitchen and frozen to lock in taste, texture, and nutrition — straight to your door.",
@@ -2155,7 +2155,7 @@
       ],
       "settings": {
         "aria_label": "Why customers love Lahore Eatery",
-        "bg_color": "#e94949",
+        "bg_color": "#007E40",
         "text_color": "#ffffff",
         "speed": 35
       }
@@ -2314,7 +2314,7 @@
         "heading": "Pakistan's favorite frozen snacks",
         "subheading": "",
         "note": "",
-        "bg_color": "#c93838",
+        "bg_color": "#00502a",
         "text_color": "#ffffff",
         "accent_color": "#ffd166"
       }
@@ -2550,7 +2550,7 @@
         "subheading": "",
         "cta_text": "Start your order",
         "cta_link": "/collections/most-loved",
-        "bg_color": "#fde0e0"
+        "bg_color": "#dff5d8"
       }
     },
     "le_reviews": {
@@ -2681,7 +2681,7 @@
         "cta_text": "Order now",
         "cta_link": "/collections/most-loved",
         "trust": "100% Halal | Delivered in 48hrs | Free delivery above Rs. 2500",
-        "bg_color": "#e94949",
+        "bg_color": "#007E40",
         "text_color": "#ffffff",
         "outer_bg": "#ffffff"
       }
