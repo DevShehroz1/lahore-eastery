@@ -2,12 +2,12 @@
 <style>
   #le-sp-{{ section.id }} { background: {{ s.bg_color }}; }
   #le-sp-{{ section.id }} .le-sp__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-  #le-sp-{{ section.id }} .le-sp__media { border-radius: var(--le-radius); overflow: hidden; aspect-ratio: 1 / 1; background: var(--le-mint); {% if s.image_right %}order: 2;{% endif %} }
+  #le-sp-{{ section.id }} .le-sp__media { border-radius: var(--le-radius); overflow: hidden; aspect-ratio: 1 / 1; background: var(--le-blush); {% if s.image_right %}order: 2;{% endif %} }
   #le-sp-{{ section.id }} .le-sp__media img, #le-sp-{{ section.id }} .le-sp__media svg { width: 100%; height: 100%; object-fit: cover; display: block; }
   #le-sp-{{ section.id }} .le-sp__text .le-lead { margin: 0 0 28px; }
   #le-sp-{{ section.id }} .le-sp__list { list-style: none; padding: 0; margin: 0 0 32px; display: grid; gap: 16px; }
   #le-sp-{{ section.id }} .le-sp__item { display: flex; gap: 14px; align-items: flex-start; }
-  #le-sp-{{ section.id }} .le-sp__icon { flex: 0 0 44px; height: 44px; border-radius: 50%; background: var(--le-mint); display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  #le-sp-{{ section.id }} .le-sp__icon { flex: 0 0 44px; height: 44px; border-radius: 50%; background: var(--le-blush); display: flex; align-items: center; justify-content: center; font-size: 22px; }
   #le-sp-{{ section.id }} .le-sp__item-title { font-size: 18px; font-weight: 700; margin: 0 0 2px; }
   #le-sp-{{ section.id }} .le-sp__item-body { font-size: 15px; line-height: 1.5; color: var(--le-ink-soft); margin: 0; }
   @media (max-width: 767px) {

@@ -3,7 +3,7 @@
   #le-steps-{{ section.id }} { background: {{ s.bg_color }}; }
   #le-steps-{{ section.id }} .le-steps__grid { display: grid; grid-template-columns: repeat({{ section.blocks.size | at_least: 1 | at_most: 4 }}, minmax(0, 1fr)); gap: 24px; counter-reset: le-step; }
   #le-steps-{{ section.id }} .le-steps__card { background: #fff; border-radius: var(--le-radius); padding: 32px 28px; position: relative; }
-  #le-steps-{{ section.id }} .le-steps__num { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: var(--le-green); color: #fff; font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+  #le-steps-{{ section.id }} .le-steps__num { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: var(--le-primary); color: #fff; font-size: 20px; font-weight: 800; margin-bottom: 20px; }
   #le-steps-{{ section.id }} .le-steps__icon { position: absolute; top: 28px; right: 28px; font-size: 36px; }
   #le-steps-{{ section.id }} .le-steps__title { font-size: 22px; font-weight: 800; margin: 0 0 8px; }
   #le-steps-{{ section.id }} .le-steps__body { font-size: 16px; line-height: 1.55; color: var(--le-ink-soft); margin: 0; }
@@ -46,7 +46,7 @@
     { "type": "textarea", "id": "subheading", "label": "Subheading" },
     { "type": "text", "id": "cta_text", "label": "Button text", "default": "Start your order" },
     { "type": "url", "id": "cta_link", "label": "Button link" },
-    { "type": "color", "id": "bg_color", "label": "Background", "default": "#dff5d8" }
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#fde4e1" }
   ],
   "blocks": [
     {
