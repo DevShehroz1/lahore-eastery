@@ -61,12 +61,6 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }} rtl_{{ isRTL }} swatch_col
     {{ content_for_header }}
     {%- render 'head_assets', t_name: t_name, isRTL: isRTL -%}
 <link rel="stylesheet" href="{{ 'shopable-video.css' | asset_url }}">
-    {%- if request.page_type == 'index' -%}
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap">
-      {{ 'le-home.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
 
   
   </head>
