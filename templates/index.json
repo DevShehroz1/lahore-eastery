@@ -597,7 +597,7 @@
         "heading_size": 76,
         "heading_size_mobile": 36,
         "show_social": true,
-        "photo_gap": 28,
+        "photo_gap": 4,
         "card_width": 300,
         "card_width_mobile": 180,
         "spin_speed": 5,

@@ -89,7 +89,7 @@
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var scrollAmount = reduce ? 0 : (parseFloat(root.dataset.scrollRotate) || 0);
     var speed = reduce ? 0 : (parseFloat(root.dataset.speed) || 0);   // degrees per second
-    var gap = parseFloat(root.dataset.gap) || 0;                      // pixels between photos
+    var gap = parseFloat(root.dataset.gap); if (isNaN(gap)) gap = 4;                      // pixels between photos
     var deg = 180 / Math.PI;
 
     var cards = originals.slice(), step = 15, span = 0, offset = 0, scrollRot = 0, R = 1000;
@@ -199,7 +199,7 @@
     { "type": "paragraph", "content": "Links come from Theme settings → Social media. Only networks with a link are shown." },
 
     { "type": "header", "content": "Photo fan" },
-    { "type": "range", "id": "photo_gap", "label": "Space between photos", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "photo_gap", "label": "Space between photos (at the bottom)", "info": "The top edges always open up a little more because of the curve. Negative values let photos overlap slightly.", "min": -40, "max": 120, "step": 2, "unit": "px", "default": 4 },
     { "type": "range", "id": "card_width", "label": "Photo width (desktop)", "min": 180, "max": 420, "step": 10, "unit": "px", "default": 300 },
     { "type": "range", "id": "card_width_mobile", "label": "Photo width (mobile)", "min": 100, "max": 300, "step": 5, "unit": "px", "default": 180 },
     { "type": "range", "id": "spin_speed", "label": "Continuous spin speed", "info": "Degrees per second. 0 stops the spinning.", "min": 0, "max": 30, "step": 1, "unit": "°", "default": 5 },
