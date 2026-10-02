@@ -1,0 +1,222 @@
+{{ 'section-new-banner-split.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading_html = section.settings.heading | escape | replace: '[', '<span class="nbs__hl">' | replace: ']', '</span>' | replace: '|', ' <br>'
+  assign uid = section.id | handleize
+-%}
+
+<section
+  class="nbs"
+  style="
+    --nbs-bg: {{ section.settings.bg_color }};
+    --nbs-text: {{ section.settings.text_color }};
+    --nbs-accent: {{ section.settings.accent_color }};
+    --nbs-bubble: {{ section.settings.bubble_color }};
+    --nbs-pad-y: {{ section.settings.padding_y }}px;
+    --nbs-pad-y-mobile: {{ section.settings.padding_y_mobile }}px;
+    --nbs-h-fs: {{ section.settings.heading_size }}px;
+    --nbs-h-fs-mobile: {{ section.settings.heading_size_mobile }}px;
+    --nbs-badge-rot: {{ section.settings.badge_rotation }}deg;
+  "
+>
+  <div class="nbs__inner">
+    <div class="nbs__content">
+      {%- if section.settings.show_reviews -%}
+        <div class="nbs__reviews">
+          <span class="nbs__stars" aria-hidden="true">
+            {%- for i in (1..5) -%}
+              <svg viewBox="0 0 16 16"><path d="M3.611,15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.172,6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.537.792c.197-.39.73-.39.927,0l2.184,4.327,4.898.696c.441.062.612.636.282.95l-3.522,3.356.83,4.73c.078.443-.36.79-.746.592l-4.391-2.256-4.388,2.256Z" fill="currentColor"/></svg>
+            {%- endfor -%}
+          </span>
+          <span>
+            <strong>{{ section.settings.rating_value }}</strong> stars&nbsp; from <strong>{{ section.settings.review_count }}</strong> reviews
+            {%- if section.settings.member_count != blank %} &bull; <strong>{{ section.settings.member_count }}</strong> {{ section.settings.member_label }}{% endif -%}
+          </span>
+        </div>
+      {%- endif -%}
+
+      <h1 class="nbs__heading">{{ heading_html }}</h1>
+
+      {%- if section.settings.cta_text != blank -%}
+        <a href="{{ section.settings.cta_link | default: routes.all_products_collection_url }}" class="nbs__cta">
+          {{- section.settings.cta_text -}}
+        </a>
+      {%- endif -%}
+
+      {%- if section.settings.trust_1 != blank or section.settings.trust_2 != blank -%}
+        <div class="nbs__trust">
+          {%- if section.settings.trust_1 != blank -%}
+            <span class="nbs__trust-item">
+              <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M9.3 1.2v1.6M4.4 1.2v1.6M1.4 5.2h10.8" stroke="currentColor" stroke-linecap="round"/><path d="M12.2 6.2V4.4c0-1-.8-1.8-1.8-1.8H3.2c-1 0-1.8.8-1.8 1.8v6.2c0 1 .8 1.8 1.8 1.8h2.6" stroke="currentColor" stroke-linecap="round"/><circle cx="10" cy="10.2" r="2.7" stroke="currentColor"/><path d="m8.9 10.2.8.8 1.4-1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              {{ section.settings.trust_1 }}
+            </span>
+          {%- endif -%}
+          {%- if section.settings.trust_2 != blank -%}
+            <span class="nbs__trust-item">
+              <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.2" y="2.4" width="11.6" height="8.2" rx="1.6" stroke="currentColor"/><path d="M1.2 5.2h11.6" stroke="currentColor"/><circle cx="10.2" cy="10.4" r="2.6" fill="var(--nbs-bg)" stroke="currentColor"/><path d="m9.3 9.5 1.8 1.8m0-1.8-1.8 1.8" stroke="currentColor" stroke-linecap="round"/></svg>
+              {{ section.settings.trust_2 }}
+            </span>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="nbs__stats">
+          {%- for block in section.blocks -%}
+            <div class="nbs__stat" {{ block.shopify_attributes }}>
+              <div class="nbs__bubble">
+                {%- if block.settings.bubble_image != blank -%}
+                  <img class="nbs__bubble-shape" src="{{ block.settings.bubble_image | image_url: width: 200 }}" alt="" width="72" height="66" loading="lazy">
+                {%- else -%}
+                  <svg class="nbs__bubble-shape" viewBox="0 0 72 66" aria-hidden="true" focusable="false">
+                    <path d="M36 1C55 1 71 15 71 33c0 10-4 18-10 24-3 3-6 3-10 2-5-1-9-2-15-2s-10 1-15 2c-4 1-7 1-10-2C5 51 1 43 1 33 1 15 17 1 36 1Z" fill="currentColor"/>
+                  </svg>
+                {%- endif -%}
+                <span class="nbs__num">
+                  {{- block.settings.number -}}
+                  {%- if block.settings.suffix != blank -%}<sup>{{ block.settings.suffix }}</sup>{%- endif -%}
+                </span>
+              </div>
+              <p class="nbs__label">{{ block.settings.label | newline_to_br }}</p>
+              {%- if block.settings.sub != blank -%}
+                <p class="nbs__sub">{{ block.settings.sub | newline_to_br }}</p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="nbs__media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1400
+          | image_tag:
+            class: 'nbs__img',
+            loading: 'eager',
+            fetchpriority: 'high',
+            widths: '400, 700, 1000, 1400',
+            sizes: '(min-width: 990px) 50vw, 100vw'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+
+      {%- if section.settings.show_badge -%}
+        <div class="nbs__badge">
+          {%- if section.settings.badge_image != blank -%}
+            <img src="{{ section.settings.badge_image | image_url: width: 400 }}" alt="{{ section.settings.badge_top }} {{ section.settings.badge_bottom }}" loading="eager">
+          {%- else -%}
+            <svg viewBox="0 0 200 200" role="img" aria-label="{{ section.settings.badge_top }} {{ section.settings.badge_bottom }}">
+              <defs>
+                <path id="nbs-top-{{ uid }}" d="M32 100a68 68 0 0 1 136 0"/>
+                <path id="nbs-bot-{{ uid }}" d="M24 100a76 76 0 0 0 152 0"/>
+              </defs>
+              <circle cx="100" cy="100" r="88" fill="{{ section.settings.text_color }}"/>
+              <circle cx="100" cy="100" r="88" fill="none" stroke="{{ section.settings.text_color }}" stroke-width="16" stroke-linecap="round" stroke-dasharray="0 22.1"/>
+              <circle cx="100" cy="100" r="80" fill="none" stroke="{{ section.settings.accent_color }}" stroke-width="3"/>
+              <text fill="{{ section.settings.bubble_color }}" font-family="Inter Tight, Arial, sans-serif" font-weight="900" font-size="25" letter-spacing="1" text-anchor="middle">
+                <textPath href="#nbs-top-{{ uid }}" startOffset="50%">{{ section.settings.badge_top | upcase }}</textPath>
+              </text>
+              <text fill="{{ section.settings.bubble_color }}" font-family="Inter Tight, Arial, sans-serif" font-weight="900" font-size="25" letter-spacing="1" text-anchor="middle" dominant-baseline="hanging">
+                <textPath href="#nbs-bot-{{ uid }}" startOffset="50%">{{ section.settings.badge_bottom | upcase }}</textPath>
+              </text>
+              <g fill="{{ section.settings.bubble_color }}">
+                <path d="M39 100l3 -7 3 7 7 3 -7 3 -3 7 -3 -7 -7 -3z"/>
+                <path d="M155 100l3 -7 3 7 7 3 -7 3 -3 7 -3 -7 -7 -3z"/>
+              </g>
+              <circle cx="100" cy="103" r="30" fill="{{ section.settings.accent_color }}"/>
+              <g fill="{{ section.settings.bubble_color }}">
+                <circle cx="82" cy="80" r="9"/><circle cx="118" cy="80" r="9"/>
+                <ellipse cx="100" cy="104" rx="22" ry="19"/>
+              </g>
+              <g fill="{{ section.settings.text_color }}">
+                <circle cx="92" cy="100" r="2.6"/><circle cx="108" cy="100" r="2.6"/>
+                <ellipse cx="100" cy="108" rx="4" ry="3"/>
+              </g>
+              <path d="M93 113q7 6 14 0" fill="none" stroke="{{ section.settings.text_color }}" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "New Banner Split",
+  "tag": "section",
+  "class": "section-new-banner-split",
+  "settings": [
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#FEF6DD" },
+    { "type": "color", "id": "text_color", "label": "Text (dark)", "default": "#183A1D" },
+    { "type": "color", "id": "accent_color", "label": "Accent (stars, highlight, button)", "default": "#2C7A3B" },
+    { "type": "color", "id": "bubble_color", "label": "Stat bubble / badge text", "default": "#F6CB45" },
+
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_y", "label": "Vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 16 },
+    { "type": "range", "id": "padding_y_mobile", "label": "Vertical padding (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 24 },
+
+    { "type": "header", "content": "Reviews row" },
+    { "type": "checkbox", "id": "show_reviews", "label": "Show reviews row", "default": true },
+    { "type": "text", "id": "rating_value", "label": "Rating", "default": "4.8" },
+    { "type": "text", "id": "review_count", "label": "Review count", "default": "100,000" },
+    { "type": "text", "id": "member_count", "label": "Member count (clear to hide)", "default": "1,000,000+" },
+    { "type": "text", "id": "member_label", "label": "Member label", "default": "members" },
+
+    { "type": "header", "content": "Heading" },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Wrap words in [square brackets] for the green highlight. Use | for a line break (desktop only).",
+      "default": "60+ Ingredients in One|Pack [You'll Actually Crave]"
+    },
+    { "type": "range", "id": "heading_size", "label": "Heading size (desktop)", "min": 28, "max": 80, "step": 1, "unit": "px", "default": 54 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Heading size (mobile)", "min": 22, "max": 56, "step": 1, "unit": "px", "default": 34 },
+
+    { "type": "header", "content": "Button" },
+    { "type": "text", "id": "cta_text", "label": "Button text", "default": "Save 55% + Free Shipping" },
+    { "type": "url", "id": "cta_link", "label": "Button link" },
+    { "type": "text", "id": "trust_1", "label": "Trust item 1", "default": "30-day guarantee" },
+    { "type": "text", "id": "trust_2", "label": "Trust item 2", "default": "Cancel anytime" },
+
+    { "type": "header", "content": "Image" },
+    { "type": "image_picker", "id": "image", "label": "Hero image", "info": "Shown at 700 × 523 on desktop (4:3-ish). Upload at least 1400px wide." },
+
+    { "type": "header", "content": "Sticker badge" },
+    { "type": "checkbox", "id": "show_badge", "label": "Show badge", "default": true },
+    { "type": "image_picker", "id": "badge_image", "label": "Badge image (optional)", "info": "Upload your own sticker PNG/SVG to replace the built-in one." },
+    { "type": "text", "id": "badge_top", "label": "Badge top text", "default": "We lowered" },
+    { "type": "text", "id": "badge_bottom", "label": "Badge bottom text", "default": "our price" },
+    { "type": "range", "id": "badge_rotation", "label": "Badge rotation", "min": -45, "max": 45, "step": 1, "unit": "°", "default": -14 }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "limit": 4,
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number", "default": "60" },
+        { "type": "text", "id": "suffix", "label": "Small suffix (e.g. +)", "default": "+" },
+        { "type": "textarea", "id": "label", "label": "Label", "default": "Ingredients" },
+        { "type": "textarea", "id": "sub", "label": "Sub-label (optional)", "default": "Including whole\nfruits and veggies" },
+        { "type": "image_picker", "id": "bubble_image", "label": "Bubble shape image (optional)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Banner Split",
+      "blocks": [
+        { "type": "stat", "settings": { "number": "60", "suffix": "+", "label": "Ingredients", "sub": "Including whole\nfruits and veggies" } },
+        { "type": "stat", "settings": { "number": "21", "suffix": "", "label": "Vitamins &\nMinerals", "sub": "" } },
+        { "type": "stat", "settings": { "number": "6g", "suffix": "", "label": "of Fiber", "sub": "" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
