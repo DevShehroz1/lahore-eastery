@@ -18,7 +18,8 @@
             "number": "60",
             "suffix": "+",
             "label": "Ingredients",
-            "sub": "Including whole\nfruits and veggies"
+            "sub": "Including whole\nfruits and veggies",
+            "bubble_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch_Background_Removed.png"
           }
         },
         "stat_FGFcHg": {
@@ -27,7 +28,8 @@
             "number": "21",
             "suffix": "",
             "label": "Vitamins &\nMinerals",
-            "sub": ""
+            "sub": "",
+            "bubble_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch_Background_Removed.png"
           }
         },
         "stat_jHe9pp": {
@@ -36,7 +38,8 @@
             "number": "6g",
             "suffix": "",
             "label": "of Fiber",
-            "sub": ""
+            "sub": "",
+            "bubble_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch_Background_Removed.png"
           }
         }
       },
@@ -47,10 +50,11 @@
       ],
       "name": "New Banner Split",
       "settings": {
-        "bg_color": "#FEF6DD",
-        "text_color": "#183A1D",
-        "accent_color": "#2C7A3B",
-        "bubble_color": "#F6CB45",
+        "bg_color": "#fef6dd",
+        "text_color": "#183a1d",
+        "accent_color": "#2c7a3b",
+        "bubble_color": "#f6cb45",
+        "number_color": "#ffffff",
         "padding_y": 16,
         "padding_y_mobile": 24,
         "show_reviews": true,
@@ -64,11 +68,7 @@
         "cta_text": "Save 55% + Free Shipping",
         "cta_link": "",
         "trust_1": "30-day guarantee",
-        "trust_2": "Cancel anytime",
-        "show_badge": true,
-        "badge_top": "We lowered",
-        "badge_bottom": "our price",
-        "badge_rotation": -14
+        "trust_2": "Cancel anytime"
       }
     },
     "le_hero_split_main": {
