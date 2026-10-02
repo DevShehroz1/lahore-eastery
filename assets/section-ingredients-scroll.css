@@ -25,25 +25,36 @@
 
 .ingsc__heading {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: var(--is-heading-top, 5%);
   left: 0;
   right: 0;
-  margin: 0;
   padding: 0 16px;
   text-align: center;
+  color: var(--is-heading);
+  pointer-events: none;
+}
+.ingsc__line {
+  margin: 0;
   font-family: "Lilita One", "Arial Rounded MT Bold", sans-serif;
   font-weight: 400;
-  font-size: var(--is-h-fs-mb, 44px);
   line-height: 1;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: var(--is-heading);
+  color: inherit;
   -webkit-text-stroke: 0.03em currentColor;
   paint-order: stroke fill;
 }
+.ingsc__line--main { font-size: var(--is-h-fs-mb, 44px); }
+.ingsc__line--extra {
+  font-size: var(--is-x-fs-mb, 26px);
+  margin-top: 0.3em;
+  opacity: 0;
+  will-change: transform, opacity;
+}
 @media (min-width: 768px) {
-  .ingsc__heading { font-size: var(--is-h-fs, 84px); }
+  .ingsc__line--main { font-size: var(--is-h-fs, 84px); }
+  .ingsc__line--extra { font-size: var(--is-x-fs, 48px); }
 }
 
 /* Product pack */
@@ -102,4 +113,5 @@
   .ingsc { height: auto; }
   .ingsc__stage { position: relative; }
   .ingsc__item-inner { animation: none; }
+  .ingsc__line--extra { opacity: 1; }
 }

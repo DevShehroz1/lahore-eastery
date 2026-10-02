@@ -12,6 +12,8 @@
     --is-h-fs: {{ section.settings.heading_size }}px;
     --is-h-fs-mb: {{ section.settings.heading_size_mobile }}px;
     --is-heading-top: {{ section.settings.heading_top }}%;
+    --is-x-fs: {{ section.settings.extra_size }}px;
+    --is-x-fs-mb: {{ section.settings.extra_size_mobile }}px;
     --is-pack-w: {{ section.settings.pack_width }}px;
     --is-pack-w-mb: {{ section.settings.pack_width_mobile }}vw;
     --is-pill-fs: {{ section.settings.pill_size }}px;
@@ -21,15 +23,30 @@
   data-pack-end="{{ section.settings.pack_end }}"
 >
   <div class="ingsc__stage" data-ingsc-stage>
-    {%- if section.settings.heading != blank -%}
-      <h2 class="ingsc__heading">{{ section.settings.heading | escape }}</h2>
+    {%- assign extra_lines = section.settings.extra_lines | newline_to_br | split: '<br />' -%}
+    {%- if section.settings.heading != blank or section.settings.extra_lines != blank -%}
+      <div class="ingsc__heading">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="ingsc__line ingsc__line--main">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+        {%- for line in extra_lines -%}
+          {%- assign line_text = line | strip -%}
+          {%- if line_text != blank -%}
+            <p class="ingsc__line ingsc__line--extra" data-ingsc-line>{{ line_text | escape }}</p>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     {%- endif -%}
 
     {%- for block in section.blocks -%}
       {%- liquid
         assign has_img = false
+        assign img_src = blank
         if block.settings.image != blank
           assign has_img = true
+        elsif block.settings.built_in_image != 'none' and block.settings.built_in_image != blank
+          assign has_img = true
+          assign img_src = block.settings.built_in_image | append: '.webp' | asset_url
         endif
         if has_img == false and block.settings.label == blank
           continue
@@ -48,7 +65,11 @@
       >
         <div class="ingsc__item-inner">
           {%- if has_img -%}
-            {{ block.settings.image | image_url: width: 500 | image_tag: loading: 'lazy', alt: block.settings.label }}
+            {%- if img_src != blank -%}
+              <img src="{{ img_src }}" alt="{{ block.settings.label | escape }}" width="800" height="533" loading="lazy">
+            {%- else -%}
+              {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', alt: block.settings.label }}
+            {%- endif -%}
           {%- else -%}
             <span class="ingsc__pill">{{ block.settings.label | escape }}</span>
           {%- endif -%}
@@ -73,6 +94,8 @@
     var stage = root.querySelector('[data-ingsc-stage]');
     var pack = root.querySelector('[data-ingsc-pack]');
     var items = [].slice.call(root.querySelectorAll('.ingsc__item'));
+    var lines = [].slice.call(root.querySelectorAll('[data-ingsc-line]'));
+    var heading = root.querySelector('.ingsc__heading');
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var packStart = parseFloat(root.dataset.packStart) / 100;
     var packEnd = parseFloat(root.dataset.packEnd) / 100;
@@ -95,9 +118,19 @@
       // Pack rises from the bottom during the first half of the scroll
       var pe = ease(clamp(p / 0.5));
       var pw = pack.offsetWidth, ph = pack.offsetHeight;
-      var packTop = lerp(H * packStart, H * packEnd - ph / 2, pe);
+      // never let the pack finish on top of the heading lines
+      var headBottom = heading ? heading.offsetTop + heading.offsetHeight + 24 : 0;
+      var packTop = lerp(H * packStart, Math.max(H * packEnd - ph / 2, headBottom), pe);
       pack.style.transform = 'translate(' + (-pw / 2) + 'px,' + packTop + 'px)';
       var pcx = W / 2, pcy = packTop + Math.min(ph, H) * 0.3;
+
+      // Extra heading lines appear one after another as you keep scrolling
+      lines.forEach(function (el, k) {
+        var at = lines.length > 1 ? 0.2 + k * (0.6 / (lines.length - 1)) : 0.4;
+        var t = ease(clamp((p - at) / 0.08));
+        el.style.opacity = t;
+        el.style.transform = 'translateY(' + ((1 - t) * 24) + 'px)';
+      });
 
       items.forEach(function (el) {
         var x = W * parseFloat(el.dataset.x) / 100;
@@ -142,9 +175,18 @@
   "class": "section-ingredients-scroll",
   "settings": [
     { "type": "header", "content": "Heading" },
-    { "type": "text", "id": "heading", "label": "Heading", "default": "60+ Ingredients" },
+    { "type": "text", "id": "heading", "label": "Heading (shown first)", "default": "60+ Ingredients" },
+    {
+      "type": "textarea",
+      "id": "extra_lines",
+      "label": "Extra lines (one per line)",
+      "info": "Each line appears below the heading, one at a time, as visitors keep scrolling.",
+      "default": "Crispy. Golden. Fresh.\nHand-Made the Lahori Way"
+    },
     { "type": "range", "id": "heading_size", "label": "Heading size (desktop)", "min": 32, "max": 160, "step": 2, "unit": "px", "default": 84 },
     { "type": "range", "id": "heading_size_mobile", "label": "Heading size (mobile)", "min": 24, "max": 90, "step": 1, "unit": "px", "default": 44 },
+    { "type": "range", "id": "extra_size", "label": "Extra line size (desktop)", "min": 16, "max": 120, "step": 2, "unit": "px", "default": 48 },
+    { "type": "range", "id": "extra_size_mobile", "label": "Extra line size (mobile)", "min": 14, "max": 70, "step": 1, "unit": "px", "default": 26 },
     { "type": "range", "id": "heading_top", "label": "Heading distance from top", "min": 0, "max": 40, "step": 1, "unit": "%", "default": 5 },
 
     { "type": "header", "content": "Colours" },
@@ -171,7 +213,21 @@
       "name": "Ingredient item",
       "limit": 30,
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "Image (gummy, fruit, veg…)", "info": "Transparent PNG. Leave empty to show the label as a text pill." },
+        { "type": "image_picker", "id": "image", "label": "Image (upload)", "info": "Transparent PNG. Overrides the built-in image." },
+        {
+          "type": "select",
+          "id": "built_in_image",
+          "label": "Built-in dish image",
+          "info": "Used when no image is uploaded. Choose None to show the label as a text pill.",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "le-cheese-balls", "label": "Chicken cheese balls" },
+            { "value": "le-chicken-strips", "label": "Chicken strips" },
+            { "value": "le-samosa", "label": "Samosa" },
+            { "value": "le-spring-rolls", "label": "Spring rolls" }
+          ],
+          "default": "none"
+        },
         { "type": "text", "id": "label", "label": "Label", "default": "Spinach" },
         {
           "type": "select",
@@ -193,19 +249,7 @@
     }
   ],
   "presets": [
-    {
-      "name": "Ingredients Scroll",
-      "blocks": [
-        { "type": "item", "settings": { "label": "Spinach",    "x": 18, "y": 30, "delay": 0,  "rotation": -8 } },
-        { "type": "item", "settings": { "label": "Broccoli",   "x": 80, "y": 28, "delay": 2,  "rotation": 6 } },
-        { "type": "item", "settings": { "label": "Kale",       "x": 30, "y": 50, "delay": 4,  "rotation": 4 } },
-        { "type": "item", "settings": { "label": "Beets",      "x": 70, "y": 48, "delay": 6,  "rotation": -6 } },
-        { "type": "item", "settings": { "label": "Vitamin D",  "x": 12, "y": 66, "delay": 8,  "rotation": 5 } },
-        { "type": "item", "settings": { "label": "Adaptogens", "x": 86, "y": 66, "delay": 10, "rotation": -4 } },
-        { "type": "item", "settings": { "label": "Prebiotics", "x": 24, "y": 82, "delay": 12, "rotation": -5 } },
-        { "type": "item", "settings": { "label": "Mushrooms",  "x": 76, "y": 84, "delay": 14, "rotation": 7 } }
-      ]
-    }
+    {"name": "Ingredients Scroll", "blocks": [{"type": "item", "settings": {"label": "Chicken cheese balls", "built_in_image": "le-cheese-balls", "x": 16, "y": 34, "size": 230, "rotation": -8, "delay": 0}}, {"type": "item", "settings": {"label": "Chicken strips", "built_in_image": "le-chicken-strips", "x": 84, "y": 32, "size": 230, "rotation": 6, "delay": 3}}, {"type": "item", "settings": {"label": "Samosa", "built_in_image": "le-samosa", "x": 12, "y": 68, "size": 240, "rotation": 5, "delay": 6}}, {"type": "item", "settings": {"label": "Spring rolls", "built_in_image": "le-spring-rolls", "x": 88, "y": 70, "size": 240, "rotation": -5, "delay": 9}}, {"type": "item", "settings": {"label": "Samosa", "built_in_image": "le-samosa", "x": 30, "y": 88, "size": 170, "rotation": -10, "delay": 12}}, {"type": "item", "settings": {"label": "Chicken cheese balls", "built_in_image": "le-cheese-balls", "x": 71, "y": 88, "size": 170, "rotation": 8, "delay": 14}}]}
   ]
 }
 {% endschema %}
