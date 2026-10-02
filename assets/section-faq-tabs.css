@@ -159,34 +159,3 @@
   .faqt__tab::before, .faqt__a, .faqt__icon { transition: none; }
   .faqt__panel.is-entering, .faqt__panel.is-leaving { animation: none; }
 }
-
-/* The theme styles every <button> (red background on hover/focus); keep FAQ buttons clean */
-.faqt .faqt__q,
-.faqt .faqt__q:hover,
-.faqt .faqt__q:focus,
-.faqt .faqt__q:active {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: 0 !important;
-  border-radius: 12px;
-  min-height: 0;
-  height: auto;
-  text-transform: none;
-  letter-spacing: normal;
-}
-.faqt .faqt__item:not(.is-open) .faqt__q:hover { color: var(--faqt-text) !important; }
-.faqt .faqt__tab:not(.is-active),
-.faqt .faqt__tab:not(.is-active):hover,
-.faqt .faqt__tab:not(.is-active):focus {
-  background: transparent !important;
-  box-shadow: none !important;
-  border-color: var(--faqt-border) !important;
-}
-.faqt .faqt__tab.is-active,
-.faqt .faqt__tab.is-active:hover,
-.faqt .faqt__tab.is-active:focus {
-  background: transparent !important;
-  box-shadow: none !important;
-  border-color: var(--faqt-accent) !important;
-  color: #FFFFFF !important;
-}
