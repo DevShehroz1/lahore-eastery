@@ -80,7 +80,7 @@
         "cta_width": 280,
         "cta_height": 56,
         "cta_font_size": 18,
-        "cta_radius": 999,
+        "cta_radius": 30,
         "trust_font_size": 12,
         "trust_font_weight": "600",
         "trust_gap": 16,
