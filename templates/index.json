@@ -20,7 +20,7 @@
             "label": "Ingredients",
             "sub": "",
             "bubble_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch_Background_Removed.png",
-            "bubble_scale": 100
+            "bubble_scale": 125
           }
         },
         "stat_FGFcHg": {
@@ -55,7 +55,7 @@
       "settings": {
         "bg_color": "#fef6dd",
         "text_color": "#183a1d",
-        "accent_color": "#2c7a3b",
+        "accent_color": "#E94949",
         "bubble_color": "#f6cb45",
         "number_color": "#ffffff",
         "bubble_size": 84,
