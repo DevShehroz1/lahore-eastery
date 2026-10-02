@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
 .t4s-bootom-hidden-true {
 	display: none;
 }
@@ -204,4 +205,15 @@
 	.t4s-text-end .t4s-footer-heading-mobile {
 		flex-direction: row-reverse;
 	}
+}
+
+/* Footer menu headings: match the Nunito Black headings used in the custom sections */
+.t4s-footer-wrap .t4s-col-heading,
+.t4s-footer-wrap .t4s-footer-title,
+.t4s-footer-wrap .t4s-socials-title {
+  font-family: "Nunito", "Arial Rounded MT Bold", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em !important;
 }
