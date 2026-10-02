@@ -147,11 +147,11 @@
         "layout": "t4s-container-wrap",
         "cl_bg": "",
         "cl_bg_gradient": "",
-        "mg": ",,50px,",
+        "mg": "50px,,50px,",
         "pd": "",
         "mg_tb": "",
         "pd_tb": "",
-        "mg_mb": ",,30px,",
+        "mg_mb": "30px,,30px,",
         "pd_mb": "",
         "use_cus_css": false,
         "code_cus_css": ""
@@ -204,6 +204,124 @@
         "text_size_mobile": 15,
         "padding_y": 64,
         "padding_y_mobile": 48
+      }
+    },
+    "ingredients_scroll_main": {
+      "type": "ingredients-scroll",
+      "blocks": {
+        "dish_1": {
+          "type": "item",
+          "settings": {
+            "built_in_image": "le-cheese-balls",
+            "label": "Chicken cheese balls",
+            "behaviour": "burst",
+            "x": 16,
+            "y": 34,
+            "size": 230,
+            "rotation": -8,
+            "delay": 0,
+            "parallax": 40
+          }
+        },
+        "dish_2": {
+          "type": "item",
+          "settings": {
+            "built_in_image": "le-chicken-strips",
+            "label": "Chicken strips",
+            "behaviour": "burst",
+            "x": 84,
+            "y": 32,
+            "size": 230,
+            "rotation": 6,
+            "delay": 3,
+            "parallax": 40
+          }
+        },
+        "dish_3": {
+          "type": "item",
+          "settings": {
+            "built_in_image": "le-samosa",
+            "label": "Samosa",
+            "behaviour": "burst",
+            "x": 12,
+            "y": 68,
+            "size": 240,
+            "rotation": 5,
+            "delay": 6,
+            "parallax": 40
+          }
+        },
+        "dish_4": {
+          "type": "item",
+          "settings": {
+            "built_in_image": "le-spring-rolls",
+            "label": "Spring rolls",
+            "behaviour": "burst",
+            "x": 88,
+            "y": 70,
+            "size": 240,
+            "rotation": -5,
+            "delay": 9,
+            "parallax": 40
+          }
+        },
+        "dish_5": {
+          "type": "item",
+          "settings": {
+            "built_in_image": "le-samosa",
+            "label": "Samosa",
+            "behaviour": "burst",
+            "x": 30,
+            "y": 88,
+            "size": 170,
+            "rotation": -10,
+            "delay": 12,
+            "parallax": 40
+          }
+        },
+        "dish_6": {
+          "type": "item",
+          "settings": {
+            "built_in_image": "le-cheese-balls",
+            "label": "Chicken cheese balls",
+            "behaviour": "burst",
+            "x": 71,
+            "y": 88,
+            "size": 170,
+            "rotation": 8,
+            "delay": 14,
+            "parallax": 40
+          }
+        }
+      },
+      "block_order": [
+        "dish_1",
+        "dish_2",
+        "dish_3",
+        "dish_4",
+        "dish_5",
+        "dish_6"
+      ],
+      "settings": {
+        "heading": "60+ Ingredients",
+        "extra_lines": "Crispy. Golden. Fresh.\nHand-Made the Lahori Way",
+        "heading_size": 84,
+        "heading_size_mobile": 44,
+        "extra_size": 48,
+        "extra_size_mobile": 26,
+        "heading_top": 5,
+        "bg_color": "#e94949",
+        "heading_color": "#ffffff",
+        "pill_bg": "#ffffff",
+        "pill_text": "#e94949",
+        "pack_image": "shopify://shop_images/Golden_Samosa_Snack_Delight.png",
+        "pack_width": 520,
+        "pack_width_mobile": 60,
+        "pack_start": 75,
+        "pack_end": 60,
+        "scroll_length": 250,
+        "pill_size": 20,
+        "mobile_scale": 60
       }
     },
     "collections_list_carousel_fVhWbq": {
@@ -2235,130 +2353,6 @@
     "17383511173830307a": {
       "type": "apps",
       "settings": {}
-    },
-    "ingredients_scroll_main": {
-      "type": "ingredients-scroll",
-      "blocks": {
-        "dish_1": {
-          "type": "item",
-          "settings": {
-            "image": "",
-            "label": "Chicken cheese balls",
-            "built_in_image": "le-cheese-balls",
-            "behaviour": "burst",
-            "x": 16,
-            "y": 34,
-            "size": 230,
-            "rotation": -8,
-            "delay": 0,
-            "parallax": 40
-          }
-        },
-        "dish_2": {
-          "type": "item",
-          "settings": {
-            "image": "",
-            "label": "Chicken strips",
-            "built_in_image": "le-chicken-strips",
-            "behaviour": "burst",
-            "x": 84,
-            "y": 32,
-            "size": 230,
-            "rotation": 6,
-            "delay": 3,
-            "parallax": 40
-          }
-        },
-        "dish_3": {
-          "type": "item",
-          "settings": {
-            "image": "",
-            "label": "Samosa",
-            "built_in_image": "le-samosa",
-            "behaviour": "burst",
-            "x": 12,
-            "y": 68,
-            "size": 240,
-            "rotation": 5,
-            "delay": 6,
-            "parallax": 40
-          }
-        },
-        "dish_4": {
-          "type": "item",
-          "settings": {
-            "image": "",
-            "label": "Spring rolls",
-            "built_in_image": "le-spring-rolls",
-            "behaviour": "burst",
-            "x": 88,
-            "y": 70,
-            "size": 240,
-            "rotation": -5,
-            "delay": 9,
-            "parallax": 40
-          }
-        },
-        "dish_5": {
-          "type": "item",
-          "settings": {
-            "image": "",
-            "label": "Samosa",
-            "built_in_image": "le-samosa",
-            "behaviour": "burst",
-            "x": 30,
-            "y": 88,
-            "size": 170,
-            "rotation": -10,
-            "delay": 12,
-            "parallax": 40
-          }
-        },
-        "dish_6": {
-          "type": "item",
-          "settings": {
-            "image": "",
-            "label": "Chicken cheese balls",
-            "built_in_image": "le-cheese-balls",
-            "behaviour": "burst",
-            "x": 71,
-            "y": 88,
-            "size": 170,
-            "rotation": 8,
-            "delay": 14,
-            "parallax": 40
-          }
-        }
-      },
-      "block_order": [
-        "dish_1",
-        "dish_2",
-        "dish_3",
-        "dish_4",
-        "dish_5",
-        "dish_6"
-      ],
-      "settings": {
-        "heading": "60+ Ingredients",
-        "heading_size": 84,
-        "heading_size_mobile": 44,
-        "heading_top": 5,
-        "bg_color": "#E94949",
-        "heading_color": "#FFFFFF",
-        "pill_bg": "#FFFFFF",
-        "pill_text": "#E94949",
-        "pack_image": "shopify://shop_images/Golden_Samosa_Snack_Delight.png",
-        "pack_width": 520,
-        "pack_width_mobile": 60,
-        "pack_start": 75,
-        "pack_end": 60,
-        "scroll_length": 250,
-        "pill_size": 20,
-        "mobile_scale": 60,
-        "extra_lines": "Crispy. Golden. Fresh.\nHand-Made the Lahori Way",
-        "extra_size": 48,
-        "extra_size_mobile": 26
-      }
     }
   },
   "order": [
