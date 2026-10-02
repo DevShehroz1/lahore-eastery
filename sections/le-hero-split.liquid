@@ -24,7 +24,7 @@
     --le-hs-h-fs-mobile: {{ section.settings.heading_font_size_mobile }}px;
     --le-hs-h-weight: {{ section.settings.heading_font_weight }};
     --le-hs-h-lh: {{ section.settings.heading_line_height }};
-    --le-hs-h-tracking: {{ section.settings.heading_letter_spacing }}em;
+    --le-hs-h-tracking: {{ section.settings.heading_letter_spacing | times: 1.0 | divided_by: 100.0 }}em;
     --le-hs-h-max-w: {{ section.settings.heading_max_width }}px;
 
     --le-hs-sub-fs: {{ section.settings.subheading_font_size }}px;
@@ -337,15 +337,16 @@
       "type": "range",
       "id": "heading_line_height",
       "label": "Heading line height",
-      "min": 0.8, "max": 1.6, "step": 0.05,
+      "min": 0.8, "max": 1.6, "step": 0.1,
       "default": 1.1
     },
     {
       "type": "range",
       "id": "heading_letter_spacing",
-      "label": "Heading letter spacing (em)",
-      "min": -0.05, "max": 0.1, "step": 0.005,
-      "default": -0.015
+      "label": "Heading letter spacing (hundredths of em)",
+      "min": -5, "max": 10, "step": 1,
+      "info": "e.g. -2 renders as -0.02em",
+      "default": -1
     },
     {
       "type": "range",
@@ -362,8 +363,8 @@
     {
       "type": "text",
       "id": "subheading",
-      "label": "Subheading text (leave blank to hide)",
-      "default": ""
+      "label": "Subheading text (clear to hide)",
+      "default": "Cooked fresh. Delivered hot."
     },
     {
       "type": "range",
@@ -388,7 +389,7 @@
       "type": "range",
       "id": "subheading_line_height",
       "label": "Subheading line height",
-      "min": 1, "max": 2, "step": 0.05,
+      "min": 1, "max": 2, "step": 0.1,
       "default": 1.4
     },
     {
@@ -439,8 +440,9 @@
       "type": "range",
       "id": "cta_radius",
       "label": "Button corner radius",
-      "min": 0, "max": 60, "step": 1, "unit": "px",
-      "default": 999
+      "min": 0, "max": 60, "step": 2, "unit": "px",
+      "info": "28+ makes it fully pill-shaped at a 56px button height.",
+      "default": 30
     },
 
     {
@@ -494,15 +496,15 @@
       "type": "range",
       "id": "bubble_width",
       "label": "Bubble width",
-      "min": 50, "max": 200, "step": 1, "unit": "px",
+      "min": 50, "max": 200, "step": 2, "unit": "px",
       "default": 90
     },
     {
       "type": "range",
       "id": "bubble_height",
       "label": "Bubble height",
-      "min": 40, "max": 160, "step": 1, "unit": "px",
-      "default": 75
+      "min": 40, "max": 160, "step": 2, "unit": "px",
+      "default": 76
     },
     {
       "type": "range",
@@ -555,13 +557,13 @@
       "id": "image_height",
       "label": "Image height (desktop)",
       "min": 240, "max": 700, "step": 10, "unit": "px",
-      "default": 488
+      "default": 490
     },
     {
       "type": "text",
       "id": "badge_text",
-      "label": "Badge text (top-left of image, leave blank to hide)",
-      "default": ""
+      "label": "Badge text (top-left of image, clear to hide)",
+      "default": "Now Delivering"
     }
   ],
   "blocks": [
