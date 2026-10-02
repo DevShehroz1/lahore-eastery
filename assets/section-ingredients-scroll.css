@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Work+Sans:wght@600&display=swap');
+
+.ingsc {
+  --is-bg: #E94949;
+  --is-heading: #FFFFFF;
+  --is-pill-bg: #FFFFFF;
+  --is-pill-text: #E94949;
+  --is-scale: 1;
+  position: relative;
+  background: var(--is-bg);
+  height: var(--is-length, 250vh);
+}
+.ingsc *, .ingsc *::before, .ingsc *::after { box-sizing: border-box; }
+@media (max-width: 767px) {
+  .ingsc { --is-scale: var(--is-mobile-scale, 0.6); }
+}
+
+.ingsc__stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.ingsc__heading {
+  position: absolute;
+  z-index: 3;
+  top: var(--is-heading-top, 5%);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0 16px;
+  text-align: center;
+  font-family: "Lilita One", "Arial Rounded MT Bold", sans-serif;
+  font-weight: 400;
+  font-size: var(--is-h-fs-mb, 44px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--is-heading);
+  -webkit-text-stroke: 0.03em currentColor;
+  paint-order: stroke fill;
+}
+@media (min-width: 768px) {
+  .ingsc__heading { font-size: var(--is-h-fs, 84px); }
+}
+
+/* Product pack */
+.ingsc__pack {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 0;
+  width: var(--is-pack-w, 520px);
+  max-width: 80vw;
+  will-change: transform;
+}
+@media (max-width: 767px) {
+  .ingsc__pack { width: var(--is-pack-w-mb, 50vw); }
+}
+.ingsc__pack img,
+.ingsc__pack svg { display: block; width: 100%; height: auto; }
+.ingsc__pack .placeholder-svg { aspect-ratio: 3 / 4; background: rgba(255,255,255,.15); border-radius: 16px; }
+
+/* Ingredient items */
+.ingsc__item {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: calc(var(--is-item-w, 120px) * var(--is-scale));
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+.ingsc__item--float { z-index: 1; }
+.ingsc__item--behind { z-index: 1; }
+.ingsc__item-inner { animation: ingsc-bob var(--is-bob, 5s) ease-in-out infinite alternate; }
+.ingsc__item img { display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 14px rgba(0,0,0,.18)); }
+
+.ingsc__pill {
+  display: inline-block;
+  white-space: nowrap;
+  padding: calc(12px * var(--is-scale)) calc(22px * var(--is-scale));
+  border-radius: 999px;
+  background: var(--is-pill-bg);
+  color: var(--is-pill-text);
+  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: calc(var(--is-pill-fs, 20px) * var(--is-scale));
+  line-height: 1;
+  box-shadow: 0 6px 16px rgba(0,0,0,.14);
+}
+.ingsc__item--pill { width: auto; }
+
+@keyframes ingsc-bob {
+  from { transform: translateY(-6px) rotate(-2deg); }
+  to   { transform: translateY(6px) rotate(2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ingsc { height: auto; }
+  .ingsc__stage { position: relative; }
+  .ingsc__item-inner { animation: none; }
+}

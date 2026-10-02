@@ -1,0 +1,211 @@
+{{ 'section-ingredients-scroll.css' | asset_url | stylesheet_tag }}
+
+<section
+  class="ingsc"
+  id="ingsc-{{ section.id }}"
+  style="
+    --is-bg: {{ section.settings.bg_color }};
+    --is-heading: {{ section.settings.heading_color }};
+    --is-pill-bg: {{ section.settings.pill_bg }};
+    --is-pill-text: {{ section.settings.pill_text }};
+    --is-length: {{ section.settings.scroll_length }}vh;
+    --is-h-fs: {{ section.settings.heading_size }}px;
+    --is-h-fs-mb: {{ section.settings.heading_size_mobile }}px;
+    --is-heading-top: {{ section.settings.heading_top }}%;
+    --is-pack-w: {{ section.settings.pack_width }}px;
+    --is-pack-w-mb: {{ section.settings.pack_width_mobile }}vw;
+    --is-pill-fs: {{ section.settings.pill_size }}px;
+    --is-mobile-scale: {{ section.settings.mobile_scale | divided_by: 100.0 }};
+  "
+  data-pack-start="{{ section.settings.pack_start }}"
+  data-pack-end="{{ section.settings.pack_end }}"
+>
+  <div class="ingsc__stage" data-ingsc-stage>
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ingsc__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign has_img = false
+        if block.settings.image != blank
+          assign has_img = true
+        endif
+        if has_img == false and block.settings.label == blank
+          continue
+        endif
+      -%}
+      <div
+        class="ingsc__item ingsc__item--{{ block.settings.behaviour }}{% unless has_img %} ingsc__item--pill{% endunless %}"
+        style="--is-item-w: {{ block.settings.size }}px; --is-bob: {{ forloop.index | modulo: 3 | plus: 4 }}s;"
+        data-x="{{ block.settings.x }}"
+        data-y="{{ block.settings.y }}"
+        data-rot="{{ block.settings.rotation }}"
+        data-delay="{{ block.settings.delay }}"
+        data-speed="{{ block.settings.parallax }}"
+        data-mode="{{ block.settings.behaviour }}"
+        {{ block.shopify_attributes }}
+      >
+        <div class="ingsc__item-inner">
+          {%- if has_img -%}
+            {{ block.settings.image | image_url: width: 500 | image_tag: loading: 'lazy', alt: block.settings.label }}
+          {%- else -%}
+            <span class="ingsc__pill">{{ block.settings.label | escape }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+
+    <div class="ingsc__pack" data-ingsc-pack>
+      {%- if section.settings.pack_image != blank -%}
+        {{ section.settings.pack_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '400, 600, 900, 1200', sizes: '(min-width: 768px) 520px, 60vw' }}
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.getElementById('ingsc-{{ section.id }}');
+    if (!root) return;
+    var stage = root.querySelector('[data-ingsc-stage]');
+    var pack = root.querySelector('[data-ingsc-pack]');
+    var items = [].slice.call(root.querySelectorAll('.ingsc__item'));
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var packStart = parseFloat(root.dataset.packStart) / 100;
+    var packEnd = parseFloat(root.dataset.packEnd) / 100;
+
+    function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+    function ease(t) { return 1 - Math.pow(1 - t, 3); }
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    var ticking = false;
+    function render() {
+      ticking = false;
+      var W = stage.clientWidth, H = stage.clientHeight;
+      var p = 1;
+      if (!reduce) {
+        var r = root.getBoundingClientRect();
+        var travel = r.height - H;
+        p = travel > 0 ? clamp(-r.top / travel) : 1;
+      }
+
+      // Pack rises from the bottom during the first half of the scroll
+      var pe = ease(clamp(p / 0.5));
+      var pw = pack.offsetWidth, ph = pack.offsetHeight;
+      var packTop = lerp(H * packStart, H * packEnd - ph / 2, pe);
+      pack.style.transform = 'translate(' + (-pw / 2) + 'px,' + packTop + 'px)';
+      var pcx = W / 2, pcy = packTop + Math.min(ph, H) * 0.3;
+
+      items.forEach(function (el) {
+        var x = W * parseFloat(el.dataset.x) / 100;
+        var y = H * parseFloat(el.dataset.y) / 100;
+        var rot = parseFloat(el.dataset.rot) || 0;
+        var speed = parseFloat(el.dataset.speed) || 0;
+        var w = el.offsetWidth, h = el.offsetHeight;
+        var cx, cy, s = 1, o = 1, rr = rot;
+
+        if (el.dataset.mode === 'burst') {
+          var d = (parseFloat(el.dataset.delay) || 0) / 100;
+          var t = ease(clamp((p - 0.3 - d) / 0.4));
+          cx = lerp(pcx, x, t);
+          cy = lerp(pcy, y, t);
+          s = lerp(0.2, 1, t);
+          o = clamp(t * 3);
+          rr = lerp(0, rot, t);
+          el.classList.toggle('ingsc__item--behind', t < 0.35);
+        } else {
+          cx = x;
+          cy = y + (p - 0.5) * speed * H * 0.004;
+          rr = rot + (p - 0.5) * speed * 0.3;
+        }
+        el.style.opacity = o;
+        el.style.transform = 'translate(' + (cx - w / 2) + 'px,' + (cy - h / 2) + 'px) rotate(' + rr + 'deg) scale(' + s + ')';
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(render); } }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    window.addEventListener('load', render);
+    root.querySelectorAll('img').forEach(function (img) { if (!img.complete) img.addEventListener('load', render); });
+    render();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Ingredients Scroll",
+  "tag": "section",
+  "class": "section-ingredients-scroll",
+  "settings": [
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "60+ Ingredients" },
+    { "type": "range", "id": "heading_size", "label": "Heading size (desktop)", "min": 32, "max": 160, "step": 2, "unit": "px", "default": 84 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Heading size (mobile)", "min": 24, "max": 90, "step": 1, "unit": "px", "default": 44 },
+    { "type": "range", "id": "heading_top", "label": "Heading distance from top", "min": 0, "max": 40, "step": 1, "unit": "%", "default": 5 },
+
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#E94949" },
+    { "type": "color", "id": "heading_color", "label": "Heading", "default": "#FFFFFF" },
+    { "type": "color", "id": "pill_bg", "label": "Text pill background", "default": "#FFFFFF" },
+    { "type": "color", "id": "pill_text", "label": "Text pill text", "default": "#E94949" },
+
+    { "type": "header", "content": "Product pack" },
+    { "type": "image_picker", "id": "pack_image", "label": "Pack / product image", "info": "Transparent PNG works best." },
+    { "type": "range", "id": "pack_width", "label": "Pack width (desktop)", "min": 200, "max": 900, "step": 10, "unit": "px", "default": 520 },
+    { "type": "range", "id": "pack_width_mobile", "label": "Pack width (mobile)", "min": 25, "max": 90, "step": 1, "unit": "%", "info": "Percent of screen width.", "default": 50 },
+    { "type": "range", "id": "pack_start", "label": "Pack start position (top edge)", "info": "Where the pack's top sits before scrolling. 75% = peeking from the bottom.", "min": 40, "max": 100, "step": 1, "unit": "%", "default": 75 },
+    { "type": "range", "id": "pack_end", "label": "Pack end position (centre)", "info": "Where the pack's centre ends up after scrolling.", "min": 30, "max": 90, "step": 1, "unit": "%", "default": 60 },
+
+    { "type": "header", "content": "Animation" },
+    { "type": "range", "id": "scroll_length", "label": "Scroll length", "info": "How long the section stays pinned while it animates. Higher = slower.", "min": 120, "max": 500, "step": 10, "unit": "vh", "default": 250 },
+    { "type": "range", "id": "pill_size", "label": "Text pill size", "min": 12, "max": 36, "step": 1, "unit": "px", "default": 20 },
+    { "type": "range", "id": "mobile_scale", "label": "Item size on mobile", "min": 30, "max": 100, "step": 5, "unit": "%", "default": 60 }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Ingredient / floating item",
+      "limit": 30,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image (gummy, fruit, veg…)", "info": "Transparent PNG. Leave empty to show the label as a text pill." },
+        { "type": "text", "id": "label", "label": "Label", "default": "Spinach" },
+        {
+          "type": "select",
+          "id": "behaviour",
+          "label": "Behaviour",
+          "options": [
+            { "value": "burst", "label": "Bursts out of the pack on scroll" },
+            { "value": "float", "label": "Always visible, floats with parallax" }
+          ],
+          "default": "burst"
+        },
+        { "type": "range", "id": "x", "label": "Final position — left", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 25 },
+        { "type": "range", "id": "y", "label": "Final position — top", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 40 },
+        { "type": "range", "id": "size", "label": "Image width", "min": 40, "max": 400, "step": 5, "unit": "px", "default": 140 },
+        { "type": "range", "id": "rotation", "label": "Rotation", "min": -180, "max": 180, "step": 5, "unit": "°", "default": 0 },
+        { "type": "range", "id": "delay", "label": "Burst delay", "info": "Staggers when this item comes out (burst only).", "min": 0, "max": 30, "step": 1, "unit": "%", "default": 0 },
+        { "type": "range", "id": "parallax", "label": "Parallax strength", "info": "Float only. Negative moves the opposite way.", "min": -100, "max": 100, "step": 5, "default": 40 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ingredients Scroll",
+      "blocks": [
+        { "type": "item", "settings": { "label": "Spinach",    "x": 18, "y": 30, "delay": 0,  "rotation": -8 } },
+        { "type": "item", "settings": { "label": "Broccoli",   "x": 80, "y": 28, "delay": 2,  "rotation": 6 } },
+        { "type": "item", "settings": { "label": "Kale",       "x": 30, "y": 50, "delay": 4,  "rotation": 4 } },
+        { "type": "item", "settings": { "label": "Beets",      "x": 70, "y": 48, "delay": 6,  "rotation": -6 } },
+        { "type": "item", "settings": { "label": "Vitamin D",  "x": 12, "y": 66, "delay": 8,  "rotation": 5 } },
+        { "type": "item", "settings": { "label": "Adaptogens", "x": 86, "y": 66, "delay": 10, "rotation": -4 } },
+        { "type": "item", "settings": { "label": "Prebiotics", "x": 24, "y": 82, "delay": 12, "rotation": -5 } },
+        { "type": "item", "settings": { "label": "Mushrooms",  "x": 76, "y": 84, "delay": 14, "rotation": 7 } }
+      ]
+    }
+  ]
+}
+{% endschema %}
