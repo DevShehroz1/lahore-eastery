@@ -59,7 +59,7 @@
         "trust_2": "Cancel anytime",
         "hero_image": "shopify://shop_images/Golden_Samosa_Snack_Delight.png",
         "badge_text": "",
-        "section_padding_y": 56,
+        "section_padding_y": 96,
         "section_padding_x": 32,
         "container_max_width": 1280,
         "column_gap": 40,
@@ -90,8 +90,8 @@
         "stat_label_font_size": 20,
         "stat_sub_font_size": 13,
         "stat_gap": 32,
-        "image_width": 500,
-        "image_height": 488
+        "image_width": 680,
+        "image_height": 620
       }
     },
     "collections_list_carousel_fVhWbq": {
