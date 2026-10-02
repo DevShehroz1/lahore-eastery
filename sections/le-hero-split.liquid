@@ -61,16 +61,10 @@
           {%- for block in section.blocks -%}
             {%- if block.type == 'stat' -%}
               <div class="le-hero-split__stat" {{ block.shopify_attributes }}>
-                <div class="le-hero-split__stat-bubble">
-                  <img
-                    src="{{ 'le-coral-bubble.png' | asset_url }}"
-                    alt=""
-                    aria-hidden="true"
-                    class="le-hero-split__stat-shape"
-                    loading="lazy"
-                    width="150"
-                    height="130"
-                  >
+                <div class="le-hero-split__stat-bubble" style="color: {{ section.settings.bubble_color }};">
+                  <svg class="le-hero-split__stat-shape" viewBox="0 0 80 70" aria-hidden="true" focusable="false">
+                    <path d="M40 0 C62 0 80 18 80 40 C80 51 76 61 68 68 C66 70 63 70 60 69 C53 66 47 65 40 65 C33 65 27 66 20 69 C17 70 14 70 12 68 C4 61 0 51 0 40 C0 18 18 0 40 0 Z" fill="currentColor"/>
+                  </svg>
                   <span class="le-hero-split__stat-num">{{ block.settings.stat_num }}</span>
                 </div>
                 <p class="le-hero-split__stat-label">{{ block.settings.stat_label }}</p>
@@ -233,8 +227,8 @@
     {
       "type": "text",
       "id": "badge_text",
-      "label": "Badge text (top-left of image)",
-      "default": "NOW DELIVERING"
+      "label": "Badge text (top-left of image, leave blank to hide)",
+      "default": ""
     }
   ],
   "blocks": [

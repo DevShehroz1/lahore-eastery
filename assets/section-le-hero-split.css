@@ -7,19 +7,24 @@
   font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 992px) {
-  .le-hero-split { padding: 5rem 4.5rem; }
+  .le-hero-split { padding: 3.5rem 2rem; }
 }
 
 .le-hero-split__inner {
-  max-width: 1280px;
+  max-width: 1200px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
 }
 @media (min-width: 992px) {
-  .le-hero-split__inner { flex-direction: row; gap: 3rem; align-items: center; }
+  .le-hero-split__inner {
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .le-hero-split__content {
@@ -31,7 +36,7 @@
   width: 100%;
 }
 @media (min-width: 992px) {
-  .le-hero-split__content { align-items: flex-start; text-align: left; flex: 1; }
+  .le-hero-split__content { align-items: center; text-align: center; flex: 1; }
 }
 
 .le-hero-split__reviews {
@@ -64,8 +69,9 @@
   line-height: 1.1;
   letter-spacing: -0.015em;
   color: #001F10;
-  margin: 0.5rem 0 0.75rem;
-  max-width: 40rem;
+  margin: 0.5rem auto 0.75rem;
+  max-width: 100%;
+  text-wrap: balance;
 }
 .le-hero-split__heading strong {
   color: var(--le-hs-accent, #E44B4C);
@@ -75,14 +81,15 @@
 
 .le-hero-split__cta-wrap {
   width: 100%;
-  max-width: 28rem;
+  max-width: 24rem;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
   align-items: center;
+  margin-inline: auto;
 }
 @media (min-width: 992px) {
-  .le-hero-split__cta-wrap { align-items: flex-start; max-width: 30rem; }
+  .le-hero-split__cta-wrap { align-items: center; max-width: 22rem; }
 }
 
 .le-hero-split__cta {
@@ -129,10 +136,10 @@
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 @media (min-width: 992px) {
-  .le-hero-split__stats { justify-content: flex-start; gap: 2.5rem; margin-top: 2rem; }
+  .le-hero-split__stats { gap: 2.75rem; margin-top: 2rem; }
 }
 
 .le-hero-split__stat {
@@ -149,15 +156,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 71px;
-  height: 61px;
+  width: 120px;
+  height: 105px;
 }
 .le-hero-split__stat-shape {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  display: block;
   pointer-events: none;
 }
 .le-hero-split__stat-num {
@@ -168,7 +175,8 @@
   font-weight: 800;
   line-height: 1;
   color: #FFFFFF;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  letter-spacing: -0.02em;
+  padding-bottom: 10px;
 }
 
 .le-hero-split__stat-label {
