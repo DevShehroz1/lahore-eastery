@@ -6,9 +6,9 @@
   --swh-dark: #1A1A1A;
   --swh-icon-bg: #E94949;
   --swh-icon: #FFFFFF;
-  --swh-card-w: 180px;
-  --swh-card-h: 250px;
-  --swh-radius: 600px;
+  --swh-card-w: var(--swh-cw-mb, 180px);
+  --swh-card-h: calc(var(--swh-card-w) * 1.4);
+  --swh-radius: 900px;
   --swh-stage-h: 340px;
   position: relative;
   overflow: hidden;
@@ -18,9 +18,8 @@
 .swh *, .swh *::before, .swh *::after { box-sizing: border-box; }
 @media (min-width: 768px) {
   .swh {
-    --swh-card-w: 300px;
-    --swh-card-h: 420px;
-    --swh-radius: 1150px;
+    --swh-card-w: var(--swh-cw, 300px);
+    --swh-radius: 2000px;
     --swh-stage-h: 520px;
     padding-top: var(--swh-pad-top, 72px);
   }
@@ -90,7 +89,8 @@
   overflow: hidden;
   transform-origin: 50% var(--swh-radius);
   transform: rotate(var(--swh-angle));
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  backface-visibility: hidden;
   background: rgba(0, 0, 0, 0.06);
 }
 .swh__card img,

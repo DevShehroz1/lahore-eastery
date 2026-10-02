@@ -12,7 +12,7 @@
   id="swh-{{ section.id }}"
   data-scroll-rotate="{{ s.scroll_rotate }}"
   data-speed="{{ s.spin_speed }}"
-  data-step="{{ s.angle_step }}"
+  data-gap="{{ s.photo_gap }}"
   style="
     --swh-bg: {{ s.bg_color }};
     --swh-accent: {{ s.accent_color }};
@@ -23,6 +23,8 @@
     --swh-h-fs-mb: {{ s.heading_size_mobile }}px;
     --swh-pad-top: {{ s.padding_top }}px;
     --swh-pad-top-mb: {{ s.padding_top_mobile }}px;
+    --swh-cw: {{ s.card_width }}px;
+    --swh-cw-mb: {{ s.card_width_mobile }}px;
   "
 >
   <div class="swh__head">
@@ -58,7 +60,7 @@
   <div class="swh__stage">
     <div class="swh__wheel" data-swh-wheel>
       {%- for block in section.blocks -%}
-        {%- assign angle = forloop.index0 | minus: center | times: s.angle_step -%}
+        {%- assign angle = forloop.index0 | minus: center | times: 16 -%}
         {%- assign dist = forloop.index0 | minus: center | abs -%}
         {%- assign z = 100 | minus: dist -%}
         <div class="swh__card" style="--swh-angle: {{ angle }}deg; z-index: {{ z | round }};" {{ block.shopify_attributes }}>
@@ -81,73 +83,101 @@
     var root = document.getElementById('swh-{{ section.id }}');
     if (!root) return;
     var wheel = root.querySelector('[data-swh-wheel]');
-    var cards = [].slice.call(root.querySelectorAll('.swh__card'));
-    if (!wheel || !cards.length) return;
+    var stage = root.querySelector('.swh__stage');
+    var originals = [].slice.call(root.querySelectorAll('.swh__card'));
+    if (!wheel || !originals.length) return;
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var scrollAmount = parseFloat(root.dataset.scrollRotate) || 0;
+    var scrollAmount = reduce ? 0 : (parseFloat(root.dataset.scrollRotate) || 0);
     var speed = reduce ? 0 : (parseFloat(root.dataset.speed) || 0);   // degrees per second
-    var step = parseFloat(root.dataset.step) || 15;
+    var gap = parseFloat(root.dataset.gap) || 0;                      // pixels between photos
+    var deg = 180 / Math.PI;
 
-    // For a seamless loop the photos must cover a wide arc, so repeat them until they do
-    var originals = cards.slice();
-    if (speed > 0) {
-      while (cards.length * step < 160 && originals.length) {
-        originals.forEach(function (c) {
-          var copy = c.cloneNode(true);
-          copy.removeAttribute('data-shopify-editor-block');
-          copy.setAttribute('aria-hidden', 'true');
-          wheel.appendChild(copy);
-          cards.push(copy);
-        });
+    var cards = originals.slice(), step = 15, span = 0, offset = 0, scrollRot = 0, R = 1000;
+
+    function build() {
+      // Remove previous copies
+      cards.forEach(function (c) { if (originals.indexOf(c) === -1) c.remove(); });
+      cards = originals.slice();
+
+      var w = originals[0].offsetWidth || 300;
+      var h = originals[0].offsetHeight || 420;
+      R = parseFloat(getComputedStyle(root).getPropertyValue('--swh-radius')) || 1000;
+
+      // Photos are closest at their bottom edge (nearest the pivot), so measure the gap there
+      var inner = Math.max(R - h, w);
+      step = 2 * Math.asin(Math.min(1, (w + gap) / (2 * inner))) * deg;
+
+      if (speed > 0) {
+        // A photo is out of sight once it has dropped below the stage or left the screen sideways
+        var hideByDrop = Math.acos(Math.max(-1, 1 - (stage.offsetHeight + h) / R)) * deg;
+        var sideways = (root.offsetWidth / 2 + w) / R;
+        var hideBySide = sideways < 1 ? Math.asin(sideways) * deg : 90;
+        var hideAt = Math.min(hideByDrop, hideBySide) + step;
+        // Repeat the photos until the loop point sits safely out of sight
+        while (cards.length * step < 2 * hideAt) {
+          originals.forEach(function (c) {
+            var copy = c.cloneNode(true);
+            copy.removeAttribute('data-shopify-editor-block');
+            copy.setAttribute('aria-hidden', 'true');
+            copy.querySelectorAll('img').forEach(function (img) { img.loading = 'eager'; });
+            wheel.appendChild(copy);
+            cards.push(copy);
+          });
+        }
       }
+      span = cards.length * step;
+      // Start with the original photos centred
+      offset = span / 2 - (originals.length - 1) / 2 * step;
+      cards.forEach(function (c) { c.style.zIndex = '1'; });
+      wheel.style.transformOrigin = '0 ' + R + 'px';
     }
-    var span = cards.length * step;
-    var offset = 0, scrollRot = 0, visible = true, last = null;
 
     function layout() {
-      cards.forEach(function (c, i) {
+      for (var i = 0; i < cards.length; i++) {
         var a = i * step + offset;
         a = ((a % span) + span) % span - span / 2;
-        c.style.transform = 'rotate(' + a + 'deg)';
-        c.style.zIndex = String(1000 - Math.round(Math.abs(a) * 10));
-      });
-      var R = getComputedStyle(root).getPropertyValue('--swh-radius').trim() || '0px';
-      wheel.style.transformOrigin = '0 ' + R;
-      wheel.style.transform = 'rotate(' + scrollRot + 'deg)';
+        cards[i].style.transform = 'rotate(' + a.toFixed(3) + 'deg)';
+      }
+      wheel.style.transform = 'rotate(' + scrollRot.toFixed(3) + 'deg)';
     }
+
     function readScroll() {
-      if (!scrollAmount || reduce) return;
+      if (!scrollAmount) return;
       var r = root.getBoundingClientRect(), vh = window.innerHeight;
       var p = Math.max(-1, Math.min(1, (vh - r.top) / (vh + r.height) * 2 - 1));
       scrollRot = -p * scrollAmount;
     }
+
+    var visible = true, last = null, raf = null;
     function frame(t) {
-      if (last !== null && visible) offset += speed * Math.min(t - last, 64) / 1000;
+      if (last !== null) offset += speed * Math.min(t - last, 64) / 1000;
       last = t;
+      readScroll();
       layout();
-      requestAnimationFrame(frame);
+      raf = visible ? requestAnimationFrame(frame) : null;
     }
+    function start() { if (!raf) { last = null; raf = requestAnimationFrame(frame); } }
 
-    // Start with the original photos centred
-    offset = span / 2 - (originals.length - 1) / 2 * step;
-
-    window.addEventListener('scroll', readScroll, { passive: true });
+    build();
     readScroll();
+    layout();
 
-    if (speed > 0) {
-      // Only animate while the section is on screen
-      var running = false;
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting && !running) { running = true; last = null; requestAnimationFrame(frame); }
-          visible = e.isIntersecting;
-        });
-      });
-      io.observe(root);
-    } else {
-      layout();
-      window.addEventListener('scroll', function () { requestAnimationFrame(layout); }, { passive: true });
-      window.addEventListener('resize', layout);
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { build(); layout(); }, 150);
+    });
+
+    if (speed > 0 || scrollAmount > 0) {
+      if (speed > 0) {
+        // Only animate while the section is on screen
+        new IntersectionObserver(function (entries) {
+          visible = entries[0].isIntersecting;
+          if (visible) start();
+        }).observe(root);
+      } else {
+        window.addEventListener('scroll', function () { readScroll(); requestAnimationFrame(layout); }, { passive: true });
+      }
     }
   })();
 </script>
@@ -169,7 +199,9 @@
     { "type": "paragraph", "content": "Links come from Theme settings → Social media. Only networks with a link are shown." },
 
     { "type": "header", "content": "Photo fan" },
-    { "type": "range", "id": "angle_step", "label": "Angle between photos", "min": 6, "max": 30, "step": 1, "unit": "°", "default": 15 },
+    { "type": "range", "id": "photo_gap", "label": "Space between photos", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "card_width", "label": "Photo width (desktop)", "min": 180, "max": 420, "step": 10, "unit": "px", "default": 300 },
+    { "type": "range", "id": "card_width_mobile", "label": "Photo width (mobile)", "min": 100, "max": 300, "step": 5, "unit": "px", "default": 180 },
     { "type": "range", "id": "spin_speed", "label": "Continuous spin speed", "info": "Degrees per second. 0 stops the spinning.", "min": 0, "max": 30, "step": 1, "unit": "°", "default": 5 },
     { "type": "range", "id": "scroll_rotate", "label": "Extra rotation while scrolling", "info": "0 turns the scroll effect off.", "min": 0, "max": 30, "step": 1, "unit": "°", "default": 6 },
 
