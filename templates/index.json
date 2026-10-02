@@ -52,8 +52,8 @@
       "settings": {
         "bg_color": "#fef6dd",
         "text_color": "#183a1d",
-        "accent_color": "#2c7a3b",
-        "bubble_color": "#f6cb45",
+        "accent_color": "#e94949",
+        "bubble_color": "#e94949",
         "number_color": "#ffffff",
         "padding_y": 16,
         "padding_y_mobile": 24,
