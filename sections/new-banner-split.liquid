@@ -64,7 +64,7 @@
       {%- if section.blocks.size > 0 -%}
         <div class="nbs__stats">
           {%- for block in section.blocks -%}
-            <div class="nbs__stat" style="--nbs-bubble-scale: {{ block.settings.bubble_scale | default: 100 | divided_by: 100.0 }};" {{ block.shopify_attributes }}>
+            <div class="nbs__stat" style="--nbs-bubble-scale: {{ block.settings.bubble_scale | default: 100 | divided_by: 100.0 }}; --nbs-num-scale: {{ block.settings.number_scale | default: 100 | divided_by: 100.0 }};" {{ block.shopify_attributes }}>
               <div class="nbs__bubble">
                 {%- if block.settings.bubble_image != blank -%}
                   <img class="nbs__bubble-shape" src="{{ block.settings.bubble_image | image_url: width: 200 }}" alt="" width="100" height="90" loading="lazy">
@@ -122,8 +122,8 @@
     { "type": "color", "id": "number_color", "label": "Stat number", "default": "#FFFFFF" },
 
     { "type": "header", "content": "Stat bubbles" },
-    { "type": "range", "id": "bubble_size", "label": "Bubble size (all stats)", "min": 50, "max": 200, "step": 2, "unit": "px", "default": 84 },
-    { "type": "range", "id": "number_size", "label": "Number size (all stats)", "min": 16, "max": 80, "step": 1, "unit": "px", "default": 34 },
+    { "type": "range", "id": "bubble_size", "label": "Bubble shape size (all stats)", "min": 50, "max": 200, "step": 2, "unit": "px", "default": 84 },
+    { "type": "range", "id": "number_size", "label": "Number text size (all stats)", "min": 16, "max": 80, "step": 1, "unit": "px", "default": 34 },
 
     { "type": "header", "content": "Spacing" },
     { "type": "range", "id": "padding_y", "label": "Vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 16 },
@@ -167,7 +167,8 @@
         { "type": "textarea", "id": "label", "label": "Label", "default": "Ingredients" },
         { "type": "textarea", "id": "sub", "label": "Sub-label (optional)", "default": "Including whole\nfruits and veggies" },
         { "type": "image_picker", "id": "bubble_image", "label": "Bubble shape image (optional)" },
-        { "type": "range", "id": "bubble_scale", "label": "Bubble size for this stat", "info": "Scales this bubble and its number. 100% = section setting.", "min": 50, "max": 250, "step": 5, "unit": "%", "default": 100 }
+        { "type": "range", "id": "bubble_scale", "label": "Bubble size for this stat", "info": "Resizes only the bubble shape. 100% = section setting.", "min": 50, "max": 250, "step": 5, "unit": "%", "default": 100 },
+        { "type": "range", "id": "number_scale", "label": "Number size for this stat", "info": "Resizes only the number text. 100% = section setting.", "min": 30, "max": 250, "step": 5, "unit": "%", "default": 100 }
       ]
     }
   ],

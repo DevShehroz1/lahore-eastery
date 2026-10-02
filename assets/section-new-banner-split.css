@@ -164,7 +164,7 @@ img.nbs__bubble-shape { object-fit: contain; }
 .nbs__num {
   position: relative;
   font-family: var(--nbs-display);
-  font-size: calc(var(--nbs-num-fs, 34px) * var(--nbs-bubble-scale, 1));
+  font-size: calc(var(--nbs-num-fs, 34px) * var(--nbs-num-scale, 1));
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -200,7 +200,7 @@ img.nbs__bubble-shape { object-fit: contain; }
 @media (max-width: 420px) {
   .nbs__label { font-size: 15px; }
   .nbs__bubble { width: calc(var(--nbs-bubble-w, 84px) * var(--nbs-bubble-scale, 1) * 0.88); }
-  .nbs__num { font-size: calc(var(--nbs-num-fs, 34px) * var(--nbs-bubble-scale, 1) * 0.88); }
+  .nbs__num { font-size: calc(var(--nbs-num-fs, 34px) * var(--nbs-num-scale, 1) * 0.88); }
 }
 
 /* ===== IMAGE ===== */
