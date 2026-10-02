@@ -500,6 +500,41 @@
         "padding_y": 72,
         "padding_y_mobile": 48
       }
+    },
+    "promo_banner_FeREkt": {
+      "type": "promo-banner",
+      "name": "Promo Banner",
+      "settings": {
+        "bg_image": "shopify://shop_images/LTO-Banner-BDAYPromo-Gruns-Desktop.webp",
+        "bg_image_mobile": "shopify://shop_images/LTO-Banner-BDAYPromo-Gruns-Mobile_2.webp",
+        "bg_color": "#FEF6DD",
+        "product_image": "shopify://shop_images/Group_1984079021.webp",
+        "product_bottom": true,
+        "product_column": 60,
+        "product_width": 85,
+        "product_width_mobile": 80,
+        "mobile_product": "bottom",
+        "badge_width": 36,
+        "badge_rotation": -12,
+        "heading": "Same Lahori Taste.|Crispy, Golden &|Ready When You Are.",
+        "text": "<p>Samosas, spring rolls, chicken cheese balls and more — hand-made with love and ready for every get-together.</p>",
+        "button_label": "Shop Now",
+        "button_link": "",
+        "heading_size": 56,
+        "heading_size_mobile": 34,
+        "text_size": 16,
+        "text_size_mobile": 15,
+        "mobile_text_align": "left",
+        "heading_color": "#E94949",
+        "text_color": "#1A1A1A",
+        "button_bg": "#E94949",
+        "button_text_color": "#FFFFFF",
+        "min_height": 580,
+        "min_height_mobile": 0,
+        "content_offset": 48,
+        "padding_y": 64,
+        "padding_y_mobile": 40
+      }
     }
   },
   "order": [
@@ -508,6 +543,7 @@
     "feature_cards_mdBPWn",
     "ingredients_scroll_main",
     "faq_main",
-    "quality_promise_main"
+    "quality_promise_main",
+    "promo_banner_FeREkt"
   ]
 }
