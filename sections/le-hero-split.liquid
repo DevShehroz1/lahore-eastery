@@ -7,6 +7,46 @@
     --le-hs-accent: {{ section.settings.accent_color }};
     --le-hs-bubble: {{ section.settings.bubble_color }};
     --le-hs-text: {{ section.settings.text_color }};
+
+    --le-hs-pad-y: {{ section.settings.section_padding_y }}px;
+    --le-hs-pad-x: {{ section.settings.section_padding_x }}px;
+    --le-hs-max-w: {{ section.settings.container_max_width }}px;
+    --le-hs-gap: {{ section.settings.column_gap }}px;
+
+    --le-hs-content-flex: {{ section.settings.content_flex | default: 1 }};
+    --le-hs-image-w: {{ section.settings.image_width }}px;
+    --le-hs-image-h: {{ section.settings.image_height }}px;
+
+    --le-hs-reviews-fs: {{ section.settings.reviews_font_size }}px;
+    --le-hs-reviews-weight: {{ section.settings.reviews_font_weight }};
+
+    --le-hs-h-fs: {{ section.settings.heading_font_size }}px;
+    --le-hs-h-fs-mobile: {{ section.settings.heading_font_size_mobile }}px;
+    --le-hs-h-weight: {{ section.settings.heading_font_weight }};
+    --le-hs-h-lh: {{ section.settings.heading_line_height }};
+    --le-hs-h-tracking: {{ section.settings.heading_letter_spacing }}em;
+    --le-hs-h-max-w: {{ section.settings.heading_max_width }}px;
+
+    --le-hs-sub-fs: {{ section.settings.subheading_font_size }}px;
+    --le-hs-sub-weight: {{ section.settings.subheading_font_weight }};
+    --le-hs-sub-lh: {{ section.settings.subheading_line_height }};
+    --le-hs-sub-max-w: {{ section.settings.subheading_max_width }}px;
+
+    --le-hs-cta-w: {{ section.settings.cta_width }}px;
+    --le-hs-cta-h: {{ section.settings.cta_height }}px;
+    --le-hs-cta-fs: {{ section.settings.cta_font_size }}px;
+    --le-hs-cta-radius: {{ section.settings.cta_radius }}px;
+
+    --le-hs-trust-fs: {{ section.settings.trust_font_size }}px;
+    --le-hs-trust-weight: {{ section.settings.trust_font_weight }};
+    --le-hs-trust-gap: {{ section.settings.trust_gap }}px;
+
+    --le-hs-bubble-w: {{ section.settings.bubble_width }}px;
+    --le-hs-bubble-h: {{ section.settings.bubble_height }}px;
+    --le-hs-stat-num-fs: {{ section.settings.stat_num_font_size }}px;
+    --le-hs-stat-label-fs: {{ section.settings.stat_label_font_size }}px;
+    --le-hs-stat-sub-fs: {{ section.settings.stat_sub_font_size }}px;
+    --le-hs-stat-gap: {{ section.settings.stat_gap }}px;
   "
 >
   <div class="le-hero-split__inner">
@@ -33,6 +73,10 @@
           <strong>{{ section.settings.heading_highlight }}</strong>
         {%- endif -%}
       </h1>
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="le-hero-split__sub">{{ section.settings.subheading }}</p>
+      {%- endif -%}
 
       <div class="le-hero-split__cta-wrap">
         <a href="{{ section.settings.cta_link }}" class="le-hero-split__cta">
@@ -62,7 +106,7 @@
             {%- if block.type == 'stat' -%}
               <div class="le-hero-split__stat" {{ block.shopify_attributes }}>
                 <div class="le-hero-split__stat-bubble" style="color: {{ section.settings.bubble_color }};">
-                  <svg class="le-hero-split__stat-shape" viewBox="0 0 80 70" aria-hidden="true" focusable="false">
+                  <svg class="le-hero-split__stat-shape" viewBox="0 0 80 70" aria-hidden="true" focusable="false" preserveAspectRatio="none">
                     <path d="M40 0 C62 0 80 18 80 40 C80 51 76 61 68 68 C66 70 63 70 60 69 C53 66 47 65 40 65 C33 65 27 66 20 69 C17 70 14 70 12 68 C4 61 0 51 0 40 C0 18 18 0 40 0 Z" fill="currentColor"/>
                   </svg>
                   <span class="le-hero-split__stat-num">{{ block.settings.stat_num }}</span>
@@ -92,7 +136,7 @@
             {{ section.settings.hero_image | image_url: width: 1000 }} 1000w,
             {{ section.settings.hero_image | image_url: width: 1400 }} 1400w
           "
-          sizes="(min-width: 992px) 50vw, 100vw"
+          sizes="(min-width: 992px) {{ section.settings.image_width }}px, 100vw"
           alt="{{ section.settings.hero_image.alt | default: section.settings.heading | escape }}"
           width="{{ section.settings.hero_image.width }}"
           height="{{ section.settings.hero_image.height }}"
@@ -128,21 +172,63 @@
     {
       "type": "color",
       "id": "accent_color",
-      "label": "Accent colour (CTA + highlight)",
+      "label": "Accent colour (CTA, stars, highlight)",
       "default": "#E44B4C"
     },
     {
       "type": "color",
       "id": "bubble_color",
-      "label": "Stat bubble colour (fallback / tint)",
+      "label": "Stat bubble colour",
       "default": "#E44B4C"
     },
     {
       "type": "color",
       "id": "text_color",
       "label": "Text colour",
-      "default": "#0a1912"
+      "default": "#001F10"
     },
+
+    {
+      "type": "header",
+      "content": "Section layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_y",
+      "label": "Vertical padding",
+      "min": 0, "max": 160, "step": 4, "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "section_padding_x",
+      "label": "Horizontal padding",
+      "min": 0, "max": 120, "step": 4, "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "container_max_width",
+      "label": "Max container width",
+      "min": 1000, "max": 1600, "step": 20, "unit": "px",
+      "default": 1280
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Gap between columns",
+      "min": 0, "max": 120, "step": 4, "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "content_flex",
+      "label": "Content column flex grow",
+      "min": 1, "max": 5, "step": 1,
+      "info": "Larger = more width for text (image stays fixed at image width).",
+      "default": 1
+    },
+
     {
       "type": "header",
       "content": "Reviews row"
@@ -152,6 +238,25 @@
       "id": "show_reviews",
       "label": "Show reviews row",
       "default": true
+    },
+    {
+      "type": "range",
+      "id": "reviews_font_size",
+      "label": "Reviews font size",
+      "min": 10, "max": 24, "step": 1, "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "reviews_font_weight",
+      "label": "Reviews font weight",
+      "options": [
+        {"value":"400","label":"Regular"},
+        {"value":"500","label":"Medium"},
+        {"value":"600","label":"Semibold"},
+        {"value":"700","label":"Bold"}
+      ],
+      "default": "500"
     },
     {
       "type": "text",
@@ -171,6 +276,7 @@
       "label": "Customer / member count",
       "default": "50,000+"
     },
+
     {
       "type": "header",
       "content": "Heading"
@@ -184,12 +290,105 @@
     {
       "type": "text",
       "id": "heading_highlight",
-      "label": "Highlight text (colored in accent)",
+      "label": "Highlight text (coloured accent)",
       "default": "You'll Actually Crave"
     },
     {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size (desktop)",
+      "min": 24, "max": 96, "step": 1, "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "Heading font size (mobile)",
+      "min": 20, "max": 60, "step": 1, "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading font weight",
+      "options": [
+        {"value":"500","label":"Medium"},
+        {"value":"600","label":"Semibold"},
+        {"value":"700","label":"Bold"},
+        {"value":"800","label":"Extra bold"},
+        {"value":"900","label":"Black"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "label": "Heading line height",
+      "min": 0.8, "max": 1.6, "step": 0.05,
+      "default": 1.1
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "label": "Heading letter spacing (em)",
+      "min": -0.05, "max": 0.1, "step": 0.005,
+      "default": -0.015
+    },
+    {
+      "type": "range",
+      "id": "heading_max_width",
+      "label": "Heading max width",
+      "min": 200, "max": 900, "step": 10, "unit": "px",
+      "default": 700
+    },
+
+    {
       "type": "header",
-      "content": "Call to action"
+      "content": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading text (leave blank to hide)",
+      "default": ""
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size",
+      "label": "Subheading font size",
+      "min": 10, "max": 32, "step": 1, "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "subheading_font_weight",
+      "label": "Subheading font weight",
+      "options": [
+        {"value":"400","label":"Regular"},
+        {"value":"500","label":"Medium"},
+        {"value":"600","label":"Semibold"},
+        {"value":"700","label":"Bold"}
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "subheading_line_height",
+      "label": "Subheading line height",
+      "min": 1, "max": 2, "step": 0.05,
+      "default": 1.4
+    },
+    {
+      "type": "range",
+      "id": "subheading_max_width",
+      "label": "Subheading max width",
+      "min": 200, "max": 900, "step": 10, "unit": "px",
+      "default": 560
+    },
+
+    {
+      "type": "header",
+      "content": "CTA button"
     },
     {
       "type": "text",
@@ -201,6 +400,39 @@
       "type": "url",
       "id": "cta_link",
       "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "cta_width",
+      "label": "Button width",
+      "min": 160, "max": 500, "step": 4, "unit": "px",
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "cta_height",
+      "label": "Button height",
+      "min": 40, "max": 80, "step": 2, "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "cta_font_size",
+      "label": "Button font size",
+      "min": 12, "max": 24, "step": 1, "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "cta_radius",
+      "label": "Button corner radius",
+      "min": 0, "max": 60, "step": 1, "unit": "px",
+      "default": 999
+    },
+
+    {
+      "type": "header",
+      "content": "Trust row (under CTA)"
     },
     {
       "type": "text",
@@ -215,6 +447,80 @@
       "default": "Cancel anytime"
     },
     {
+      "type": "range",
+      "id": "trust_font_size",
+      "label": "Trust font size",
+      "min": 10, "max": 20, "step": 1, "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "trust_font_weight",
+      "label": "Trust font weight",
+      "options": [
+        {"value":"400","label":"Regular"},
+        {"value":"500","label":"Medium"},
+        {"value":"600","label":"Semibold"},
+        {"value":"700","label":"Bold"}
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "trust_gap",
+      "label": "Gap between trust items",
+      "min": 4, "max": 48, "step": 2, "unit": "px",
+      "default": 16
+    },
+
+    {
+      "type": "header",
+      "content": "Stat bubbles"
+    },
+    {
+      "type": "range",
+      "id": "bubble_width",
+      "label": "Bubble width",
+      "min": 50, "max": 200, "step": 1, "unit": "px",
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "bubble_height",
+      "label": "Bubble height",
+      "min": 40, "max": 160, "step": 1, "unit": "px",
+      "default": 75
+    },
+    {
+      "type": "range",
+      "id": "stat_num_font_size",
+      "label": "Number font size",
+      "min": 16, "max": 60, "step": 1, "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "stat_label_font_size",
+      "label": "Label font size",
+      "min": 10, "max": 32, "step": 1, "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "stat_sub_font_size",
+      "label": "Sub-label font size",
+      "min": 8, "max": 20, "step": 1, "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "stat_gap",
+      "label": "Gap between stat bubbles",
+      "min": 8, "max": 64, "step": 2, "unit": "px",
+      "default": 32
+    },
+
+    {
       "type": "header",
       "content": "Right-side image"
     },
@@ -222,7 +528,21 @@
       "type": "image_picker",
       "id": "hero_image",
       "label": "Hero image (upload your own)",
-      "info": "Recommended: 1400×1050 or larger. Appears on the right side on desktop."
+      "info": "Recommended: 1300x976 or larger (same aspect)."
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Image width (desktop)",
+      "min": 300, "max": 800, "step": 10, "unit": "px",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Image height (desktop)",
+      "min": 240, "max": 700, "step": 10, "unit": "px",
+      "default": 488
     },
     {
       "type": "text",
@@ -262,30 +582,9 @@
     {
       "name": "LE Hero Split",
       "blocks": [
-        {
-          "type": "stat",
-          "settings": {
-            "stat_num": "25+",
-            "stat_label": "Dishes",
-            "stat_sub": "Lahori recipes perfected"
-          }
-        },
-        {
-          "type": "stat",
-          "settings": {
-            "stat_num": "100%",
-            "stat_label": "Fresh Daily",
-            "stat_sub": "Cooked fresh every morning"
-          }
-        },
-        {
-          "type": "stat",
-          "settings": {
-            "stat_num": "30m",
-            "stat_label": "Delivery",
-            "stat_sub": "Hot at your door"
-          }
-        }
+        { "type": "stat", "settings": {"stat_num":"25+","stat_label":"Dishes","stat_sub":"Lahori recipes perfected"} },
+        { "type": "stat", "settings": {"stat_num":"100%","stat_label":"Fresh Daily","stat_sub":"Cooked fresh every morning"} },
+        { "type": "stat", "settings": {"stat_num":"30m","stat_label":"Delivery","stat_sub":"Hot at your door"} }
       ]
     }
   ]
