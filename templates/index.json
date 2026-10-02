@@ -92,7 +92,7 @@
         "trust_gap": 16,
         "bubble_width": 90,
         "bubble_height": 76,
-        "stat_num_font_size": 24,
+        "stat_num_font_size": 18,
         "stat_label_font_size": 20,
         "stat_sub_font_size": 13,
         "stat_gap": 32,
