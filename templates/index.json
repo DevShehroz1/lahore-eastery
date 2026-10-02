@@ -2329,12 +2329,188 @@
     "17383511173830307a": {
       "type": "apps",
       "settings": {}
+    },
+    "ingredients_scroll_main": {
+      "type": "ingredients-scroll",
+      "blocks": {
+        "pill_1": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Potatoes",
+            "behaviour": "burst",
+            "x": 18,
+            "y": 30,
+            "size": 140,
+            "rotation": -8,
+            "delay": 0,
+            "parallax": 40
+          }
+        },
+        "pill_2": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Green Peas",
+            "behaviour": "burst",
+            "x": 80,
+            "y": 28,
+            "size": 140,
+            "rotation": 6,
+            "delay": 2,
+            "parallax": 40
+          }
+        },
+        "pill_3": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Cumin",
+            "behaviour": "burst",
+            "x": 30,
+            "y": 50,
+            "size": 140,
+            "rotation": 4,
+            "delay": 4,
+            "parallax": 40
+          }
+        },
+        "pill_4": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Coriander",
+            "behaviour": "burst",
+            "x": 70,
+            "y": 48,
+            "size": 140,
+            "rotation": -6,
+            "delay": 6,
+            "parallax": 40
+          }
+        },
+        "pill_5": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Green Chilli",
+            "behaviour": "burst",
+            "x": 12,
+            "y": 66,
+            "size": 140,
+            "rotation": 5,
+            "delay": 8,
+            "parallax": 40
+          }
+        },
+        "pill_6": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Ginger",
+            "behaviour": "burst",
+            "x": 86,
+            "y": 66,
+            "size": 140,
+            "rotation": -4,
+            "delay": 10,
+            "parallax": 40
+          }
+        },
+        "pill_7": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Garam Masala",
+            "behaviour": "burst",
+            "x": 24,
+            "y": 82,
+            "size": 140,
+            "rotation": -5,
+            "delay": 12,
+            "parallax": 40
+          }
+        },
+        "pill_8": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "label": "Crispy Pastry",
+            "behaviour": "burst",
+            "x": 76,
+            "y": 84,
+            "size": 140,
+            "rotation": 7,
+            "delay": 14,
+            "parallax": 40
+          }
+        },
+        "samosa_float_left": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Golden_Samosa_Snack_Delight.png",
+            "label": "Samosa",
+            "behaviour": "float",
+            "x": 9,
+            "y": 36,
+            "size": 180,
+            "rotation": -10,
+            "delay": 0,
+            "parallax": 60
+          }
+        },
+        "samosa_float_right": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Golden_Samosa_Snack_Delight.png",
+            "label": "Samosa",
+            "behaviour": "float",
+            "x": 91,
+            "y": 15,
+            "size": 130,
+            "rotation": 25,
+            "delay": 0,
+            "parallax": -50
+          }
+        }
+      },
+      "block_order": [
+        "pill_1",
+        "pill_2",
+        "pill_3",
+        "pill_4",
+        "pill_5",
+        "pill_6",
+        "pill_7",
+        "pill_8",
+        "samosa_float_left",
+        "samosa_float_right"
+      ],
+      "settings": {
+        "heading": "60+ Ingredients",
+        "heading_size": 84,
+        "heading_size_mobile": 44,
+        "heading_top": 5,
+        "bg_color": "#E94949",
+        "heading_color": "#FFFFFF",
+        "pill_bg": "#FFFFFF",
+        "pill_text": "#E94949",
+        "pack_image": "shopify://shop_images/Golden_Samosa_Snack_Delight.png",
+        "pack_width": 520,
+        "pack_width_mobile": 60,
+        "pack_start": 75,
+        "pack_end": 60,
+        "scroll_length": 250,
+        "pill_size": 20,
+        "mobile_scale": 60
+      }
     }
   },
   "order": [
     "new_banner_split_N3EVaU",
     "featured_collection_new_QewxVW",
     "feature_cards_mdBPWn",
+    "ingredients_scroll_main",
     "le_hero_split_main",
     "collections_list_carousel_fVhWbq",
     "1646028739ae283905",
