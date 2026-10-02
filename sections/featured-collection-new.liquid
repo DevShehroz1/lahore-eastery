@@ -92,6 +92,31 @@
   endif
  -%}
 
+{%- if se_stts.use_bold_heading -%}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <style>
+    .t4s_nt_se_{{ sid }} .t4s-top-heading .t4s-section-title,
+    .t4s_nt_se_{{ sid }} .t4s-top-heading .t4s-section-title > span {
+      font-family: "Lilita One", "Arial Rounded MT Bold", sans-serif !important;
+      font-weight: 400 !important;
+      font-size: {{ se_stts.bold_heading_size_mb }}px !important;
+      line-height: 1.1 !important;
+      letter-spacing: 0.01em !important;
+      text-transform: none !important;
+      color: {{ se_stts.bold_heading_color }} !important;
+      -webkit-text-stroke: 0.035em {{ se_stts.bold_heading_color }};
+      paint-order: stroke fill;
+    }
+    @media (min-width: 768px) {
+      .t4s_nt_se_{{ sid }} .t4s-top-heading .t4s-section-title,
+      .t4s_nt_se_{{ sid }} .t4s-top-heading .t4s-section-title > span {
+        font-size: {{ se_stts.bold_heading_size }}px !important;
+      }
+    }
+  </style>
+{%- endif -%}
+
 {%- paginate collection.products by limit -%}
 
 <div data-not-main data-ntajax-options='{"id":"{{ sid }}","type":"{{ typeAjax }}","isProduct":true}' class="t4s-section-inner t4s_nt_se_{{ sid }} t4s_se_{{ sid }} {{ stt_layout }} {% if stt_image_bg != blank and stt_layout != 't4s-se-container' %} t4s-has-imgbg lazyloadt4s {% endif %}"  {% if stt_image_bg != blank and stt_layout != 't4s-se-container' %}  data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto"  data-optimumx="2" {% endif %} {% render 'section_style', se_stts: se_stts %} >
@@ -294,6 +319,32 @@
           ]
       },
       {
+        "type": "checkbox",
+        "id": "use_bold_heading",
+        "label": "+ Bold rounded heading (Grüns style)",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "bold_heading_color",
+        "label": "+ Bold heading colour",
+        "default": "#E94949"
+      },
+      {
+        "type": "range",
+        "id": "bold_heading_size",
+        "label": "+ Bold heading size (desktop)",
+        "min": 24, "max": 100, "step": 1, "unit": "px",
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "bold_heading_size_mb",
+        "label": "+ Bold heading size (mobile)",
+        "min": 18, "max": 72, "step": 1, "unit": "px",
+        "default": 36
+      },
+      {
           "type": "select",
           "id": "heading_align",
           "label": "+ Heading align",
@@ -313,7 +364,7 @@
           "type": "text",
           "id": "top_heading",
           "label": "+ Heading",
-          "default": "Featured collection"
+          "default": "Find Your Flavor"
       },
       {
         "type": "text",
