@@ -25,7 +25,6 @@
   "
 >
   <div class="faqt__header">
-    <span class="faqt__glow" aria-hidden="true"></span>
     {%- if section.settings.subtitle != blank -%}
       <p class="faqt__subtitle">{{ section.settings.subtitle | escape }}</p>
     {%- endif -%}
@@ -180,7 +179,7 @@
     { "type": "range", "id": "title_size_mobile", "label": "Title size (mobile)", "min": 20, "max": 64, "step": 1, "unit": "px", "default": 36 },
 
     { "type": "header", "content": "Colours" },
-    { "type": "color", "id": "bg_color", "label": "Background", "default": "#FEF6DD" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#FFFFFF" },
     { "type": "color", "id": "text_color", "label": "Text", "default": "#1A1A1A" },
     { "type": "color", "id": "muted_color", "label": "Muted text", "default": "#6B6B6B" },
     { "type": "color", "id": "accent_color", "label": "Accent (tabs, subtitle, icons)", "default": "#E94949" },
