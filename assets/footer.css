@@ -217,8 +217,3 @@
   line-height: 1.15 !important;
   letter-spacing: -0.01em !important;
 }
-
-/* Footer layout: sign-up column on the left, link columns pushed to the right */
-@media (min-width: 1025px) {
-  .t4s-footer-wrap:not(.t4s-bottom-bar) > .t4s-col-item:first-child { margin-inline-end: auto; }
-}

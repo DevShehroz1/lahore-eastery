@@ -170,6 +170,25 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "footer-0": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "",
+              "menu": "",
+              "menu_style": "1",
+              "col_border": "none",
+              "col_dk": "3",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "",
+              "content_align_tb": "t4s-text-md-start",
+              "padding_inner_tb": "",
+              "col_heading_mobile": "Get in touch",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
           "385c1474-1235-4a3d-b73c-9555b5f8dcfb": {
             "type": "image",
             "settings": {
@@ -224,7 +243,7 @@
               "menu_style": "1",
               "col_border": "none",
               "col_dk": "2",
-              "col_tb": "4",
+              "col_tb": "6",
               "col_mb": "12",
               "content_align": "t4s-text-md-start",
               "padding_inner": "5px,0,0,0",
@@ -242,8 +261,8 @@
               "menu": "",
               "menu_style": "1",
               "col_border": "none",
-              "col_dk": "3",
-              "col_tb": "4",
+              "col_dk": "2",
+              "col_tb": "6",
               "col_mb": "12",
               "content_align": "t4s-text-md-start",
               "padding_inner": "5px,0,0,0",
@@ -292,7 +311,7 @@
               "menu_style": "1",
               "col_border": "none",
               "col_dk": "2",
-              "col_tb": "4",
+              "col_tb": "6",
               "col_mb": "12",
               "content_align": "t4s-text-md-start",
               "padding_inner": "5px,0,0,0",
@@ -310,8 +329,8 @@
               "menu": "",
               "menu_style": "1",
               "col_border": "none",
-              "col_dk": "4",
-              "col_tb": "12",
+              "col_dk": "3",
+              "col_tb": "6",
               "col_mb": "12",
               "content_align": "t4s-text-md-start",
               "padding_inner": "5px,0,0,0",
@@ -388,20 +407,21 @@
           }
         },
         "block_order": [
-          "footer-10",
-          "footer-12",
-          "footer-11",
+          "footer-0",
           "385c1474-1235-4a3d-b73c-9555b5f8dcfb",
           "de84a111-3ed0-40a2-b86a-1e81488e9bff",
-          "footer-3",
           "footer-2",
-          "payments_axJLCN",
-          "33eb929e-a001-4d96-82a0-5aab1aaabaea",
+          "footer-3",
           "footer-4",
-          "footer-8",
           "footer-6",
           "html_GMEiR4",
-          "custom_text_KYEt99"
+          "custom_text_KYEt99",
+          "footer-8",
+          "footer-10",
+          "footer-11",
+          "footer-12",
+          "payments_axJLCN",
+          "33eb929e-a001-4d96-82a0-5aab1aaabaea"
         ],
         "settings": {
           "sticky": false,
