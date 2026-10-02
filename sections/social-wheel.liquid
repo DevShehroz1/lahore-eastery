@@ -1,0 +1,155 @@
+{{ 'section-social-wheel.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+  assign n = section.blocks.size
+  assign center = n | minus: 1 | times: 0.5
+  assign lines = s.heading | newline_to_br | split: '<br />'
+-%}
+
+<section
+  class="swh"
+  id="swh-{{ section.id }}"
+  data-scroll-rotate="{{ s.scroll_rotate }}"
+  style="
+    --swh-bg: {{ s.bg_color }};
+    --swh-accent: {{ s.accent_color }};
+    --swh-dark: {{ s.text_color }};
+    --swh-icon-bg: {{ s.icon_bg }};
+    --swh-icon: {{ s.icon_color }};
+    --swh-h-fs: {{ s.heading_size }}px;
+    --swh-h-fs-mb: {{ s.heading_size_mobile }}px;
+    --swh-pad-top: {{ s.padding_top }}px;
+    --swh-pad-top-mb: {{ s.padding_top_mobile }}px;
+  "
+>
+  <div class="swh__head">
+    <h2 class="swh__heading">
+      {%- if s.heading_accent != blank -%}<span class="swh__accent">{{ s.heading_accent | escape }}</span>{%- endif -%}
+      {%- for line in lines -%}
+        {%- assign t = line | strip -%}
+        {%- if t != blank -%}<span>{{ t | escape }}</span>{%- endif -%}
+      {%- endfor -%}
+    </h2>
+
+    {%- if s.show_social -%}
+      <ul class="swh__social" role="list">
+        {%- if settings.social_instagram_link != blank -%}
+          <li><a href="{{ settings.social_instagram_link }}" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+        {%- endif -%}
+        {%- if settings.social_tiktok_link != blank -%}
+          <li><a href="{{ settings.social_tiktok_link }}" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></a></li>
+        {%- endif -%}
+        {%- if settings.social_youtube_link != blank -%}
+          <li><a href="{{ settings.social_youtube_link }}" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg></a></li>
+        {%- endif -%}
+        {%- if settings.social_facebook_link != blank -%}
+          <li><a href="{{ settings.social_facebook_link }}" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h2.5V4.5H14c-2.2 0-4 1.8-4 4V11H8v3.5h2V21h3.5v-6.5H16l.5-3.5h-3V8.5c0-.3.2-.5.5-.5z"/></svg></a></li>
+        {%- endif -%}
+        {%- if settings.social_pinterest_link != blank -%}
+          <li><a href="{{ settings.social_pinterest_link }}" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.6 1.9 1.9 0 3.3-2 3.3-4.9 0-2.6-1.9-4.4-4.5-4.4-3.1 0-4.9 2.3-4.9 4.7 0 .9.4 1.9.8 2.5.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.1-1.4-.6-2.2-2.7-2.2-4.3 0-3.5 2.5-6.7 7.3-6.7 3.8 0 6.8 2.7 6.8 6.4 0 3.8-2.4 6.9-5.8 6.9-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2z"/></svg></a></li>
+        {%- endif -%}
+      </ul>
+    {%- endif -%}
+  </div>
+
+  <div class="swh__stage">
+    <div class="swh__wheel" data-swh-wheel>
+      {%- for block in section.blocks -%}
+        {%- assign angle = forloop.index0 | minus: center | times: s.angle_step -%}
+        {%- assign dist = forloop.index0 | minus: center | abs -%}
+        {%- assign z = 100 | minus: dist -%}
+        <div class="swh__card" style="--swh-angle: {{ angle }}deg; z-index: {{ z | round }};" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}
+          {%- if block.settings.image != blank -%}
+            {%- assign photo_alt = block.settings.image.alt | default: '' -%}
+            {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '300, 500, 700', sizes: '(min-width: 768px) 300px, 180px', alt: photo_alt }}
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          {%- if block.settings.link != blank -%}</a>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.getElementById('swh-{{ section.id }}');
+    if (!root) return;
+    var wheel = root.querySelector('[data-swh-wheel]');
+    var amount = parseFloat(root.dataset.scrollRotate) || 0;
+    if (!wheel || !amount || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var ticking = false;
+    function render() {
+      ticking = false;
+      var r = root.getBoundingClientRect();
+      var vh = window.innerHeight;
+      // -1 when the section enters from the bottom, +1 when it leaves at the top
+      var p = (vh - r.top) / (vh + r.height) * 2 - 1;
+      p = Math.max(-1, Math.min(1, p));
+      var R = getComputedStyle(root).getPropertyValue('--swh-radius').trim() || '0px';
+      wheel.style.transformOrigin = '0 ' + R;
+      wheel.style.transform = 'rotate(' + (-p * amount) + 'deg)';
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(render); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    render();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Social Wheel",
+  "tag": "section",
+  "class": "section-social-wheel",
+  "settings": [
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "heading_accent", "label": "First line (accent colour)", "default": "Follow the flavour." },
+    { "type": "textarea", "id": "heading", "label": "Other lines (one per line)", "default": "We've been\ngetting around" },
+    { "type": "range", "id": "heading_size", "label": "Heading size (desktop)", "min": 28, "max": 120, "step": 2, "unit": "px", "default": 76 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Heading size (mobile)", "min": 20, "max": 64, "step": 1, "unit": "px", "default": 36 },
+
+    { "type": "header", "content": "Social icons" },
+    { "type": "checkbox", "id": "show_social", "label": "Show social icons", "default": true },
+    { "type": "paragraph", "content": "Links come from Theme settings → Social media. Only networks with a link are shown." },
+
+    { "type": "header", "content": "Photo fan" },
+    { "type": "range", "id": "angle_step", "label": "Angle between photos", "min": 6, "max": 30, "step": 1, "unit": "°", "default": 15 },
+    { "type": "range", "id": "scroll_rotate", "label": "Rotation while scrolling", "info": "0 turns the scroll animation off.", "min": 0, "max": 30, "step": 1, "unit": "°", "default": 10 },
+
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#FEF6DD" },
+    { "type": "color", "id": "accent_color", "label": "First line", "default": "#E94949" },
+    { "type": "color", "id": "text_color", "label": "Other lines", "default": "#1A1A1A" },
+    { "type": "color", "id": "icon_bg", "label": "Icon background", "default": "#E94949" },
+    { "type": "color", "id": "icon_color", "label": "Icon", "default": "#FFFFFF" },
+
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "label": "Top padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_top_mobile", "label": "Top padding (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Photo",
+      "limit": 12,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image", "info": "Portrait works best (5:7)." },
+        { "type": "url", "id": "link", "label": "Link (optional)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Wheel",
+      "blocks": [
+        { "type": "photo" }, { "type": "photo" }, { "type": "photo" }, { "type": "photo" },
+        { "type": "photo" }, { "type": "photo" }, { "type": "photo" }
+      ]
+    }
+  ]
+}
+{% endschema %}

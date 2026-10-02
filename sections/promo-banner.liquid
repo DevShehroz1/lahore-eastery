@@ -62,7 +62,8 @@
     <div class="pbn__media{% if s.mobile_product == 'top' %} pbn__media--top-mb{% elsif s.mobile_product == 'hide' %} pbn__media--hide-mb{% endif %}">
       <div class="pbn__product">
         {%- if s.product_image != blank -%}
-          {{ s.product_image | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '400, 700, 1000, 1400', sizes: '(min-width: 990px) 45vw, 80vw', alt: s.product_image.alt | default: s.heading }}
+          {%- assign product_alt = s.product_image.alt | default: s.heading | replace: '|', ' ' -%}
+          {{ s.product_image | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '400, 700, 1000, 1400', sizes: '(min-width: 990px) 45vw, 80vw', alt: product_alt }}
         {%- else -%}
           {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
