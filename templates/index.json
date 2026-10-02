@@ -15,7 +15,7 @@
         "stat_1": {
           "type": "stat",
           "settings": {
-            "stat_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch.png",
+            "stat_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch_Background_Removed.png",
             "stat_num": "25+",
             "stat_label": "Dishes",
             "stat_sub": "Lahori recipes perfected"
@@ -24,6 +24,7 @@
         "stat_2": {
           "type": "stat",
           "settings": {
+            "stat_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch_Background_Removed.png",
             "stat_num": "100%",
             "stat_label": "Fresh Daily",
             "stat_sub": "Cooked fresh every morning"
@@ -32,6 +33,7 @@
         "stat_3": {
           "type": "stat",
           "settings": {
+            "stat_image": "shopify://shop_images/Coral_Circle_with_Bottom_Notch_Background_Removed.png",
             "stat_num": "30m",
             "stat_label": "Delivery",
             "stat_sub": "Hot at your door"
