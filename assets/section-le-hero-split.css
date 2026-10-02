@@ -3,7 +3,10 @@
 .le-hero-split {
   background: var(--le-hs-bg, #FEF7DF);
   color: var(--le-hs-text, #001F10);
-  padding: var(--le-hs-pad-y, 56px) var(--le-hs-pad-x, 32px);
+  padding-top: var(--le-hs-pad-y, 56px);
+  padding-bottom: var(--le-hs-pad-y, 56px);
+  padding-left: var(--le-hs-pad-x, 32px);
+  padding-right: var(--le-hs-pad-right, var(--le-hs-pad-x, 32px));
   font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -21,7 +24,7 @@
 @media (min-width: 992px) {
   .le-hero-split__inner {
     flex-direction: row;
-    align-items: center;
+    align-items: var(--le-hs-row-align, flex-start);
     justify-content: center;
   }
   .le-hero-split__image-wrap { order: 2; }

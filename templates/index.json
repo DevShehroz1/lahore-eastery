@@ -91,7 +91,9 @@
         "stat_sub_font_size": 13,
         "stat_gap": 32,
         "image_width": 650,
-        "image_height": 488
+        "image_height": 488,
+        "section_padding_right": 0,
+        "row_vertical_align": "flex-start"
       }
     },
     "collections_list_carousel_fVhWbq": {

@@ -10,8 +10,10 @@
 
     --le-hs-pad-y: {{ section.settings.section_padding_y }}px;
     --le-hs-pad-x: {{ section.settings.section_padding_x }}px;
+    --le-hs-pad-right: {{ section.settings.section_padding_right | default: section.settings.section_padding_x }}px;
     --le-hs-max-w: {{ section.settings.container_max_width }}px;
     --le-hs-gap: {{ section.settings.column_gap }}px;
+    --le-hs-row-align: {{ section.settings.row_vertical_align | default: 'flex-start' }};
 
     --le-hs-content-flex: {{ section.settings.content_flex | default: 1 }};
     --le-hs-image-w: {{ section.settings.image_width }}px;
@@ -216,8 +218,16 @@
     {
       "type": "range",
       "id": "section_padding_x",
-      "label": "Horizontal padding",
-      "min": 0, "max": 120, "step": 4, "unit": "px",
+      "label": "Horizontal padding (left + fallback right)",
+      "min": 0, "max": 160, "step": 4, "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "section_padding_right",
+      "label": "Right padding override",
+      "info": "Set 0 to let image sit flush with the right edge.",
+      "min": 0, "max": 160, "step": 4, "unit": "px",
       "default": 32
     },
     {
@@ -233,6 +243,18 @@
       "label": "Gap between columns",
       "min": 0, "max": 120, "step": 4, "unit": "px",
       "default": 40
+    },
+    {
+      "type": "select",
+      "id": "row_vertical_align",
+      "label": "Vertical alignment (desktop)",
+      "info": "How the text column lines up when the image is taller.",
+      "options": [
+        {"value":"flex-start","label":"Top"},
+        {"value":"center","label":"Center"},
+        {"value":"flex-end","label":"Bottom"}
+      ],
+      "default": "flex-start"
     },
     {
       "type": "range",
