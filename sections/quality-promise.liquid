@@ -1,0 +1,133 @@
+{{ 'section-quality-promise.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading_html = section.settings.heading | escape | replace: '|', ' <br>'
+  assign cols = section.blocks.size
+  if cols > 4
+    assign cols = 4
+  elsif cols < 1
+    assign cols = 1
+  endif
+-%}
+
+<section
+  class="qp"
+  style="
+    --qp-bg: {{ section.settings.bg_color }};
+    --qp-card: {{ section.settings.card_color }};
+    --qp-text: {{ section.settings.text_color }};
+    --qp-sub: {{ section.settings.sub_color }};
+    --qp-icon: {{ section.settings.icon_color }};
+    --qp-h-fs: {{ section.settings.heading_size }}px;
+    --qp-h-fs-mb: {{ section.settings.heading_size_mobile }}px;
+    --qp-pad-y: {{ section.settings.padding_y }}px;
+    --qp-pad-y-mb: {{ section.settings.padding_y_mobile }}px;
+    --qp-cols: {{ cols }};
+  "
+>
+  <div class="qp__inner">
+    <div class="qp__text">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="qp__heading">{{ heading_html }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="qp__sub">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="qp__cards">
+        {%- for block in section.blocks -%}
+          <div class="qp__card" {{ block.shopify_attributes }}>
+            {%- if block.settings.icon_image != blank -%}
+              {{ block.settings.icon_image | image_url: width: 160 | image_tag: class: 'qp__icon-img', loading: 'lazy', alt: '' }}
+            {%- else -%}
+              {%- render 'quality-icon', icon: block.settings.icon, slash: block.settings.slash -%}
+            {%- endif -%}
+            {%- if block.settings.label != blank -%}
+              <p class="qp__label">{{ block.settings.label | escape | newline_to_br }}</p>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Quality Promise",
+  "tag": "section",
+  "class": "section-quality-promise",
+  "settings": [
+    { "type": "header", "content": "Text" },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Use | for a line break (desktop only).",
+      "default": "Made fresh, with|care & quality."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Every dish is hand-made in our kitchen with ingredients we trust and high hygiene standards, including:</p>"
+    },
+    { "type": "range", "id": "heading_size", "label": "Heading size (desktop)", "min": 24, "max": 80, "step": 1, "unit": "px", "default": 44 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Heading size (mobile)", "min": 20, "max": 56, "step": 1, "unit": "px", "default": 30 },
+
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#E94949" },
+    { "type": "color", "id": "card_color", "label": "Card background", "default": "#D63C3C" },
+    { "type": "color", "id": "text_color", "label": "Heading & card text", "default": "#FFFFFF" },
+    { "type": "color", "id": "sub_color", "label": "Body text", "default": "#FCE3E3" },
+    { "type": "color", "id": "icon_color", "label": "Icons", "default": "#FFFFFF" },
+
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_y", "label": "Vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_y_mobile", "label": "Vertical padding (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "leaf", "label": "Leaf (fresh / natural)" },
+            { "value": "chef", "label": "Chef hat (hand-made)" },
+            { "value": "shield", "label": "Shield (hygiene / safety)" },
+            { "value": "flame", "label": "Flame (fried fresh)" },
+            { "value": "heart", "label": "Heart (made with love)" },
+            { "value": "clock", "label": "Clock (made daily)" },
+            { "value": "droplet", "label": "Droplet (colours / oils)" },
+            { "value": "flask", "label": "Flask (chemicals / preservatives)" },
+            { "value": "germ", "label": "Germ (contaminants)" },
+            { "value": "bug", "label": "Bug (pests)" }
+          ],
+          "default": "leaf"
+        },
+        { "type": "checkbox", "id": "slash", "label": "Cross out icon (\"no …\")", "default": false },
+        { "type": "image_picker", "id": "icon_image", "label": "Custom icon (optional)", "info": "Replaces the built-in icon. White line icons work best." },
+        { "type": "textarea", "id": "label", "label": "Label", "default": "Quality\ningredients" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quality Promise",
+      "blocks": [
+        { "type": "card", "settings": { "icon": "leaf", "slash": false, "label": "Quality\ningredients" } },
+        { "type": "card", "settings": { "icon": "chef", "slash": false, "label": "Hand-made\nevery batch" } },
+        { "type": "card", "settings": { "icon": "shield", "slash": false, "label": "Hygienic\nkitchen" } },
+        { "type": "card", "settings": { "icon": "flame", "slash": false, "label": "Authentic\nLahori recipes" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
