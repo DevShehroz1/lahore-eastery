@@ -1,0 +1,240 @@
+{{ 'section-faq-tabs.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign cat_count = 0
+  for block in section.blocks
+    if block.type == 'category'
+      assign cat_count = cat_count | plus: 1
+    endif
+  endfor
+-%}
+
+<section
+  class="faqt"
+  id="faqt-{{ section.id }}"
+  style="
+    --faqt-bg: {{ section.settings.bg_color }};
+    --faqt-text: {{ section.settings.text_color }};
+    --faqt-muted: {{ section.settings.muted_color }};
+    --faqt-accent: {{ section.settings.accent_color }};
+    --faqt-card: {{ section.settings.card_color }};
+    --faqt-h-fs: {{ section.settings.title_size }}px;
+    --faqt-h-fs-mb: {{ section.settings.title_size_mobile }}px;
+    --faqt-pad-y: {{ section.settings.padding_y }}px;
+    --faqt-pad-y-mb: {{ section.settings.padding_y_mobile }}px;
+  "
+>
+  <div class="faqt__header">
+    <span class="faqt__glow" aria-hidden="true"></span>
+    {%- if section.settings.subtitle != blank -%}
+      <p class="faqt__subtitle">{{ section.settings.subtitle | escape }}</p>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h2 class="faqt__title">{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+  </div>
+
+  {%- if cat_count > 1 -%}
+    <div class="faqt__tabs" role="tablist" aria-label="{{ section.settings.title | escape }}">
+      {%- assign first_cat = true -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'category' -%}
+          <button
+            type="button"
+            class="faqt__tab{% if first_cat %} is-active{% endif %}"
+            role="tab"
+            id="faqt-tab-{{ block.id }}"
+            aria-controls="faqt-panel-{{ block.id }}"
+            aria-selected="{% if first_cat %}true{% else %}false{% endif %}"
+            data-faqt-tab="{{ block.id }}"
+            {{ block.shopify_attributes }}
+          ><span>{{ block.settings.label | escape }}</span></button>
+          {%- assign first_cat = false -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  <div class="faqt__panels">
+    {%- assign panel_open = false -%}
+    {%- assign first_cat = true -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'category' -%}
+        {%- if panel_open -%}</div>{%- endif -%}
+        <div
+          class="faqt__panel"
+          role="tabpanel"
+          id="faqt-panel-{{ block.id }}"
+          aria-labelledby="faqt-tab-{{ block.id }}"
+          data-faqt-panel="{{ block.id }}"
+          {% unless first_cat %}hidden{% endunless %}
+        >
+        {%- assign panel_open = true -%}
+        {%- assign first_cat = false -%}
+      {%- elsif block.type == 'question' and panel_open -%}
+        <div class="faqt__item" {{ block.shopify_attributes }}>
+          <button type="button" class="faqt__q" aria-expanded="false" aria-controls="faqt-a-{{ block.id }}">
+            <span>{{ block.settings.question | escape }}</span>
+            <svg class="faqt__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          </button>
+          <div class="faqt__a" id="faqt-a-{{ block.id }}" role="region">
+            <div class="faqt__a-inner">{{ block.settings.answer }}</div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if panel_open -%}</div>{%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.getElementById('faqt-{{ section.id }}');
+    if (!root) return;
+    var tabs = [].slice.call(root.querySelectorAll('[data-faqt-tab]'));
+    var panels = [].slice.call(root.querySelectorAll('[data-faqt-panel]'));
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var current = panels.filter(function (p) { return !p.hidden; })[0];
+
+    function show(id) {
+      var next = root.querySelector('[data-faqt-panel="' + id + '"]');
+      if (!next || next === current) return;
+      tabs.forEach(function (t) {
+        var on = t.dataset.faqtTab === id;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      var prev = current;
+      current = next;
+      function enter() {
+        if (prev) { prev.hidden = true; prev.classList.remove('is-leaving'); }
+        next.hidden = false;
+        if (!reduce) {
+          next.classList.remove('is-entering');
+          void next.offsetWidth;
+          next.classList.add('is-entering');
+        }
+      }
+      // Like AnimatePresence mode="wait": old list leaves before the new one enters
+      if (prev && !reduce) {
+        prev.classList.add('is-leaving');
+        setTimeout(enter, 300);
+      } else {
+        enter();
+      }
+    }
+
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { show(t.dataset.faqtTab); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+        n.focus();
+        show(n.dataset.faqtTab);
+      });
+    });
+
+    root.querySelectorAll('.faqt__q').forEach(function (btn) {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faqt__a');
+      btn.addEventListener('click', function () {
+        var open = !item.classList.contains('is-open');
+        item.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) {
+          answer.style.height = answer.scrollHeight + 'px';
+          answer.addEventListener('transitionend', function done(e) {
+            if (e.propertyName !== 'height') return;
+            if (item.classList.contains('is-open')) answer.style.height = 'auto';
+            answer.removeEventListener('transitionend', done);
+          });
+        } else {
+          answer.style.height = answer.scrollHeight + 'px';
+          void answer.offsetHeight;
+          answer.style.height = '0px';
+        }
+      });
+    });
+
+    // Theme editor: jump to the tab that holds a selected block
+    document.addEventListener('shopify:block:select', function (e) {
+      if (!root.contains(e.target)) return;
+      if (e.target.dataset.faqtTab) { show(e.target.dataset.faqtTab); return; }
+      var panel = e.target.closest('[data-faqt-panel]');
+      if (panel) show(panel.dataset.faqtPanel);
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": "section",
+  "class": "section-faq-tabs",
+  "max_blocks": 50,
+  "settings": [
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Let's answer some questions" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Frequently Asked Questions" },
+    { "type": "range", "id": "title_size", "label": "Title size (desktop)", "min": 24, "max": 96, "step": 1, "unit": "px", "default": 52 },
+    { "type": "range", "id": "title_size_mobile", "label": "Title size (mobile)", "min": 20, "max": 64, "step": 1, "unit": "px", "default": 36 },
+
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#FEF6DD" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#1A1A1A" },
+    { "type": "color", "id": "muted_color", "label": "Muted text", "default": "#6B6B6B" },
+    { "type": "color", "id": "accent_color", "label": "Accent (tabs, subtitle, icons)", "default": "#E94949" },
+    { "type": "color", "id": "card_color", "label": "Question card", "default": "#FFFFFF" },
+
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_y", "label": "Vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_y_mobile", "label": "Vertical padding (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 },
+
+    { "type": "paragraph", "content": "How to organise: add a Category block (it becomes a tab), then add Question blocks under it. Every question belongs to the category above it." }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category (tab)",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Tab label", "default": "Ordering" }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "How do I place an order?" },
+        { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Browse the menu, add your favourites to the cart and check out. You'll get a confirmation as soon as your order is placed.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        { "type": "category", "settings": { "label": "Ordering" } },
+        { "type": "question", "settings": { "question": "How do I place an order?", "answer": "<p>Browse the menu, add your favourites to the cart and check out. You'll get a confirmation as soon as your order is placed.</p>" } },
+        { "type": "question", "settings": { "question": "Can I change or cancel my order?", "answer": "<p>Contact us as soon as possible after ordering. If we haven't started preparing it yet, we'll do our best to change or cancel it for you.</p>" } },
+        { "type": "question", "settings": { "question": "Do you take large or party orders?", "answer": "<p>Yes! Hosting a get-together? Get in touch with your date, number of guests and favourite dishes and we'll help you put together the right order.</p>" } },
+
+        { "type": "category", "settings": { "label": "Delivery" } },
+        { "type": "question", "settings": { "question": "Which areas do you deliver to?", "answer": "<p>Enter your address at checkout to see whether we deliver to you and which delivery options are available.</p>" } },
+        { "type": "question", "settings": { "question": "How long will my delivery take?", "answer": "<p>Delivery time depends on your location and how busy we are. You'll see an estimate at checkout and we'll keep you updated after you order.</p>" } },
+        { "type": "question", "settings": { "question": "How much is delivery?", "answer": "<p>Delivery charges, and any free-delivery offers, are shown at checkout before you pay.</p>" } },
+        { "type": "question", "settings": { "question": "How can I track my order?", "answer": "<p>After you order you'll receive a confirmation with your order details. Contact us any time if you'd like an update.</p>" } },
+
+        { "type": "category", "settings": { "label": "Food & Menu" } },
+        { "type": "question", "settings": { "question": "What's on the menu?", "answer": "<p>Our Lahori favourites include samosas, spring rolls, chicken cheese balls and chicken strips — plus more on the menu page.</p>" } },
+        { "type": "question", "settings": { "question": "Do your dishes contain allergens?", "answer": "<p>Some of our dishes contain common allergens such as wheat (gluten), dairy and egg. Check each product page or contact us before ordering if you have an allergy.</p>" } },
+        { "type": "question", "settings": { "question": "How should I store and reheat my food?", "answer": "<p>Follow the storage and heating instructions on the pack or product page for the best, crispiest results.</p>" } },
+
+        { "type": "category", "settings": { "label": "Payments" } },
+        { "type": "question", "settings": { "question": "Which payment methods do you accept?", "answer": "<p>All available payment methods are shown at checkout.</p>" } },
+        { "type": "question", "settings": { "question": "Is it safe to pay on your website?", "answer": "<p>Yes. Payments go through Shopify's secure, encrypted checkout — we never see or store your full card details.</p>" } },
+        { "type": "question", "settings": { "question": "How do I use a discount code?", "answer": "<p>Enter your code in the discount box at checkout and the saving will be applied before you pay.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
