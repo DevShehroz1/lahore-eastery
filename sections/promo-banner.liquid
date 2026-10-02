@@ -1,0 +1,159 @@
+{{ 'section-promo-banner.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+  assign heading_html = s.heading | escape | replace: '|', '<br>'
+  if s.mobile_text_align == 'center'
+    assign align_mb = 'center'
+  else
+    assign align_mb = 'flex-start'
+  endif
+-%}
+
+<section
+  class="pbn"
+  style="
+    --pbn-bg: {{ s.bg_color }};
+    --pbn-heading: {{ s.heading_color }};
+    --pbn-text: {{ s.text_color }};
+    --pbn-btn-bg: {{ s.button_bg }};
+    --pbn-btn-text: {{ s.button_text_color }};
+    --pbn-h-fs: {{ s.heading_size }}px;
+    --pbn-h-fs-mb: {{ s.heading_size_mobile }}px;
+    --pbn-t-fs: {{ s.text_size }}px;
+    --pbn-t-fs-mb: {{ s.text_size_mobile }}px;
+    --pbn-min-h: {{ s.min_height }}px;
+    --pbn-min-h-mb: {{ s.min_height_mobile }}px;
+    --pbn-pad-y: {{ s.padding_y }}px;
+    --pbn-pad-y-mb: {{ s.padding_y_mobile }}px;
+    --pbn-pad-left: {{ s.content_offset }}px;
+    --pbn-text-align-mb: {{ s.mobile_text_align }};
+    --pbn-align-mb: {{ align_mb }};
+    --pbn-media-w: {{ s.product_column }}%;
+    --pbn-media-align: {% if s.product_bottom %}flex-end{% else %}center{% endif %};
+    --pbn-prod-w: {{ s.product_width }}%;
+    --pbn-prod-w-mb: {{ s.product_width_mobile }}%;
+    --pbn-badge-w: {{ s.badge_width }}%;
+    --pbn-badge-rot: {{ s.badge_rotation }}deg;
+  "
+>
+  {%- if s.bg_image != blank and s.bg_image_mobile != blank -%}
+    {{ s.bg_image_mobile | image_url: width: 1200 | image_tag: class: 'pbn__bg pbn__bg--mobile', widths: '400, 750, 1000, 1200', sizes: '100vw', loading: 'lazy', alt: '' }}
+    {{ s.bg_image | image_url: width: 2400 | image_tag: class: 'pbn__bg pbn__bg--desktop', widths: '1000, 1400, 1920, 2400', sizes: '100vw', loading: 'lazy', alt: '' }}
+  {%- elsif s.bg_image != blank or s.bg_image_mobile != blank -%}
+    {%- comment -%} Only one background uploaded: use it on every screen size {%- endcomment -%}
+    {%- assign only_bg = s.bg_image | default: s.bg_image_mobile -%}
+    {{ only_bg | image_url: width: 2400 | image_tag: class: 'pbn__bg', widths: '400, 750, 1000, 1400, 1920, 2400', sizes: '100vw', loading: 'lazy', alt: '' }}
+  {%- endif -%}
+
+  <div class="pbn__inner">
+    <div class="pbn__content">
+      {%- if s.heading != blank -%}
+        <h2 class="pbn__heading">{{ heading_html }}</h2>
+      {%- endif -%}
+      {%- if s.text != blank -%}
+        <div class="pbn__text">{{ s.text }}</div>
+      {%- endif -%}
+      {%- if s.button_label != blank -%}
+        <a class="pbn__btn" href="{{ s.button_link | default: routes.all_products_collection_url }}">{{ s.button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+
+    <div class="pbn__media{% if s.mobile_product == 'top' %} pbn__media--top-mb{% elsif s.mobile_product == 'hide' %} pbn__media--hide-mb{% endif %}">
+      <div class="pbn__product">
+        {%- if s.product_image != blank -%}
+          {{ s.product_image | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '400, 700, 1000, 1400', sizes: '(min-width: 990px) 45vw, 80vw', alt: s.product_image.alt | default: s.heading }}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+        {%- if s.badge_image != blank -%}
+          <div class="pbn__badge">
+            {{ s.badge_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Promo Banner",
+  "tag": "section",
+  "class": "section-promo-banner",
+  "settings": [
+    { "type": "header", "content": "Background" },
+    { "type": "image_picker", "id": "bg_image", "label": "Background image (desktop)", "info": "Recommended 2400 × 760 or similar wide image." },
+    { "type": "image_picker", "id": "bg_image_mobile", "label": "Background image (mobile)", "info": "Recommended 1080 × 1500 portrait. Leave empty to reuse the desktop image." },
+    { "type": "color", "id": "bg_color", "label": "Background colour (shown if no image)", "default": "#FEF6DD" },
+
+    { "type": "header", "content": "Product image (right side)" },
+    { "type": "image_picker", "id": "product_image", "label": "Product image", "info": "Transparent PNG works best." },
+    { "type": "checkbox", "id": "product_bottom", "label": "Stick product to the bottom edge", "default": true },
+    { "type": "range", "id": "product_column", "label": "Product column width (desktop)", "min": 25, "max": 60, "step": 1, "unit": "%", "default": 46 },
+    { "type": "range", "id": "product_width", "label": "Product size (desktop)", "min": 30, "max": 100, "step": 5, "unit": "%", "default": 85 },
+    { "type": "range", "id": "product_width_mobile", "label": "Product size (mobile)", "min": 30, "max": 100, "step": 5, "unit": "%", "default": 80 },
+    {
+      "type": "select",
+      "id": "mobile_product",
+      "label": "Product on mobile",
+      "options": [
+        { "value": "bottom", "label": "Below the text" },
+        { "value": "top", "label": "Above the text" },
+        { "value": "hide", "label": "Hide" }
+      ],
+      "default": "bottom"
+    },
+    { "type": "image_picker", "id": "badge_image", "label": "Badge / sticker (optional)", "info": "Shown on the top-left of the product." },
+    { "type": "range", "id": "badge_width", "label": "Badge size", "min": 10, "max": 60, "step": 1, "unit": "%", "default": 36 },
+    { "type": "range", "id": "badge_rotation", "label": "Badge rotation", "min": -45, "max": 45, "step": 1, "unit": "°", "default": -12 },
+
+    { "type": "header", "content": "Text" },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Use | for a line break.",
+      "default": "Same Lahori Taste.|Crispy, Golden &|Ready When You Are."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Samosas, spring rolls, chicken cheese balls and more — hand-made with love and ready for every get-together.</p>"
+    },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop Now" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "range", "id": "heading_size", "label": "Heading size (desktop)", "min": 24, "max": 96, "step": 1, "unit": "px", "default": 56 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Heading size (mobile)", "min": 20, "max": 60, "step": 1, "unit": "px", "default": 34 },
+    { "type": "range", "id": "text_size", "label": "Text size (desktop)", "min": 12, "max": 24, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "text_size_mobile", "label": "Text size (mobile)", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 15 },
+    {
+      "type": "select",
+      "id": "mobile_text_align",
+      "label": "Text alignment (mobile)",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left"
+    },
+
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "heading_color", "label": "Heading", "default": "#E94949" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#1A1A1A" },
+    { "type": "color", "id": "button_bg", "label": "Button background", "default": "#E94949" },
+    { "type": "color", "id": "button_text_color", "label": "Button text", "default": "#FFFFFF" },
+
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "min_height", "label": "Minimum height (desktop)", "min": 300, "max": 900, "step": 10, "unit": "px", "default": 580 },
+    { "type": "range", "id": "min_height_mobile", "label": "Minimum height (mobile)", "min": 0, "max": 900, "step": 10, "unit": "px", "default": 0 },
+    { "type": "range", "id": "content_offset", "label": "Text left offset (desktop)", "min": 0, "max": 400, "step": 8, "unit": "px", "default": 48 },
+    { "type": "range", "id": "padding_y", "label": "Text vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding_y_mobile", "label": "Top padding (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 }
+  ],
+  "presets": [
+    { "name": "Promo Banner" }
+  ]
+}
+{% endschema %}
