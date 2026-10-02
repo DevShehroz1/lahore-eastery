@@ -209,12 +209,12 @@
   position: relative;
   z-index: 1;
   font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: var(--le-hs-stat-num-fs, 30px);
-  font-weight: 800;
+  font-size: min(var(--le-hs-stat-num-fs, 18px), 18px) !important;
+  font-weight: 700;
   line-height: 1;
   color: #FFFFFF;
   letter-spacing: -0.02em;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
 }
 
 .le-hero-split__stat-label {
