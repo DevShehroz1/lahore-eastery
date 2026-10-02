@@ -192,6 +192,10 @@
 .le-hero-split__stat-shape--img {
   object-fit: contain;
   object-position: center;
+  transform:
+    translateY(var(--stat-img-offset-y, 0px))
+    scale(var(--stat-img-scale, 1));
+  transform-origin: center center;
 }
 .le-hero-split__stat-num {
   position: relative;

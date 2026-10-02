@@ -109,13 +109,14 @@
                   {%- if block.settings.stat_image != blank -%}
                     <img
                       class="le-hero-split__stat-shape le-hero-split__stat-shape--img"
-                      src="{{ block.settings.stat_image | image_url: width: 300 }}"
-                      srcset="{{ block.settings.stat_image | image_url: width: 150 }} 150w, {{ block.settings.stat_image | image_url: width: 300 }} 300w"
+                      src="{{ block.settings.stat_image | image_url: width: 400 }}"
+                      srcset="{{ block.settings.stat_image | image_url: width: 200 }} 200w, {{ block.settings.stat_image | image_url: width: 400 }} 400w"
                       sizes="{{ section.settings.bubble_width }}px"
                       alt=""
                       width="{{ block.settings.stat_image.width }}"
                       height="{{ block.settings.stat_image.height }}"
                       loading="lazy"
+                      style="--stat-img-scale: {{ block.settings.stat_image_scale | default: 100 | divided_by: 100.0 }}; --stat-img-offset-y: {{ block.settings.stat_image_offset_y | default: 0 }}px;"
                     >
                   {%- else -%}
                     <svg class="le-hero-split__stat-shape" viewBox="0 0 80 70" aria-hidden="true" focusable="false" preserveAspectRatio="none">
@@ -577,6 +578,20 @@
           "id": "stat_image",
           "label": "Bubble image (upload — replaces the coral shape)",
           "info": "Leave empty to keep the default coral shape behind the number."
+        },
+        {
+          "type": "range",
+          "id": "stat_image_scale",
+          "label": "Bubble image scale",
+          "min": 50, "max": 250, "step": 5, "unit": "%",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "stat_image_offset_y",
+          "label": "Bubble image vertical offset",
+          "min": -40, "max": 40, "step": 2, "unit": "px",
+          "default": 0
         },
         {
           "type": "text",
