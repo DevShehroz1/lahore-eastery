@@ -136,7 +136,7 @@
   margin-top: 30px;
 }
 .nbs__stat {
-  flex: 0 1 152px;
+  flex: 0 1 max(152px, calc(var(--nbs-bubble-w, 84px) * var(--nbs-bubble-scale, 1) + 24px));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,9 +147,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 84px;
-  height: 76px;
-  padding-bottom: 7px; /* keep the number in the round part, above the concave base */
+  width: calc(var(--nbs-bubble-w, 84px) * var(--nbs-bubble-scale, 1));
+  aspect-ratio: 100 / 90;
+  /* keep the number in the round part, above the concave base */
+  padding-bottom: calc(var(--nbs-bubble-w, 84px) * var(--nbs-bubble-scale, 1) * 0.08);
   margin-bottom: 6px;
 }
 .nbs__bubble-shape {
@@ -163,7 +164,7 @@ img.nbs__bubble-shape { object-fit: contain; }
 .nbs__num {
   position: relative;
   font-family: var(--nbs-display);
-  font-size: 34px;
+  font-size: calc(var(--nbs-num-fs, 34px) * var(--nbs-bubble-scale, 1));
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -198,7 +199,8 @@ img.nbs__bubble-shape { object-fit: contain; }
 }
 @media (max-width: 420px) {
   .nbs__label { font-size: 15px; }
-  .nbs__num { font-size: 30px; }
+  .nbs__bubble { width: calc(var(--nbs-bubble-w, 84px) * var(--nbs-bubble-scale, 1) * 0.88); }
+  .nbs__num { font-size: calc(var(--nbs-num-fs, 34px) * var(--nbs-bubble-scale, 1) * 0.88); }
 }
 
 /* ===== IMAGE ===== */

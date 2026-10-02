@@ -12,6 +12,8 @@
     --nbs-accent: {{ section.settings.accent_color }};
     --nbs-bubble: {{ section.settings.bubble_color }};
     --nbs-num: {{ section.settings.number_color }};
+    --nbs-bubble-w: {{ section.settings.bubble_size }}px;
+    --nbs-num-fs: {{ section.settings.number_size }}px;
     --nbs-pad-y: {{ section.settings.padding_y }}px;
     --nbs-pad-y-mobile: {{ section.settings.padding_y_mobile }}px;
     --nbs-h-fs: {{ section.settings.heading_size }}px;
@@ -62,7 +64,7 @@
       {%- if section.blocks.size > 0 -%}
         <div class="nbs__stats">
           {%- for block in section.blocks -%}
-            <div class="nbs__stat" {{ block.shopify_attributes }}>
+            <div class="nbs__stat" style="--nbs-bubble-scale: {{ block.settings.bubble_scale | default: 100 | divided_by: 100.0 }};" {{ block.shopify_attributes }}>
               <div class="nbs__bubble">
                 {%- if block.settings.bubble_image != blank -%}
                   <img class="nbs__bubble-shape" src="{{ block.settings.bubble_image | image_url: width: 200 }}" alt="" width="100" height="90" loading="lazy">
@@ -119,6 +121,10 @@
     { "type": "color", "id": "bubble_color", "label": "Stat bubble", "default": "#E94949" },
     { "type": "color", "id": "number_color", "label": "Stat number", "default": "#FFFFFF" },
 
+    { "type": "header", "content": "Stat bubbles" },
+    { "type": "range", "id": "bubble_size", "label": "Bubble size (all stats)", "min": 50, "max": 200, "step": 2, "unit": "px", "default": 84 },
+    { "type": "range", "id": "number_size", "label": "Number size (all stats)", "min": 16, "max": 80, "step": 1, "unit": "px", "default": 34 },
+
     { "type": "header", "content": "Spacing" },
     { "type": "range", "id": "padding_y", "label": "Vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 16 },
     { "type": "range", "id": "padding_y_mobile", "label": "Vertical padding (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 24 },
@@ -160,7 +166,8 @@
         { "type": "text", "id": "suffix", "label": "Small suffix (e.g. +)", "default": "+" },
         { "type": "textarea", "id": "label", "label": "Label", "default": "Ingredients" },
         { "type": "textarea", "id": "sub", "label": "Sub-label (optional)", "default": "Including whole\nfruits and veggies" },
-        { "type": "image_picker", "id": "bubble_image", "label": "Bubble shape image (optional)" }
+        { "type": "image_picker", "id": "bubble_image", "label": "Bubble shape image (optional)" },
+        { "type": "range", "id": "bubble_scale", "label": "Bubble size for this stat", "info": "Scales this bubble and its number. 100% = section setting.", "min": 50, "max": 250, "step": 5, "unit": "%", "default": 100 }
       ]
     }
   ],
