@@ -106,9 +106,22 @@
             {%- if block.type == 'stat' -%}
               <div class="le-hero-split__stat" {{ block.shopify_attributes }}>
                 <div class="le-hero-split__stat-bubble" style="color: {{ section.settings.bubble_color }};">
-                  <svg class="le-hero-split__stat-shape" viewBox="0 0 80 70" aria-hidden="true" focusable="false" preserveAspectRatio="none">
-                    <path d="M40 0 C62 0 80 18 80 40 C80 51 76 61 68 68 C66 70 63 70 60 69 C53 66 47 65 40 65 C33 65 27 66 20 69 C17 70 14 70 12 68 C4 61 0 51 0 40 C0 18 18 0 40 0 Z" fill="currentColor"/>
-                  </svg>
+                  {%- if block.settings.stat_image != blank -%}
+                    <img
+                      class="le-hero-split__stat-shape le-hero-split__stat-shape--img"
+                      src="{{ block.settings.stat_image | image_url: width: 300 }}"
+                      srcset="{{ block.settings.stat_image | image_url: width: 150 }} 150w, {{ block.settings.stat_image | image_url: width: 300 }} 300w"
+                      sizes="{{ section.settings.bubble_width }}px"
+                      alt=""
+                      width="{{ block.settings.stat_image.width }}"
+                      height="{{ block.settings.stat_image.height }}"
+                      loading="lazy"
+                    >
+                  {%- else -%}
+                    <svg class="le-hero-split__stat-shape" viewBox="0 0 80 70" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+                      <path d="M40 0 C62 0 80 18 80 40 C80 51 76 61 68 68 C66 70 63 70 60 69 C53 66 47 65 40 65 C33 65 27 66 20 69 C17 70 14 70 12 68 C4 61 0 51 0 40 C0 18 18 0 40 0 Z" fill="currentColor"/>
+                    </svg>
+                  {%- endif -%}
                   <span class="le-hero-split__stat-num">{{ block.settings.stat_num }}</span>
                 </div>
                 <p class="le-hero-split__stat-label">{{ block.settings.stat_label }}</p>
@@ -557,6 +570,12 @@
       "name": "Stat bubble",
       "limit": 6,
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "stat_image",
+          "label": "Bubble image (upload — replaces the coral shape)",
+          "info": "Leave empty to keep the default coral shape behind the number."
+        },
         {
           "type": "text",
           "id": "stat_num",

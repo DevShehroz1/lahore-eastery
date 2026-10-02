@@ -189,6 +189,10 @@
   pointer-events: none;
   background: transparent;
 }
+.le-hero-split__stat-shape--img {
+  object-fit: contain;
+  object-position: center;
+}
 .le-hero-split__stat-num {
   position: relative;
   z-index: 1;
