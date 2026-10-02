@@ -451,7 +451,6 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "icon_image": "",
             "icon": "leaf",
             "slash": false,
             "label": "Quality\ningredients"
@@ -460,7 +459,6 @@
         "card_2": {
           "type": "card",
           "settings": {
-            "icon_image": "",
             "icon": "chef",
             "slash": false,
             "label": "Hand-made\nevery batch"
@@ -469,7 +467,6 @@
         "card_3": {
           "type": "card",
           "settings": {
-            "icon_image": "",
             "icon": "shield",
             "slash": false,
             "label": "Hygienic\nkitchen"
@@ -478,7 +475,6 @@
         "card_4": {
           "type": "card",
           "settings": {
-            "icon_image": "",
             "icon": "flame",
             "slash": false,
             "label": "Authentic\nLahori recipes"
@@ -496,11 +492,11 @@
         "text": "<p>Every dish is hand-made in our kitchen with ingredients we trust and high hygiene standards, including:</p>",
         "heading_size": 44,
         "heading_size_mobile": 30,
-        "bg_color": "#E94949",
-        "card_color": "#D63C3C",
-        "text_color": "#FFFFFF",
-        "sub_color": "#FCE3E3",
-        "icon_color": "#FFFFFF",
+        "bg_color": "#e94949",
+        "card_color": "#d63c3c",
+        "text_color": "#ffffff",
+        "sub_color": "#fce3e3",
+        "icon_color": "#ffffff",
         "padding_y": 72,
         "padding_y_mobile": 48
       }
@@ -511,7 +507,7 @@
     "featured_collection_new_QewxVW",
     "feature_cards_mdBPWn",
     "ingredients_scroll_main",
-    "quality_promise_main",
-    "faq_main"
+    "faq_main",
+    "quality_promise_main"
   ]
 }
