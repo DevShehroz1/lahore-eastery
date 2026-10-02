@@ -15,12 +15,17 @@
   gap: var(--le-hs-gap, 40px);
   align-items: center;
 }
+.le-hero-split__image-wrap { order: 1; }
+.le-hero-split__content    { order: 2; }
+
 @media (min-width: 992px) {
   .le-hero-split__inner {
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
+  .le-hero-split__image-wrap { order: 2; }
+  .le-hero-split__content    { order: 1; }
 }
 
 /* ===== CONTENT COLUMN ===== */
