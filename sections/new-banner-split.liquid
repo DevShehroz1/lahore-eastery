@@ -2,7 +2,6 @@
 
 {%- liquid
   assign heading_html = section.settings.heading | escape | replace: '[', '<span class="nbs__hl">' | replace: ']', '</span>' | replace: '|', ' <br>'
-  assign uid = section.id | handleize
 -%}
 
 <section
@@ -12,11 +11,11 @@
     --nbs-text: {{ section.settings.text_color }};
     --nbs-accent: {{ section.settings.accent_color }};
     --nbs-bubble: {{ section.settings.bubble_color }};
+    --nbs-num: {{ section.settings.number_color }};
     --nbs-pad-y: {{ section.settings.padding_y }}px;
     --nbs-pad-y-mobile: {{ section.settings.padding_y_mobile }}px;
     --nbs-h-fs: {{ section.settings.heading_size }}px;
     --nbs-h-fs-mobile: {{ section.settings.heading_size_mobile }}px;
-    --nbs-badge-rot: {{ section.settings.badge_rotation }}deg;
   "
 >
   <div class="nbs__inner">
@@ -66,10 +65,10 @@
             <div class="nbs__stat" {{ block.shopify_attributes }}>
               <div class="nbs__bubble">
                 {%- if block.settings.bubble_image != blank -%}
-                  <img class="nbs__bubble-shape" src="{{ block.settings.bubble_image | image_url: width: 200 }}" alt="" width="72" height="66" loading="lazy">
+                  <img class="nbs__bubble-shape" src="{{ block.settings.bubble_image | image_url: width: 200 }}" alt="" width="100" height="90" loading="lazy">
                 {%- else -%}
-                  <svg class="nbs__bubble-shape" viewBox="0 0 72 66" aria-hidden="true" focusable="false">
-                    <path d="M36 1C55 1 71 15 71 33c0 10-4 18-10 24-3 3-6 3-10 2-5-1-9-2-15-2s-10 1-15 2c-4 1-7 1-10-2C5 51 1 43 1 33 1 15 17 1 36 1Z" fill="currentColor"/>
+                  <svg class="nbs__bubble-shape" viewBox="0 0 100 90" aria-hidden="true" focusable="false">
+                    <path d="M15.8 86.9A50 50 0 1 1 84.2 86.9Q82.6 89.2 80.3 88.2Q50 74 19.7 88.2Q17.4 89.2 15.8 86.9Z" fill="currentColor"/>
                   </svg>
                 {%- endif -%}
                 <span class="nbs__num">
@@ -103,43 +102,6 @@
         {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
       {%- endif -%}
 
-      {%- if section.settings.show_badge -%}
-        <div class="nbs__badge">
-          {%- if section.settings.badge_image != blank -%}
-            <img src="{{ section.settings.badge_image | image_url: width: 400 }}" alt="{{ section.settings.badge_top }} {{ section.settings.badge_bottom }}" loading="eager">
-          {%- else -%}
-            <svg viewBox="0 0 200 200" role="img" aria-label="{{ section.settings.badge_top }} {{ section.settings.badge_bottom }}">
-              <defs>
-                <path id="nbs-top-{{ uid }}" d="M32 100a68 68 0 0 1 136 0"/>
-                <path id="nbs-bot-{{ uid }}" d="M24 100a76 76 0 0 0 152 0"/>
-              </defs>
-              <circle cx="100" cy="100" r="88" fill="{{ section.settings.text_color }}"/>
-              <circle cx="100" cy="100" r="88" fill="none" stroke="{{ section.settings.text_color }}" stroke-width="16" stroke-linecap="round" stroke-dasharray="0 22.1"/>
-              <circle cx="100" cy="100" r="80" fill="none" stroke="{{ section.settings.accent_color }}" stroke-width="3"/>
-              <text fill="{{ section.settings.bubble_color }}" font-family="Inter Tight, Arial, sans-serif" font-weight="900" font-size="25" letter-spacing="1" text-anchor="middle">
-                <textPath href="#nbs-top-{{ uid }}" startOffset="50%">{{ section.settings.badge_top | upcase }}</textPath>
-              </text>
-              <text fill="{{ section.settings.bubble_color }}" font-family="Inter Tight, Arial, sans-serif" font-weight="900" font-size="25" letter-spacing="1" text-anchor="middle" dominant-baseline="hanging">
-                <textPath href="#nbs-bot-{{ uid }}" startOffset="50%">{{ section.settings.badge_bottom | upcase }}</textPath>
-              </text>
-              <g fill="{{ section.settings.bubble_color }}">
-                <path d="M39 100l3 -7 3 7 7 3 -7 3 -3 7 -3 -7 -7 -3z"/>
-                <path d="M155 100l3 -7 3 7 7 3 -7 3 -3 7 -3 -7 -7 -3z"/>
-              </g>
-              <circle cx="100" cy="103" r="30" fill="{{ section.settings.accent_color }}"/>
-              <g fill="{{ section.settings.bubble_color }}">
-                <circle cx="82" cy="80" r="9"/><circle cx="118" cy="80" r="9"/>
-                <ellipse cx="100" cy="104" rx="22" ry="19"/>
-              </g>
-              <g fill="{{ section.settings.text_color }}">
-                <circle cx="92" cy="100" r="2.6"/><circle cx="108" cy="100" r="2.6"/>
-                <ellipse cx="100" cy="108" rx="4" ry="3"/>
-              </g>
-              <path d="M93 113q7 6 14 0" fill="none" stroke="{{ section.settings.text_color }}" stroke-width="2.2" stroke-linecap="round"/>
-            </svg>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
     </div>
   </div>
 </section>
@@ -153,8 +115,9 @@
     { "type": "header", "content": "Colours" },
     { "type": "color", "id": "bg_color", "label": "Background", "default": "#FEF6DD" },
     { "type": "color", "id": "text_color", "label": "Text (dark)", "default": "#183A1D" },
-    { "type": "color", "id": "accent_color", "label": "Accent (stars, highlight, button)", "default": "#2C7A3B" },
-    { "type": "color", "id": "bubble_color", "label": "Stat bubble / badge text", "default": "#F6CB45" },
+    { "type": "color", "id": "accent_color", "label": "Accent (stars, highlight, button)", "default": "#E94949" },
+    { "type": "color", "id": "bubble_color", "label": "Stat bubble", "default": "#E94949" },
+    { "type": "color", "id": "number_color", "label": "Stat number", "default": "#FFFFFF" },
 
     { "type": "header", "content": "Spacing" },
     { "type": "range", "id": "padding_y", "label": "Vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 16 },
@@ -185,14 +148,7 @@
     { "type": "text", "id": "trust_2", "label": "Trust item 2", "default": "Cancel anytime" },
 
     { "type": "header", "content": "Image" },
-    { "type": "image_picker", "id": "image", "label": "Hero image", "info": "Shown at 700 × 523 on desktop (4:3-ish). Upload at least 1400px wide." },
-
-    { "type": "header", "content": "Sticker badge" },
-    { "type": "checkbox", "id": "show_badge", "label": "Show badge", "default": true },
-    { "type": "image_picker", "id": "badge_image", "label": "Badge image (optional)", "info": "Upload your own sticker PNG/SVG to replace the built-in one." },
-    { "type": "text", "id": "badge_top", "label": "Badge top text", "default": "We lowered" },
-    { "type": "text", "id": "badge_bottom", "label": "Badge bottom text", "default": "our price" },
-    { "type": "range", "id": "badge_rotation", "label": "Badge rotation", "min": -45, "max": 45, "step": 1, "unit": "°", "default": -14 }
+    { "type": "image_picker", "id": "image", "label": "Hero image", "info": "Shown at 700 × 523 on desktop (4:3-ish). Upload at least 1400px wide." }
   ],
   "blocks": [
     {

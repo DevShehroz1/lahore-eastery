@@ -3,8 +3,9 @@
 .nbs {
   --nbs-bg: #FEF6DD;
   --nbs-text: #183A1D;
-  --nbs-accent: #2C7A3B;
-  --nbs-bubble: #F6CB45;
+  --nbs-accent: #E94949;
+  --nbs-bubble: #E94949;
+  --nbs-num: #FFFFFF;
   --nbs-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --nbs-body: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -146,9 +147,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 66px;
-  margin-bottom: 4px;
+  width: 84px;
+  height: 76px;
+  padding-bottom: 7px; /* keep the number in the round part, above the concave base */
+  margin-bottom: 6px;
 }
 .nbs__bubble-shape {
   position: absolute;
@@ -161,11 +163,11 @@ img.nbs__bubble-shape { object-fit: contain; }
 .nbs__num {
   position: relative;
   font-family: var(--nbs-display);
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--nbs-text);
+  color: var(--nbs-num);
   white-space: nowrap;
 }
 .nbs__num sup {
@@ -196,7 +198,7 @@ img.nbs__bubble-shape { object-fit: contain; }
 }
 @media (max-width: 420px) {
   .nbs__label { font-size: 15px; }
-  .nbs__num { font-size: 34px; }
+  .nbs__num { font-size: 30px; }
 }
 
 /* ===== IMAGE ===== */
@@ -221,19 +223,3 @@ img.nbs__bubble-shape { object-fit: contain; }
   object-fit: cover;
   display: block;
 }
-
-/* Sticker badge */
-.nbs__badge {
-  position: absolute;
-  top: 1.8%;
-  left: 0.6%;
-  z-index: 2;
-  width: var(--nbs-badge-w, 25.5%);
-  max-width: 180px;
-  min-width: 96px;
-  aspect-ratio: 1;
-  transform: rotate(var(--nbs-badge-rot, 0deg));
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,.18));
-}
-.nbs__badge svg,
-.nbs__badge img { width: 100%; height: 100%; display: block; object-fit: contain; }
