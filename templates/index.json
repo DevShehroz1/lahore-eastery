@@ -507,7 +507,7 @@
       "settings": {
         "bg_image": "shopify://shop_images/LTO-Banner-BDAYPromo-Gruns-Desktop.webp",
         "bg_image_mobile": "shopify://shop_images/LTO-Banner-BDAYPromo-Gruns-Mobile_2.webp",
-        "bg_color": "#FEF6DD",
+        "bg_color": "#fef6dd",
         "product_image": "shopify://shop_images/Group_1984079021.webp",
         "product_bottom": true,
         "product_column": 60,
@@ -525,15 +525,89 @@
         "text_size": 16,
         "text_size_mobile": 15,
         "mobile_text_align": "left",
-        "heading_color": "#E94949",
-        "text_color": "#1A1A1A",
-        "button_bg": "#E94949",
-        "button_text_color": "#FFFFFF",
+        "heading_color": "#e94949",
+        "text_color": "#1a1a1a",
+        "button_bg": "#e94949",
+        "button_text_color": "#ffffff",
         "min_height": 580,
         "min_height_mobile": 0,
         "content_offset": 48,
         "padding_y": 64,
         "padding_y_mobile": 40
+      }
+    },
+    "social_wheel_AKpgLw": {
+      "type": "social-wheel",
+      "blocks": {
+        "photo_mXEjLC": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/LTO-Banner-BDAYPromo-Gruns-Mobile_2.webp",
+            "link": ""
+          }
+        },
+        "photo_Xr9epX": {
+          "type": "photo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "photo_P4htBt": {
+          "type": "photo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "photo_LbJDN4": {
+          "type": "photo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "photo_Ek44nt": {
+          "type": "photo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "photo_qq8Pfr": {
+          "type": "photo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "photo_gJAcHq": {
+          "type": "photo",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "photo_mXEjLC",
+        "photo_Xr9epX",
+        "photo_P4htBt",
+        "photo_LbJDN4",
+        "photo_Ek44nt",
+        "photo_qq8Pfr",
+        "photo_gJAcHq"
+      ],
+      "name": "Social Wheel",
+      "settings": {
+        "heading_accent": "Follow the flavour.",
+        "heading": "We've been\ngetting around",
+        "heading_size": 76,
+        "heading_size_mobile": 36,
+        "show_social": true,
+        "angle_step": 15,
+        "scroll_rotate": 10,
+        "bg_color": "#FEF6DD",
+        "accent_color": "#E94949",
+        "text_color": "#1A1A1A",
+        "icon_bg": "#E94949",
+        "icon_color": "#FFFFFF",
+        "padding_top": 72,
+        "padding_top_mobile": 48
       }
     }
   },
@@ -544,6 +618,7 @@
     "ingredients_scroll_main",
     "faq_main",
     "quality_promise_main",
-    "promo_banner_FeREkt"
+    "promo_banner_FeREkt",
+    "social_wheel_AKpgLw"
   ]
 }
