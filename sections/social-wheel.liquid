@@ -11,6 +11,8 @@
   class="swh"
   id="swh-{{ section.id }}"
   data-scroll-rotate="{{ s.scroll_rotate }}"
+  data-speed="{{ s.spin_speed }}"
+  data-step="{{ s.angle_step }}"
   style="
     --swh-bg: {{ s.bg_color }};
     --swh-accent: {{ s.accent_color }};
@@ -79,24 +81,74 @@
     var root = document.getElementById('swh-{{ section.id }}');
     if (!root) return;
     var wheel = root.querySelector('[data-swh-wheel]');
-    var amount = parseFloat(root.dataset.scrollRotate) || 0;
-    if (!wheel || !amount || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var ticking = false;
-    function render() {
-      ticking = false;
-      var r = root.getBoundingClientRect();
-      var vh = window.innerHeight;
-      // -1 when the section enters from the bottom, +1 when it leaves at the top
-      var p = (vh - r.top) / (vh + r.height) * 2 - 1;
-      p = Math.max(-1, Math.min(1, p));
+    var cards = [].slice.call(root.querySelectorAll('.swh__card'));
+    if (!wheel || !cards.length) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var scrollAmount = parseFloat(root.dataset.scrollRotate) || 0;
+    var speed = reduce ? 0 : (parseFloat(root.dataset.speed) || 0);   // degrees per second
+    var step = parseFloat(root.dataset.step) || 15;
+
+    // For a seamless loop the photos must cover a wide arc, so repeat them until they do
+    var originals = cards.slice();
+    if (speed > 0) {
+      while (cards.length * step < 160 && originals.length) {
+        originals.forEach(function (c) {
+          var copy = c.cloneNode(true);
+          copy.removeAttribute('data-shopify-editor-block');
+          copy.setAttribute('aria-hidden', 'true');
+          wheel.appendChild(copy);
+          cards.push(copy);
+        });
+      }
+    }
+    var span = cards.length * step;
+    var offset = 0, scrollRot = 0, visible = true, last = null;
+
+    function layout() {
+      cards.forEach(function (c, i) {
+        var a = i * step + offset;
+        a = ((a % span) + span) % span - span / 2;
+        c.style.transform = 'rotate(' + a + 'deg)';
+        c.style.zIndex = String(1000 - Math.round(Math.abs(a) * 10));
+      });
       var R = getComputedStyle(root).getPropertyValue('--swh-radius').trim() || '0px';
       wheel.style.transformOrigin = '0 ' + R;
-      wheel.style.transform = 'rotate(' + (-p * amount) + 'deg)';
+      wheel.style.transform = 'rotate(' + scrollRot + 'deg)';
     }
-    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(render); } }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    render();
+    function readScroll() {
+      if (!scrollAmount || reduce) return;
+      var r = root.getBoundingClientRect(), vh = window.innerHeight;
+      var p = Math.max(-1, Math.min(1, (vh - r.top) / (vh + r.height) * 2 - 1));
+      scrollRot = -p * scrollAmount;
+    }
+    function frame(t) {
+      if (last !== null && visible) offset += speed * Math.min(t - last, 64) / 1000;
+      last = t;
+      layout();
+      requestAnimationFrame(frame);
+    }
+
+    // Start with the original photos centred
+    offset = span / 2 - (originals.length - 1) / 2 * step;
+
+    window.addEventListener('scroll', readScroll, { passive: true });
+    readScroll();
+
+    if (speed > 0) {
+      // Only animate while the section is on screen
+      var running = false;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && !running) { running = true; last = null; requestAnimationFrame(frame); }
+          visible = e.isIntersecting;
+        });
+      });
+      io.observe(root);
+    } else {
+      layout();
+      window.addEventListener('scroll', function () { requestAnimationFrame(layout); }, { passive: true });
+      window.addEventListener('resize', layout);
+    }
   })();
 </script>
 
@@ -118,7 +170,8 @@
 
     { "type": "header", "content": "Photo fan" },
     { "type": "range", "id": "angle_step", "label": "Angle between photos", "min": 6, "max": 30, "step": 1, "unit": "°", "default": 15 },
-    { "type": "range", "id": "scroll_rotate", "label": "Rotation while scrolling", "info": "0 turns the scroll animation off.", "min": 0, "max": 30, "step": 1, "unit": "°", "default": 10 },
+    { "type": "range", "id": "spin_speed", "label": "Continuous spin speed", "info": "Degrees per second. 0 stops the spinning.", "min": 0, "max": 30, "step": 1, "unit": "°", "default": 5 },
+    { "type": "range", "id": "scroll_rotate", "label": "Extra rotation while scrolling", "info": "0 turns the scroll effect off.", "min": 0, "max": 30, "step": 1, "unit": "°", "default": 6 },
 
     { "type": "header", "content": "Colours" },
     { "type": "color", "id": "bg_color", "label": "Background", "default": "#FEF6DD" },
