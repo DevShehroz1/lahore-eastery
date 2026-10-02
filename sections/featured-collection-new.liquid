@@ -94,19 +94,17 @@
 
 {%- if se_stts.use_bold_heading -%}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
   <style>
     .t4s_nt_se_{{ sid }} .t4s-top-heading .t4s-section-title,
     .t4s_nt_se_{{ sid }} .t4s-top-heading .t4s-section-title > span {
-      font-family: "Lilita One", "Arial Rounded MT Bold", sans-serif !important;
-      font-weight: 400 !important;
+      font-family: "Nunito", "Arial Rounded MT Bold", sans-serif !important;
+      font-weight: 900 !important;
       font-size: {{ se_stts.bold_heading_size_mb }}px !important;
       line-height: 1.1 !important;
-      letter-spacing: 0.01em !important;
+      letter-spacing: -0.02em !important;
       text-transform: none !important;
       color: {{ se_stts.bold_heading_color }} !important;
-      -webkit-text-stroke: 0.035em {{ se_stts.bold_heading_color }};
-      paint-order: stroke fill;
     }
     @media (min-width: 768px) {
       .t4s_nt_se_{{ sid }} .t4s-top-heading .t4s-section-title,

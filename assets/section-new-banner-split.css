@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Inter+Tight:wght@700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap');
 
 .nbs {
   --nbs-bg: #FEF6DD;
@@ -74,17 +74,17 @@
 
 /* Heading */
 .nbs__heading {
-  font-family: var(--nbs-display);
+  font-family: "Nunito", "Arial Rounded MT Bold", sans-serif;
   font-size: var(--nbs-h-fs-mobile, 34px);
-  font-weight: 800;
-  line-height: 1.17;
-  letter-spacing: -0.028em;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: var(--nbs-text);
   margin: 0 0 26px;
 }
 .nbs__heading .nbs__hl { color: var(--nbs-accent); }
 @media (min-width: 990px) {
-  .nbs__heading { font-size: var(--nbs-h-fs, 54px); margin-bottom: 28px; }
+  .nbs__heading { font-size: min(var(--nbs-h-fs, 50px), 3.4vw); margin-bottom: 28px; }
 }
 @media (max-width: 989px) {
   /* Let the heading wrap naturally on small screens */
