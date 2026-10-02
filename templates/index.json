@@ -539,58 +539,56 @@
     "social_wheel_AKpgLw": {
       "type": "social-wheel",
       "blocks": {
-        "photo_mXEjLC": {
-          "type": "photo",
-          "settings": {
-            "image": "shopify://shop_images/LTO-Banner-BDAYPromo-Gruns-Mobile_2.webp",
-            "link": ""
-          }
-        },
         "photo_Xr9epX": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/Flavorful_Malai_Boti_Pocket_Delight.png",
             "link": ""
           }
         },
-        "photo_P4htBt": {
+        "photo_zeP4ha": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/Flavorful_Malai_Boti_Pocket_Delight.png",
             "link": ""
           }
         },
         "photo_LbJDN4": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/Flavorful_Malai_Boti_Pocket_Review.png",
             "link": ""
           }
         },
-        "photo_Ek44nt": {
+        "photo_jtTGQf": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/Flavorful_Malai_Boti_Pocket_Review.png",
             "link": ""
           }
         },
-        "photo_qq8Pfr": {
+        "photo_P4htBt": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery__Flavorful_Bites.png",
             "link": ""
           }
         },
-        "photo_gJAcHq": {
+        "photo_ERrgaD": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/Lahore_Eatery__Flavorful_Bites.png",
             "link": ""
           }
         }
       },
       "block_order": [
-        "photo_mXEjLC",
         "photo_Xr9epX",
-        "photo_P4htBt",
+        "photo_zeP4ha",
         "photo_LbJDN4",
-        "photo_Ek44nt",
-        "photo_qq8Pfr",
-        "photo_gJAcHq"
+        "photo_jtTGQf",
+        "photo_P4htBt",
+        "photo_ERrgaD"
       ],
       "name": "Social Wheel",
       "settings": {
@@ -600,12 +598,13 @@
         "heading_size_mobile": 36,
         "show_social": true,
         "angle_step": 15,
+        "spin_speed": 5,
         "scroll_rotate": 10,
-        "bg_color": "#FEF6DD",
-        "accent_color": "#E94949",
-        "text_color": "#1A1A1A",
-        "icon_bg": "#E94949",
-        "icon_color": "#FFFFFF",
+        "bg_color": "#fef6dd",
+        "accent_color": "#e94949",
+        "text_color": "#1a1a1a",
+        "icon_bg": "#e94949",
+        "icon_color": "#ffffff",
         "padding_top": 72,
         "padding_top_mobile": 48
       }
