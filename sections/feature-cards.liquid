@@ -1,0 +1,162 @@
+{{ 'section-feature-cards.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading_html = section.settings.heading | escape | replace: '[', '<span class="fcards__hl">' | replace: ']', '</span>' | replace: '|', ' <br>'
+  assign card_count = section.blocks.size
+  if card_count > 4
+    assign cols = 4
+  elsif card_count < 1
+    assign cols = 1
+  else
+    assign cols = card_count
+  endif
+-%}
+
+<section
+  class="fcards"
+  id="fcards-{{ section.id }}"
+  style="
+    --fc-bg: {{ section.settings.bg_color }};
+    --fc-heading: {{ section.settings.heading_color }};
+    --fc-hl: {{ section.settings.highlight_color }};
+    --fc-card-bg: {{ section.settings.card_bg }};
+    --fc-title: {{ section.settings.title_color }};
+    --fc-text: {{ section.settings.text_color }};
+    --fc-pad-y: {{ section.settings.padding_y }}px;
+    --fc-pad-y-mb: {{ section.settings.padding_y_mobile }}px;
+    --fc-h-fs: {{ section.settings.heading_size }}px;
+    --fc-h-fs-mb: {{ section.settings.heading_size_mobile }}px;
+    --fc-title-fs: {{ section.settings.title_size }}px;
+    --fc-title-fs-mb: {{ section.settings.title_size_mobile }}px;
+    --fc-text-fs: {{ section.settings.text_size }}px;
+    --fc-text-fs-mb: {{ section.settings.text_size_mobile }}px;
+    --fc-cols: {{ cols }};
+  "
+>
+  <div class="fcards__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="fcards__heading">{{ heading_html }}</h2>
+    {%- endif -%}
+
+    <div class="fcards__track" data-fcards-track>
+      {%- for block in section.blocks -%}
+        <div class="fcards__card" {{ block.shopify_attributes }}>
+          <div class="fcards__media">
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 1200
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '400, 600, 800, 1200',
+                  sizes: '(min-width: 990px) 33vw, 82vw',
+                  alt: block.settings.title
+              }}
+            {%- else -%}
+              {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+          {%- if block.settings.title != blank -%}
+            <h3 class="fcards__title">{{ block.settings.title }}</h3>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <div class="fcards__text">{{ block.settings.text }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if card_count > 1 -%}
+      <div class="fcards__dots" data-fcards-dots>
+        {%- for block in section.blocks -%}
+          <button type="button" class="fcards__dot{% if forloop.first %} is-active{% endif %}" aria-label="Go to card {{ forloop.index }}"></button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.getElementById('fcards-{{ section.id }}');
+    if (!root) return;
+    var track = root.querySelector('[data-fcards-track]');
+    var dots = root.querySelectorAll('.fcards__dot');
+    if (!track || !dots.length) return;
+    var cards = track.children;
+    function update() {
+      var i = 0, best = Infinity;
+      for (var k = 0; k < cards.length; k++) {
+        var d = Math.abs(cards[k].offsetLeft - track.offsetLeft - track.scrollLeft - 16);
+        if (d < best) { best = d; i = k; }
+      }
+      dots.forEach(function (dot, k) { dot.classList.toggle('is-active', k === i); });
+    }
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    dots.forEach(function (dot, k) {
+      dot.addEventListener('click', function () {
+        track.scrollTo({ left: cards[k].offsetLeft - track.offsetLeft - 16, behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Feature Cards",
+  "tag": "section",
+  "class": "section-feature-cards",
+  "settings": [
+    { "type": "header", "content": "Heading" },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Wrap words in [square brackets] for the highlight colour. Use | for a line break (desktop only).",
+      "default": "We made daily nutrition,|like, [ridiculously easy.]"
+    },
+    { "type": "range", "id": "heading_size", "label": "Heading size (desktop)", "min": 24, "max": 100, "step": 1, "unit": "px", "default": 66 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Heading size (mobile)", "min": 18, "max": 64, "step": 1, "unit": "px", "default": 36 },
+
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#E94949" },
+    { "type": "color", "id": "heading_color", "label": "Heading", "default": "#FFFFFF" },
+    { "type": "color", "id": "highlight_color", "label": "Heading highlight", "default": "#F6CB45" },
+    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#FFFFFF" },
+    { "type": "color", "id": "title_color", "label": "Card title", "default": "#1A1A1A" },
+    { "type": "color", "id": "text_color", "label": "Card text", "default": "#555555" },
+
+    { "type": "header", "content": "Card text sizes" },
+    { "type": "range", "id": "title_size", "label": "Card title size (desktop)", "min": 16, "max": 48, "step": 1, "unit": "px", "default": 30 },
+    { "type": "range", "id": "title_size_mobile", "label": "Card title size (mobile)", "min": 14, "max": 40, "step": 1, "unit": "px", "default": 24 },
+    { "type": "range", "id": "text_size", "label": "Card text size (desktop)", "min": 12, "max": 24, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "text_size_mobile", "label": "Card text size (mobile)", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 15 },
+
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_y", "label": "Vertical padding (desktop)", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding_y_mobile", "label": "Vertical padding (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 4,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image", "info": "Shown at 4:3. Upload at least 1000px wide." },
+        { "type": "text", "id": "title", "label": "Title", "default": "Delicious Flavor" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Tastes like a treat, works like a supplement. You'll actually look forward to taking it.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Cards",
+      "blocks": [
+        { "type": "card", "settings": { "title": "Delicious Flavor", "text": "<p>Tastes like a treat, works like a supplement. You'll actually look forward to taking it.</p>" } },
+        { "type": "card", "settings": { "title": "Rip. Tip. Enjoy.", "text": "<p>Toss it in your bag. Pop it at your desk. No shaker, no water, no routine overhaul required.</p>" } },
+        { "type": "card", "settings": { "title": "Daily Nutrition", "text": "<p>60+ ingredients. 20+ vitamins and minerals. One convenient pack.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
